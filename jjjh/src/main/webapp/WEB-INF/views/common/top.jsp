@@ -15,7 +15,7 @@ li {
     display: inline-block;
     padding: 0 28px 0 0;
 
-}
+} 
 a {
 	    --swiper-theme-color: #00FF0000 !important;
     --swiper-navigation-size: 44px;

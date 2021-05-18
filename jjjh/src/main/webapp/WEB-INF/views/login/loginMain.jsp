@@ -22,9 +22,9 @@ font-family: 'campton', 'Apple SD Gothic Neo', NanumBarunGothic, '나눔바른고딕',
        color: #000;
        font-size: 44px;
        font-weight: 500;
-       text-align: center;">로그인</h2><!---->
+       text-align: center;">로그인</h2><!----> 
    
-       
+        
        <div _ngcontent-baf-c57="" class="tab_cnt ng-star-inserted">
            <form _ngcontent-baf-c57="" novalidate="" class="ng-pristine ng-invalid ng-touched">
 
