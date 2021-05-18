@@ -34,4 +34,8 @@ public class HomeController {
 	public String home() {
 		return "home";
 	}
+	@RequestMapping(value = "/login")
+	public String login() {
+		return "login/Clogin";
+	}
 }

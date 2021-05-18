@@ -153,6 +153,28 @@ a {
     position: relative;
     float: left;"><ul>
     
+<li><a href="${topHome}index?formpath=login" class="log" style="    --swiper-theme-color: #00FF0000 !important;
+    --swiper-navigation-size: 44px;
+    font-family: 'Noto Sans KR',sans-serif;
+    -webkit-text-size-adjust: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    width: 128px;
+    height: 36px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 34px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: -0.8px;
+    box-sizing: border-box;">LOGIN</a></li>
+    
 <li><a href="#" class="log" style="    --swiper-theme-color: #00FF0000 !important;
     --swiper-navigation-size: 44px;
     font-family: 'Noto Sans KR',sans-serif;
@@ -173,7 +195,7 @@ a {
     font-weight: 400;
     text-align: center;
     letter-spacing: -0.8px;
-    box-sizing: border-box;">LOGIN / JOIN</a></li>
+    box-sizing: border-box;">JOIN</a></li>
 
 					</ul>
 </div>
