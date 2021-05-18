@@ -175,7 +175,7 @@ a {
     letter-spacing: -0.8px;
     box-sizing: border-box;">LOGIN</a></li>
     
-<li><a href="#" class="log" style="    --swiper-theme-color: #00FF0000 !important;
+<li><a href="${topHome }/index?formpath=member" class="log" style="    --swiper-theme-color: #00FF0000 !important;
     --swiper-navigation-size: 44px;
     font-family: 'Noto Sans KR',sans-serif;
     -webkit-text-size-adjust: 100%;

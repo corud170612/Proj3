@@ -38,4 +38,16 @@ public class HomeController {
    public String login() {
       return "login/loginMain"; 
    }
+   @RequestMapping(value = "/member")
+   public String beforeForm() {
+      return "member/beforeForm"; 
+   }
+   @RequestMapping(value = "/Cmember")
+   public String Cmember() {
+      return "member/Cmember"; 
+   }
+   @RequestMapping(value = "/Bmember")
+   public String Bmember() {
+      return "member/Bmember"; 
+   }
 }
