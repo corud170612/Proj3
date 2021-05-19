@@ -43,7 +43,7 @@ p {
 </head>
 <body style="background: #111;">
 <div style="margin-top: 100px; width: 100%; height: 1000px; background: url('') center center / 100% no-repeat; ">
-<img alt="" src="resources/img/coffee2.png" style="-webkit-filter: grayscale(100%); filter: gray; width: 1500px; margin-left: 200px; margin-right: 200px; height: auto;vertical-align: middle;">
+<img alt="" src="${pageContext.request.contextPath}/resources/img/coffee2.png" style="-webkit-filter: grayscale(100%); filter: gray; width: 1500px; margin-left: 200px; margin-right: 200px; height: auto;vertical-align: middle;">
 <div id="text1" style="display: none;"><p  style="top: 30%; left: 12%;">집으로 찾아오는</p></div>
 <div id="text2" style="display: none;"><p  style="top: 40%; left: 12%;">나만의 커피구독</p></div>
 <div id="text3" style="display: none;"><p  style="top: 48%; left: 12%; font-size: 20px;">서로 다른 카페들의 다양한 커피를 한번에 즐겨보세요</p></div>

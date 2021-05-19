@@ -1,40 +1,39 @@
 package com.jjjh.Member;
 
-//사업자 회원가입 
+
 public class Bmember {
 
-	 // 사업자등록 번호 
-	 private String Bid;
+	 private String bid;
 	
-	 // 비번 
-	 private String Bpw;
+
+	 private String bpw;
 	
-	 // 대표이름 
+
 	 private String name;
 	
-	 // 상호명 
+
 	 private String store;
 	
-	 // 매장 주소 
+
 	 private String zipcode;
 	
-	 // 매장 전화번호 
+
 	 private String num;
 
 	public String getBid() {
-		return Bid;
+		return bid;
 	}
 
 	public void setBid(String bid) {
-		Bid = bid;
+		this.bid = bid;
 	}
 
 	public String getBpw() {
-		return Bpw;
+		return bpw;
 	}
 
 	public void setBpw(String bpw) {
-		Bpw = bpw;
+		this.bpw = bpw;
 	}
 
 	public String getName() {
@@ -68,6 +67,8 @@ public class Bmember {
 	public void setNum(String num) {
 		this.num = num;
 	}
+
+	
 	
 	
 }

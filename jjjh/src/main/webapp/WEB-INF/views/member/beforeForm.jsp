@@ -116,7 +116,8 @@
     float: left;
     margin-left: 40px;
     background: #fff;
-    border-radius: 30px;">
+    border-radius: 30px;
+    margin-bottom: 150px;">
                 <div class="company-member" style="    font-size: 12px;
     color: #494949;
     text-align: center;

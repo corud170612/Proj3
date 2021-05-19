@@ -4,8 +4,8 @@
 <select id="BloginProc" parameterType="com.jjjh.Member.Bmember" resultType="int">
 	SELECT COUNT(*)
 	FROM bmember
-	WHERE id=#{Bid, jdbcType=VARCHAR}
-	AND pw=#{Bpw, jdbcType=VARCHAR}
+	WHERE id=#{bid, jdbcType=VARCHAR}
+	AND pw=#{bpw, jdbcType=VARCHAR}
 </select>
 <select id="CloginProc" parameterType="com.jjjh.Member.Cmember" resultType="int">
 	SELECT COUNT(*)

@@ -3,6 +3,7 @@ package com.jjjh.Member;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MemberController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
+
+	@Autowired
+	private IMemberService iMemberServ;
 	@RequestMapping(value = "/member")
 	public String index(Model model) {
 		model.addAttribute("formpath", "member");
@@ -28,6 +32,16 @@ public class MemberController {
 	public String moveBusiness(Model model) {
 		model.addAttribute("formpath", "Bmember");
 		return "forward:/index?formpath=Bmember";
+	}
+	@RequestMapping(value = "/authForm")
+	public String authForm() {
+	
+		return "member/authForm";
+	}
+	@RequestMapping(value = "/memberProc")
+	public String memberProc(Bmember bmember) {
+		iMemberServ.MemberProc(bmember);
+		return "forward:/index?formpath=home";
 	}
 	
 }
