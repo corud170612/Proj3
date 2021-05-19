@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jjjh.Login.ILoginDao">
+<select id="BloginProc" parameterType="com.jjjh.Member.Bmember" resultType="int">
+	SELECT COUNT(*)
+	FROM bmember
+	WHERE id=#{Bid, jdbcType=VARCHAR}
+	AND pw=#{Bpw, jdbcType=VARCHAR}
+</select>
+<select id="CloginProc" parameterType="com.jjjh.Member.Cmember" resultType="int">
+	SELECT COUNT(*)
+	FROM cmember
+	WHERE id=#{Cid, jdbcType=VARCHAR}
+	AND pw=#{Cpw, jdbcType=VARCHAR}
+</select>
+</mapper>

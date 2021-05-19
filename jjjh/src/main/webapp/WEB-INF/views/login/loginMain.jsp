@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:url var="home" value="/"/>
+
 <html>
 <style>
 -webkit-text-size-adjust: none;
@@ -12,9 +15,8 @@ td{
 }
 </style>
 
-
-<body style="background: #111;">
-<section _ngcontent-baf-c50="" class="member global_wrap" style="
+<form action="${home }login/BloginProc" method="post">
+<section class="member global_wrap" style="
     margin: 0;
     padding: 0;
     display: white;
@@ -51,7 +53,8 @@ td{
 <tr colspan="2">
 
    <td>
-      <button type="submit" class="btn btn_login ng-star-inserted" style="
+      <%-- <button type="submit" class="btn btn_login ng-star-inserted" style=" --%>
+      <button formaction="${home }index?formpath=Clogin"  class="btn btn_login ng-star-inserted" style="
           padding: 0;
           outline: none;
           vertical-align: top;
@@ -73,7 +76,8 @@ td{
         </button><!---->
    </td>
     <td>
-      <button type="submit" class="btn btn_login ng-star-inserted" style="
+      <%-- <button type="submit" class="btn btn_login ng-star-inserted" style=" --%>
+      <button formaction="${home }index?formpath=Blogin" class="btn btn_login ng-star-inserted" style="
           padding: 0;
           outline: none;
           vertical-align: top;
@@ -97,7 +101,6 @@ td{
 </tr>
 
 </table>
-
 
 </section>
 </body>

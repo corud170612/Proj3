@@ -50,4 +50,13 @@ public class HomeController {
    public String Bmember() {
       return "member/Bmember"; 
    }
+   @RequestMapping(value = "/Clogin")
+   public String Clogin() {
+	   return "login/Clogin"; 
+   }
+   @RequestMapping(value = "/Blogin")
+   public String Blogin() {
+	   return "login/Blogin"; 
+   }
+
 }
