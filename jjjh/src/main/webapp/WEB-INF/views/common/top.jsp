@@ -1,5 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+	/*
+	 * request를 통해 session을 얻어올 수 있으며 내부 인자가 
+	 * true인 경우 session이 없으면 별도로 생성하고
+	 * false인 경우 별도로 생성하지 않고 null을 반환함.
+	 */
+	HttpSession topSession = request.getSession(false);
+	String sessionId = (String)topSession.getAttribute("id");
+%>
 <c:url var="topHome" value="/"/>
 <style>
 li {
@@ -153,6 +162,8 @@ a {
     position: relative;
     float: left;"><ul>
     
+		<% if(sessionId==null){		%>
+		
 <li><a href="${topHome}index?formpath=login" class="log" style="    --swiper-theme-color: #00FF0000 !important;
     --swiper-navigation-size: 44px;
     font-family: 'Noto Sans KR',sans-serif;
@@ -175,6 +186,30 @@ a {
     letter-spacing: -0.8px;
     box-sizing: border-box;">LOGIN</a></li>
     
+    		<%}else{ %>
+    		
+<li><a href="${topHome}login/logout" class="log" style="    --swiper-theme-color: #00FF0000 !important;
+    --swiper-navigation-size: 44px;
+    font-family: 'Noto Sans KR',sans-serif;
+    -webkit-text-size-adjust: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    width: 128px;
+    height: 36px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 34px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: -0.8px;
+    box-sizing: border-box;">LOGOUT</a></li>
+    		<%} %>
 <li><a href="${topHome }/index?formpath=member" class="log" style="    --swiper-theme-color: #00FF0000 !important;
     --swiper-navigation-size: 44px;
     font-family: 'Noto Sans KR',sans-serif;

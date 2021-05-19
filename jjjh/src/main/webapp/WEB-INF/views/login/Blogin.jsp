@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-
-<body style="background: #111;">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
+<c:url var="home" value="/"/>
+<%-- <h3><font color="white" style="text-align: center;">${msg }</font></h3>
+ --%>
 	<section _class="member global_wrap" style="
 	    margin: 0;
 	    padding: 0;
@@ -14,7 +16,7 @@
 		padding: 0;
 	    max-width: 400px;
 	    margin: 0 auto 50px;">
-		    <h2  class="member_title ng-star-inserted" style="
+		    <h2 _class="member_title ng-star-inserted" style="
 		    margin: 0;
 		    padding: 0;
 		    margin-bottom: 20px;
@@ -29,7 +31,8 @@
 		    padding: 0;
 		    padding-top: 16px;
 		    border-top: 0;">
-		        <form _novalidate="" class="ng-pristine ng-invalid ng-touched" style="
+		    
+		        <form action="${home}login/BloginProc" method="post"_novalidate="" class="ng-pristine ng-invalid ng-touched" style="
 				margin: 0;
 			    padding: 0;">
 		            <div _class="inpbx" style="
@@ -42,7 +45,7 @@
 				    box-sizing: border-box;
 				    margin-top: 8px;
 				    margin-bottom: 8px;">
-		                    <input _type="text" id="user_id" formcontrolname="user_id" placeholder="사업자 등록 번호" autocorrect="off" autocapitalize="none" class="ng-pristine ng-invalid ng-touched" style="
+		                    <input _type="text" name="Bid" id="user_id" formcontrolname="user_id" placeholder="아이디" autocorrect="off" autocapitalize="none" class="ng-pristine ng-invalid ng-touched" style="
 							margin: 0;
 						    appearance: none;
 						    vertical-align: top;
@@ -69,7 +72,7 @@
 				    box-sizing: border-box;
 				    margin-top: 8px;
 				    margin-bottom: 8px;">
-		    			<input _type="password" id="user_password" formcontrolname="user_password" placeholder="비밀번호" class="ng-untouched ng-pristine ng-invalid" style="
+		    			<input _type="password" name="Bpw" id="user_password" formcontrolname="user_password" placeholder="비밀번호" class="ng-untouched ng-pristine ng-invalid" style="
 						margin: 0;
 					    appearance: none;
 					    vertical-align: top;
@@ -162,4 +165,3 @@
 		<!---->
 	</ui-login>
 	</section>
-</body>
