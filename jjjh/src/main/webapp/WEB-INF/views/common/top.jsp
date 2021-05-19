@@ -57,7 +57,7 @@ a {
     <!-- 헤더 메뉴 -->
     <div class="header_menu">
 		<!-- 상단 로고 -->
-		<div class="xans-element- xans-layout xans-layout-logotop top_logo "><a href="${topHome}index?formpath=home"><img src="resources/img/logoWhite.png" style="width: 150px; height: auto;" alt=""></a>
+		<div class="xans-element- xans-layout xans-layout-logotop top_logo "><a href="${topHome}index?formpath=home"><img src="${pageContext.request.contextPath}/resources/img/logoWhite.png" style="width: 150px; height: auto;" alt=""></a>
 </div>
 		<div class="header_menu_inner">
 			<!-- 메인메뉴 영역 : 메인메뉴 수정은 "레이아웃 > 기본레이아웃 > menu.html" 문서에서 수정을 하시면 됩니다.-->
@@ -175,7 +175,7 @@ a {
     letter-spacing: -0.8px;
     box-sizing: border-box;">LOGIN</a></li>
     
-<li><a href="#" class="log" style="    --swiper-theme-color: #00FF0000 !important;
+<li><a href="${topHome }/index?formpath=member" class="log" style="    --swiper-theme-color: #00FF0000 !important;
     --swiper-navigation-size: 44px;
     font-family: 'Noto Sans KR',sans-serif;
     -webkit-text-size-adjust: 100%;

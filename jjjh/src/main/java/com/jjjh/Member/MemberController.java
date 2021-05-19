@@ -8,16 +8,26 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-/**
- * Handles requests for the application home page.
- */
+
 @Controller
+@RequestMapping("membership")
 public class MemberController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
-	@RequestMapping(value = "/")
+	@RequestMapping(value = "/member")
 	public String index(Model model) {
-		model.addAttribute("formpath", "home");
-		return "index";
+		model.addAttribute("formpath", "member");
+		return "forward:/index?formpath=member";
 	}
+	@RequestMapping(value = "/moveCustomer")
+	public String moveCustomer(Model model) {
+		model.addAttribute("formpath", "Cmember");
+		return "forward:/index?formpath=Cmember";
+	}
+	@RequestMapping(value = "/moveBusiness")
+	public String moveBusiness(Model model) {
+		model.addAttribute("formpath", "Bmember");
+		return "forward:/index?formpath=Bmember";
+	}
+	
 }
