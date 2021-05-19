@@ -43,7 +43,7 @@ button:hover {
    color: #111;
 }
 </style>
-<form action="${home }membership/memberProc">
+<form action="${home }membership/BmemberProc">
 <script type="text/javascript">
 function openAuth(cmd){
 	window.name="인증";

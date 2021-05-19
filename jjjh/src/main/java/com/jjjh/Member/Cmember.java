@@ -1,49 +1,47 @@
 package com.jjjh.Member;
 
-//개인 멤버 
+ 
 public class Cmember {
 
-	 // 아이디 
-	 private String Cid;
+
+	 private String cid;
 	
-	 // 비밀번호 
-	 private String Cpw;
+
+	 private String cpw;
 	
-	 // 이름 
+
 	 private String name;
-	
-	 // 전화번호 
+
 	 private String ph;
 	
-	 // 우편번호 
+	
 	 private String zipcode;
 	
-	 // 주소 
+
 	 private String address;
-	
-	 // 카드번호 
+
 	 private String cardnumber;
 	
-	 // 은행이름 
+	
 	 private String bank;
 	
-	 // 만기일(월/년) 
+	 
 	 private String expirationdate;
 
 	public String getCid() {
-		return Cid;
+		return cid;
 	}
 
 	public void setCid(String cid) {
-		Cid = cid;
+		this.cid = cid;
 	}
 
 	public String getCpw() {
-		return Cpw;
+		return cpw;
 	}
 
 	public void setCpw(String cpw) {
-		Cpw = cpw;
+		this.cpw = cpw;
 	}
 
 	public String getName() {
@@ -101,6 +99,7 @@ public class Cmember {
 	public void setExpirationdate(String expirationdate) {
 		this.expirationdate = expirationdate;
 	}
+
 	
 
 }

@@ -9,8 +9,14 @@ public class MemberServiceImpl implements IMemberService{
 	private IMemberDao iMemberDao;
 	
 	@Override
-	public void MemberProc(Bmember bmember) {
-		iMemberDao.MemberProc(bmember);
+	public void BmemberProc(Bmember bmember) {
+		iMemberDao.BmemberProc(bmember);
+		
+	}
+
+	@Override
+	public void CmemberProc(Cmember cmember) {
+		iMemberDao.CmemberProc(cmember);
 		
 	}
 	

@@ -10,7 +10,7 @@
 <select id="CloginProc" parameterType="com.jjjh.Member.Cmember" resultType="int">
 	SELECT COUNT(*)
 	FROM cmember
-	WHERE id=#{Cid, jdbcType=VARCHAR}
-	AND pw=#{Cpw, jdbcType=VARCHAR}
+	WHERE id=#{cid, jdbcType=VARCHAR}
+	AND pw=#{cpw, jdbcType=VARCHAR}
 </select>
 </mapper>

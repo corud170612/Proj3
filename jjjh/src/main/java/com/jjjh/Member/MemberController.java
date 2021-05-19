@@ -38,10 +38,14 @@ public class MemberController {
 	
 		return "member/authForm";
 	}
-	@RequestMapping(value = "/memberProc")
-	public String memberProc(Bmember bmember) {
-		iMemberServ.MemberProc(bmember);
-		return "forward:/index?formpath=home";
+	@RequestMapping(value = "/BmemberProc")
+	public String BmemberProc(Bmember bmember) {
+		iMemberServ.BmemberProc(bmember);
+		return "forward:/index?formpath=Blogin";
 	}
-	
+	@RequestMapping(value = "/CmemberProc")
+	public String CmemberProc(Cmember cmember) {
+		iMemberServ.CmemberProc(cmember);
+		return "forward:/index?formpath=Clogin";
+	}
 }
