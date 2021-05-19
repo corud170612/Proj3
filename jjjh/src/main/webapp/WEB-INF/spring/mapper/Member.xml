@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jjjh.Member.IMemberDao">
 <insert id="BmemberProc" parameterType="com.jjjh.Member.Bmember">
-insert into bmember(id, pw, name, store, zipcode, num)
-values (#{bid}, #{bpw}, #{name}, #{store}, #{zipcode}, #{num})</insert>
+insert into bmember(id, pw, name, store, zipcode, num, storeAddr)
+values (#{bid}, #{bpw}, #{name}, #{store}, #{zipcode}, #{num}, #{storeAddr})</insert>
 <insert id="CmemberProc" parameterType="com.jjjh.Member.Cmember">
 insert into cmember(id, pw, name, ph, zipcode, address, cardnumber, bank, expirationdate)
 values (#{cid}, #{cpw}, #{name}, #{ph}, #{zipcode}, #{address}, #{cardnumber}, #{bank}, #{expirationdate})</insert>

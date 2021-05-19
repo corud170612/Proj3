@@ -14,8 +14,7 @@ $(document).ready(function(){
 });
 </script>
 <style type="text/css">
-p {
-		    -webkit-text-size-adjust: none;
+p {-webkit-text-size-adjust: none;
     -webkit-font-smoothing: subpixel-antialiased;
     font-variant-ligatures: none;
     word-break: keep-all;
@@ -42,7 +41,7 @@ p {
 	<title>Home</title>
 </head>
 <body style="background: #111;">
-<div style="margin-top: 100px; width: 100%; height: 1000px; background: url('') center center / 100% no-repeat; ">
+<div style="margin-top: 100px; width: 100%;  background: url('') center center / 100% no-repeat; ">
 <img alt="" src="${pageContext.request.contextPath}/resources/img/coffee2.png" style="-webkit-filter: grayscale(100%); filter: gray; width: 1500px; margin-left: 200px; margin-right: 200px; height: auto;vertical-align: middle;">
 <div id="text1" style="display: none;"><p  style="top: 30%; left: 12%;">집으로 찾아오는</p></div>
 <div id="text2" style="display: none;"><p  style="top: 40%; left: 12%;">나만의 커피구독</p></div>

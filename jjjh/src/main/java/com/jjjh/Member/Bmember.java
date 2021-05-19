@@ -19,6 +19,15 @@ public class Bmember {
 	
 
 	 private String num;
+	 private String storeAddr;
+
+	public String getStoreAddr() {
+		return storeAddr;
+	}
+
+	public void setStoreAddr(String storeAddr) {
+		this.storeAddr = storeAddr;
+	}
 
 	public String getBid() {
 		return bid;
