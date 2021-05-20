@@ -130,7 +130,7 @@ a {
                <li class="xans-record-">
                      <a href="${topHome}index?formpath=storeMain">STORE</a> </li>
                   <li class="xans-record-">
-                     <a href="#">TASTE TEST</a> </li>
+                     <a href="${topHome }/index?formpath=tasteTest">TASTE TEST</a> </li>
                   <li id="my-cafebox-li" style="display: none;">
                   <a href="#">BRAND</a></li>
                         <li><a href="#">REVIEW</a></li>

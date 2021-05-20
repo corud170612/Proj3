@@ -68,4 +68,12 @@ public class HomeController {
 	   return "status/statusForm"; 
 
    }
+   @RequestMapping(value = "/tasteTest")
+   public String tasteTest() {
+      return "tasteTest/tasteTestForm"; 
+   }
+   @RequestMapping(value = "/tasteTestForm2")
+   public String tasteTest2() {
+      return "tasteTest/tasteTestForm2"; 
+   }
 }
