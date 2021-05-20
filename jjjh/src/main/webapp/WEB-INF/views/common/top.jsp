@@ -1,4 +1,4 @@
-<%@page import="java.lang.System.Logger"%>
+
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
@@ -137,7 +137,7 @@ a {
                         <li><a href="#">RECIPE</a></li>
                   <%if(sessionCid==null && sessionBid!=null) { %>
                   <li class="xans-record-">
-                     <a href="#">SALES STATUS</a> </li>
+                     <a href="${topHome }/index?formpath=status">SALES STATUS</a> </li>
                   <li class="xans-record-">
                      <a href="#">PRODUCT</a> </li>
                   <%} %>
