@@ -58,5 +58,8 @@ public class HomeController {
    public String Blogin() {
 	   return "login/Blogin"; 
    }
-
+   @RequestMapping(value = "/storeMain")
+   public String storeMain() {
+	   return "store/storeMain"; 
+   }
 }
