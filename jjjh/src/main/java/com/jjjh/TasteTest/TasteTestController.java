@@ -21,4 +21,29 @@ public class TasteTestController {
       model.addAttribute("formpath", "tasteTestForm3");
       return "forward:/index?formpath=tasteTestForm3";
    }
+   @RequestMapping(value = "/tasteTestForm4")
+   public String tasteTestForm4(Model model) {
+      model.addAttribute("formpath", "tasteTestForm4");
+      return "forward:/index?formpath=tasteTestForm4";
+   }
+   @RequestMapping(value = "/tasteTestForm5")
+   public String tasteTestForm5(Model model) {
+      model.addAttribute("formpath", "tasteTestForm5");
+      return "forward:/index?formpath=tasteTestForm5";
+   }
+   @RequestMapping(value = "/tasteTestForm6")
+   public String tasteTestForm6(Model model) {
+      model.addAttribute("formpath", "tasteTestForm6");
+      return "forward:/index?formpath=tasteTestForm6";
+   }
+   @RequestMapping(value = "/tasteTestForm7")
+   public String tasteTestForm7(Model model) {
+      model.addAttribute("formpath", "tasteTestForm7");
+      return "forward:/index?formpath=tasteTestForm7";
+   }
+   @RequestMapping(value = "/testSucessForm")
+   public String testSucessForm(Model model) {
+      model.addAttribute("formpath", "testSucessForm");
+      return "forward:/index?formpath=testSucessForm";
+   }
 }

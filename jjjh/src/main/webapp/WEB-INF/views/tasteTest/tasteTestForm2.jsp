@@ -60,64 +60,141 @@ strong {
     position: relative;
     width: 100%;
    padding-left: 10px;
+       background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
   $("#choice1").click(function(){
-    $("#choice1").css("background", "gray");
-    $("#choice2").css("background", "white");
-    $("#choice3").css("background", "white");
-    $("#choice4").css("background", "white");
-    $("#choice5").css("background", "white");
-    $("#choice6").css("background", "white");
-
+		$("#taste1").hide();
+		$("#choice1").append(" <b id='b1'>Drip Bag</b>");
+	    $("#choice1").css("background", "black");
+	    
+	    $("#taste2").show();
+	    $("#b2").remove();
+	    $("#choice2").css("background", "white");
+	    $("#taste3").show();
+	    $("#b3").remove();
+	    $("#choice3").css("background", "white");
+	    $("#taste4").show();
+	    $("#b4").remove();
+	    $("#choice4").css("background", "white");
+	    $("#taste5").show();
+	    $("#b5").remove();
+	    $("#choice5").css("background", "white");
+	    $("#taste6").show();
+	    $("#b6").remove();
+	    $("#choice6	").css("background", "white");
   });
   $("#choice2").click(function(){
-       $("#choice2").css("background", "gray");
-       $("#choice1").css("background", "white");
-       $("#choice3").css("background", "white");
-       $("#choice4").css("background", "white");
-       $("#choice5").css("background", "white");
-       $("#choice6").css("background", "white");
-
+		$("#taste2").hide();
+		$("#choice2").append(" <b id='b2'>Coffee Maker</b>");
+	    $("#choice2").css("background", "black");
+	    
+	    $("#taste1").show();
+	    $("#b1").remove();
+	    $("#choice1").css("background", "white");
+	    $("#taste3").show();
+	    $("#b3").remove();
+	    $("#choice3").css("background", "white");
+	    $("#taste4").show();
+	    $("#b4").remove();
+	    $("#choice4").css("background", "white");
+	    $("#taste5").show();
+	    $("#b5").remove();
+	    $("#choice5").css("background", "white");
+	    $("#taste6").show();
+	    $("#b6").remove();
+	    $("#choice6").css("background", "white");
      });
   $("#choice3").click(function(){
-       $("#choice3").css("background", "gray");
-       $("#choice2").css("background", "white");
-       $("#choice1").css("background", "white");
-       $("#choice4").css("background", "white");
-       $("#choice5").css("background", "white");
-       $("#choice6").css("background", "white");
-
+		$("#taste3").hide();
+		$("#choice3").append(" <b id='b3'>Hand drip</b>");
+	    $("#choice3").css("background", "black");
+	    
+	    $("#taste2").show();
+	    $("#b2").remove();
+	    $("#choice2").css("background", "white");
+	    $("#taste1").show();
+	    $("#b1").remove();
+	    $("#choice1").css("background", "white");
+	    $("#taste4").show();
+	    $("#b4").remove();
+	    $("#choice4").css("background", "white");
+	    $("#taste5").show();
+	    $("#b5").remove();
+	    $("#choice5").css("background", "white");
+	    $("#taste6").show();
+	    $("#b6").remove();
+	    $("#choice6").css("background", "white");
      });
   $("#choice4").click(function(){
-       $("#choice4").css("background", "gray");
-       $("#choice2").css("background", "white");
-       $("#choice3").css("background", "white");
-       $("#choice1").css("background", "white");
-       $("#choice5").css("background", "white");
-       $("#choice6").css("background", "white");
-
+		$("#taste4").hide();
+		$("#choice4").append(" <b id='b4'>Espresso</b>");
+	    $("#choice4").css("background", "black");
+	    
+	    $("#taste2").show();
+	    $("#b2").remove();
+	    $("#choice2").css("background", "white");
+	    $("#taste3").show();
+	    $("#b3").remove();
+	    $("#choice3").css("background", "white");
+	    $("#taste1").show();
+	    $("#b1").remove();
+	    $("#choice1").css("background", "white");
+	    $("#taste5").show();
+	    $("#b5").remove();
+	    $("#choice5").css("background", "white");
+	    $("#taste6").show();
+	    $("#b6").remove();
+	    $("#choice6").css("background", "white");
      });
   $("#choice5").click(function(){
-       $("#choice5").css("background", "gray");
-       $("#choice2").css("background", "white");
-       $("#choice3").css("background", "white");
-       $("#choice4").css("background", "white");
-       $("#choice1").css("background", "white");
-       $("#choice6").css("background", "white");
-
+		$("#taste5").hide();
+		$("#choice5").append(" <b id='b5'>Moka pot</b>");
+	    $("#choice5").css("background", "black");
+	    
+	    $("#taste2").show();
+	    $("#b2").remove();
+	    $("#choice2").css("background", "white");
+	    $("#taste3").show();
+	    $("#b3").remove();
+	    $("#choice3").css("background", "white");
+	    $("#taste4").show();
+	    $("#b4").remove();
+	    $("#choice4").css("background", "white");
+	    $("#taste1").show();
+	    $("#b1").remove();
+	    $("#choice1").css("background", "white");
+	    $("#taste6").show();
+	    $("#b6").remove();
+	    $("#choice6").css("background", "white");
      });
   $("#choice6").click(function(){
-       $("#choice6").css("background", "gray");
-       $("#choice2").css("background", "white");
-       $("#choice3").css("background", "white");
-       $("#choice4").css("background", "white");
-       $("#choice5").css("background", "white");
-       $("#choice1").css("background", "white");
-
+		$("#taste6").hide();
+		$("#choice6").append(" <b id='b6'>No Tool</b>");
+	    $("#choice6").css("background", "black");
+	    
+	    $("#taste2").show();
+	    $("#b2").remove();
+	    $("#choice2").css("background", "white");
+	    
+	    $("#taste3").show();
+	    $("#b3").remove();
+	    $("#choice2").css("background", "white");
+	    
+	    $("#taste4").show();
+	    $("#b4").remove();
+	    $("#choice4").css("background", "white");
+	    $("#taste5").show();
+	    $("#b5").remove();
+	    $("#choice5").css("background", "white");
+	    $("#taste1").show();
+	    $("#b1").remove();
+	    $("#choice1").css("background", "white");
      });
 
   
@@ -132,42 +209,42 @@ $(document).ready(function(){
 <div id="testframe">
 
    <div style="float: left; margin-right: 150px; text-align: center;">
-      <div class="choice" id="choice1"><img class="choiceimg" src="https://roastery-box.s3.amazonaws.com/media/curation/tool/%EA%B7%B8%EB%A3%B9_67332x.png"></div>
+      <div class="choice" id="choice1"><img class="choiceimg" id="taste1" src="https://roastery-box.s3.amazonaws.com/media/curation/tool/%EA%B7%B8%EB%A3%B9_67332x.png"></div>
       <br /> <strong>드립백
       </strong>
    
    </div>
 
    <div style="float: left; margin-right: 150px; text-align: center;">
-      <div class="choice" id="choice2"><img class="choiceimg" src="https://roastery-box.s3.amazonaws.com/media/curation/tool/%EA%B7%B8%EB%A3%B9_67322x.png"></div>
+      <div class="choice" id="choice2"><img class="choiceimg" id="taste2"  src="https://roastery-box.s3.amazonaws.com/media/curation/tool/%EA%B7%B8%EB%A3%B9_67322x.png"></div>
       <br /> <strong>커피메이커
       </strong>
 
    </div>
    
       <div style="float: left; text-align: center;">
-      <div class="choice" id="choice3"><img class="choiceimg" src="https://roastery-box.s3.amazonaws.com/media/curation/tool/%EA%B7%B8%EB%A3%B9_67312x.png"></div>
+      <div class="choice" id="choice3"><img class="choiceimg" id="taste3"  src="https://roastery-box.s3.amazonaws.com/media/curation/tool/%EA%B7%B8%EB%A3%B9_67312x.png"></div>
       <br /> <strong>핸드드립
       </strong>   
 
    </div>
 
    <div style="float: left; margin-right: 150px; text-align: center;">
-      <div class="choice" id="choice4"><img class="choiceimg" src="https://roastery-box.s3.amazonaws.com/media/curation/tool/%EA%B7%B8%EB%A3%B9_67302x.png"></div>
+      <div class="choice" id="choice4"><img class="choiceimg" id="taste4"  src="https://roastery-box.s3.amazonaws.com/media/curation/tool/%EA%B7%B8%EB%A3%B9_67302x.png"></div>
       <br /> <strong>에스프레소 머신
       </strong>
 
    </div>
 
    <div style="float: left; margin-right: 150px; text-align: center;">
-      <div class="choice" id="choice5"><img class="choiceimg" src="https://roastery-box.s3.amazonaws.com/media/curation/tool/%EA%B7%B8%EB%A3%B9_67342x.png"></div>
+      <div class="choice" id="choice5"><img class="choiceimg" id="taste5"  src="https://roastery-box.s3.amazonaws.com/media/curation/tool/%EA%B7%B8%EB%A3%B9_67342x.png"></div>
       <br /> <strong>모카포트
       </strong>
 
    </div>
    
       <div style="float: left; text-align: center;">
-      <div class="choice" id="choice6"><img class="choiceimg" src="https://roastery-box.s3.amazonaws.com/media/curation/tool/KakaoTalk_20201219_175613492.png"></div>
+      <div class="choice" id="choice6"><img class="choiceimg" id="taste6"  src="https://roastery-box.s3.amazonaws.com/media/curation/tool/KakaoTalk_20201219_175613492.png"></div>
       <br /> <strong>기구 없음
       </strong>   
 

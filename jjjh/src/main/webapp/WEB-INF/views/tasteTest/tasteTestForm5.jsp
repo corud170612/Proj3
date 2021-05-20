@@ -6,23 +6,22 @@
 }
 #testframe{
 width: 100%;
-position: absolute;
-left: 50%;
-margin-left: -25%;
+
 height: auto;
 }
 .selectBox{
-	width: 400px;
+	width: 200px;
 	text-align: center;
 	background: white;
 	color: black;
 	border: 1px solid #A4A4A4;
 	border-radius: 20px;
 	padding: 24px;
-	position: absolute;
-	left: 50%;
-	margin-left: -200px;
-	top: 33%;
+	float: left;
+	margin-right: 100px;
+	margin-top: 100px;
+
+
 }
 .title{
 	font-weight: bold;
@@ -39,6 +38,8 @@ $(document).ready(function(){
     $("#box3").css("color", "black");
     $("#box2").css("background", "white");
     $("#box2").css("color", "black");
+    $("#box4").css("background", "white");
+    $("#box4").css("color", "black");
 
   });
   $("#box2").click(function(){
@@ -48,6 +49,8 @@ $(document).ready(function(){
        $("#box3").css("color", "black");
        $("#box1").css("background", "white");
        $("#box1").css("color", "black");
+       $("#box4").css("background", "white");
+       $("#box4").css("color", "black");
 
      });
   $("#box3").click(function(){
@@ -57,36 +60,55 @@ $(document).ready(function(){
        $("#box1").css("color", "black");
        $("#box2").css("background", "white");
        $("#box2").css("color", "black");
+       $("#box4").css("background", "white");
+       $("#box4").css("color", "black");
 
      });
+  $("#box4").click(function(){
+      $("#box4").css("background", "black");
+      $("#box4").css("color", "white");
+      $("#box1").css("background", "white");
+      $("#box1").css("color", "black");
+      $("#box2").css("background", "white");
+      $("#box2").css("color", "black");
+      $("#box3").css("background", "white");
+      $("#box3").css("color", "black");
+
+    });
 
 
   
 });
 </script>
-<form action="${home }tasteTest/tasteTestForm4">
+<form action="${home }tasteTest/tasteTestForm6">
 <br><br><br><br><br><br><br>
 <div>
-<p style="font-size: 30px; text-align: center; color: #fff; ">어떤 커피를 더 선호하시나요?</p>
+<p style="font-size: 30px; text-align: center; color: #fff; ">산미는 어느 정도가 좋으세요?</p>
 </div>
 
-<div id="testframe">
-<div style="height: 570px; width: 400px;">
-	<div class="selectBox" id="box1">
-		<p class="title">묵직한 커피</p>
-		<p class="contents">무거운 무게감으로<br/> 풍미가 가득한 커피</p>
-	</div>
+	<div id="testframe">
+		<div style="height: 400px; width: 100%;">
+			<div class="selectBox" id="box1" style="	margin-left: 320px;">
+				<p class="title">없음</p>
 
-	<div class="selectBox" style="top: 55%;" id="box2">
-		<p class="title">밸런스 좋은 커피</p>
-		<p class="contents">적당한 무게감으로 <br/>균형이 잘 잡힌 커피</p>
-	</div>
+			</div>
 
-	<div class="selectBox"style="top: 77%;" id="box3">
-		<p class="title">가벼운 커피</p>
-		<p class="contents">가벼운 무게감으로 <br/>산뜻한 느낌을 주는 커피</p>
+			<div class="selectBox" id="box2">
+				<p class="title">약함</p>
+
+			</div>
+
+			<div class="selectBox"  id="box3">
+				<p class="title">적당</p>
+
+			</div>
+				<div class="selectBox"  id="box4">
+			<p class="title">강함</p>
+
+		</div>
+		</div>
+	
 	</div>
-</div>
 
 
 
