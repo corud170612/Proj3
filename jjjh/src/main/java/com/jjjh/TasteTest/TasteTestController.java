@@ -16,4 +16,9 @@ public class TasteTestController {
       model.addAttribute("formpath", "tasteTestForm2");
       return "forward:/index?formpath=tasteTestForm2";
    }
+   @RequestMapping(value = "/tasteTestForm3")
+   public String tasteTestForm3(Model model) {
+      model.addAttribute("formpath", "tasteTestForm3");
+      return "forward:/index?formpath=tasteTestForm3";
+   }
 }

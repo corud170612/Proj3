@@ -58,6 +58,10 @@ public class HomeController {
    public String Blogin() {
 	   return "login/Blogin"; 
    }
+   @RequestMapping(value = "/product")
+   public String product() {
+	   return "business/product"; 
+   }
 
    @RequestMapping(value = "/storeMain")
    public String storeMain() {
@@ -75,5 +79,9 @@ public class HomeController {
    @RequestMapping(value = "/tasteTestForm2")
    public String tasteTest2() {
       return "tasteTest/tasteTestForm2"; 
+   }
+   @RequestMapping(value = "/tasteTestForm3")
+   public String tasteTest3() {
+      return "tasteTest/tasteTestForm3"; 
    }
 }

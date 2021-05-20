@@ -139,7 +139,7 @@ a {
                   <li class="xans-record-">
                      <a href="${topHome }/index?formpath=status">SALES STATUS</a> </li>
                   <li class="xans-record-">
-                     <a href="#">PRODUCT</a> </li>
+                     <a href="${topHome }index?formpath=product">PRODUCT</a> </li>
                   <%} %>
                </ul>
 </div>

@@ -123,6 +123,7 @@ $(document).ready(function(){
   
 });
 </script>
+<form action="${home }tasteTest/tasteTestForm3">
 <br><br><br><br><br><br><br><br><br><br>
 <div>
 <p style="font-size: 30px; text-align: center; color: #fff;">어떤 방식으로 내려 드실건가요?</p>
@@ -177,7 +178,7 @@ $(document).ready(function(){
 
 
 
-   <button formaction="${home }tasteTest/tasteTestForm3"
-      style="width: 420px; background: #111; border: 1px solid #fff; color: #fff; font-size: 25px; margin-top: 100px; margin-left: 195px; margin-bottom: 100px;">다음</button>
+<input type="submit" style="width: 420px; background: #111; border: 1px solid #fff; color: #fff; font-size: 25px; margin-top: 100px; margin-bottom: 100px; margin-left: 210px;" value="다음" />
 
 </div>
+</form>
