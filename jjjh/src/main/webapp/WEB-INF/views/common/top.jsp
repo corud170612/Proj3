@@ -128,7 +128,7 @@ a {
     float: left;
     padding: 0;"><ul>
                <li class="xans-record-">
-                     <a href="${topHome}index?formpath=storeMain">STORE</a> </li>
+                     <a href="${topHome}store/storeProc">STORE</a> </li>
                   <li class="xans-record-">
                      <a href="${topHome }/index?formpath=tasteTest">TASTE TEST</a> </li>
                   <li id="my-cafebox-li" style="display: none;">

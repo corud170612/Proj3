@@ -1,5 +1,7 @@
 package com.jjjh.Store;
 
+
+
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -10,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 
@@ -23,8 +24,9 @@ public class StoreController {
 
    @RequestMapping(value = "/storeProc")
    public String storeProc(Model model, HttpSession session) {
-
-      return "forward:/index?formpath=store";
+      List<ProdRegis> storeLst= iStoreServ.getProdList();
+      model.addAttribute("storeLst", storeLst);
+      return "forward:/index?formpath=storeMain";
    }
    
 
