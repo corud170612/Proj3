@@ -54,7 +54,8 @@ $(document).ready(function(){
     $("#choice1").css("background", "white");
     $("#choice2").css("color", "white");
     $("#choice2").css("background", "black");
-    
+    sessionStorage
+    location.href="TasteTestController.java";
   });
   $("#choice2").click(function(){
        $("#choice2").css("color", "black");
