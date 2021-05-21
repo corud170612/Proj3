@@ -37,4 +37,9 @@
    id="StatusMapperFactoryBean"
    p:mapperInterface="com.jjjh.Status.IStatusDao"
    p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
+   
+   	<bean class="org.mybatis.spring.mapper.MapperFactoryBean"
+   id="StoreMapperFactoryBean"
+   p:mapperInterface="com.jjjh.Store.IStoreDao"
+   p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
 </beans>

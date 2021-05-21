@@ -1,397 +1,517 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:url var="home" value="/" />
 
+<form action="${home }business/productProc" method="post"> <!-- 컨트롤러  -->
 <style type="text/css">
+#searchBox{
+   width: 300px;
+   height: 150px;
+   margin-top: -90px;
+   position: absolute;
+   left: 50%;
+   margin-left: -150px;
+   
+   }
 button {
-	background: #111
-	border-radius: 2px;
-	color: #000;
-	font-size: 16px;
+   background: #111 border-radius: 2px;
+   color: #000;
+   font-size: 16px;
 }
 
 input {
-	white-space: nowrap; /* 가로스크롤시 중요한 속성 */
-	padding: 10px 10px 5px;
-	width: auto;
-	position: absolute;
-	left: 45%;
-	margin-left: -250px;
-	margin-top: 100px;
-	display: none;
+   white-space: nowrap; /* 가로스크롤시 중요한 속성 */
+   padding: 10px 10px 5px;
+   width: auto;
 }
 
 #row {
-	white-space: nowrap; /* 가로스크롤시 중요한 속성 */
-	overflow-x: auto;
-	overflow-y: hidden;
-	padding: 10px 10px 5px;
-	background: #efefef;
-	width: auto;
-	position: absolute;
-	left: 50%;
-	margin-left: -700px;
-	margin-top: 100px;
-	display: none;
+   white-space: nowrap; /* 가로스크롤시 중요한 속성 */
+   overflow-x: auto;
+   overflow-y: hidden;
+   padding: 10px 10px 5px;
+   background: #fff;
+   width: 1350px;
+   position: absolute;
+   left: 50%;
+   top:60%;
+   margin-left:-700px;
+   
+   display: flex;
+   
+   /*    display: none;*/
 }
 
 #row .items {
-	display: inline-block;
-	margin-left: 10px;
-	width: 160px;
+   display: inline-block;
+   margin-left: 10px;
+   width: 160px;
 }
 
 #row .items:first-child {
-	margin-left: 0;
+   margin-left: 0;
 }
 
 #row .items p {
-	margin-bottom: 8px;
-	text-indent: 7px;
+   margin-bottom: 8px;
+   text-indent: 7px;
 }
 
 #row .items ul {
-	border-radius: 3px;
-	border: 1px solid #b5b5b5;
-	height: 250px;
-	overflow-y: scroll;
-	padding: 3px 3px 8px;
-	background: #fff;
-	display: flex;
-	align-content: flex-start;
-	flex-direction: column;
-	flex-wrap: wrap;
-	overflow: auto;
-	color: red;
+   border-radius: 3px;
+   border: 1px solid #b5b5b5;
+   height: 250px;
+   overflow-y: scroll;
+   padding: 3px 3px 8px;
+   background: #fff;
+   display: flex;
+   align-content: flex-start;
+   flex-direction: column;
+   flex-wrap: wrap;
+   overflow: auto;
+   color: red;
 }
 
 #row .items ul li {
-	width: 100%;
+   width: 100%;
 }
 
 #row .items ul li a {
-	display: block;
-	overflow: hidden;
-	margin-top: 8px;
-	padding: 3px;
-	color: black;
-	font-size: 12px;
-	text-decoration: none;
-	width: 100%;
-	
+   display: block;
+   overflow: hidden;
+   margin-top: 8px;
+   padding: 3px;
+   color: white;
+   font-size: 12px;
+   text-decoration: none;
+   width: 100%;
+   
 }
 /* #row .items ul li a:visited {
 
-	background: #111;
+   background: #111;
 } */
-#row .items ul li a:hover {
-	color: #000;
-	background: #111;
+#row .items ul li a:visited {
+   color: #000;
+   background: yellow;
 }
 
 #row .items ul li:first-child a {
-	margin-top: 3px;
-	
+   margin-top: 3px;
 }
 
 #row .items ul li.on a {
-	border: 1px solid #c9cccf;
-	border-radius: 3px;
-	font-weight: bold;
-	background-color: #efefef;
+   border: 1px solid #c9cccf;
+   border-radius: 3px;
+   font-weight: bold;
+   background-color: #efefef;
 }
-#dripback:visited{
-	background: #111;
+
+#dripback:visited {
+   background: #111;
+}
+
+#iii {
+   width: 100%;
 }
 /* .cate {
-	display: flex;
-	align-content: flex-start;
-	flex-direction: column;
-	flex-wrap: wrap;
-	overflow: auto;
-	width: 200px;
-	float: left;
-	height: 300px;
+   display: flex;
+   align-content: flex-start;
+   flex-direction: column;
+   flex-wrap: wrap;
+   overflow: auto;
+   width: 200px;
+   float: left;
+   height: 300px;
 } */
+
+#categoryBox{
+   white-space: nowrap; /* 가로스크롤시 중요한 속성 */
+   overflow-x: auto;
+   overflow-y: hidden;
+
+   background: #fff;
+    width: 1370px;
+   position: absolute;
+   left: 50%;
+   margin-left: -700px;
+   margin-top: 30px;
+   color: black;
+   
+   }
+   
+.parent {
+    display: flex;
+    width: 1370px;
+
+}
+.child {
+    flex: 1;
+}
+
+#together{
+   background-color: #D8D8D8;
+   width: 1500px;
+   height: 800px;
+   display: flex;
+   margin-left: 250px;
+   
+}
+h4{
+   text-align: center;
+}
 </style>
 <!-- style="width; 600px; height: 500px; border: 1px solid #111; overflow: scroll; height: 500px;"> -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
- 	$(document).ready(function() {
-/* 		$("#btn1").click(function() {
-			$("#show1").show();
-			$("#row").hide();
-		}); */
-		$("#btn2").click(function() {
-			$("#row").show();
-			$("#show1").hide();
+   $(document).ready(function() {
+      /* 카페인/ 디카페인 */
+      $("#caffeine").click(function() {
+         $("#caffeine").css("background", "#adb5db")
+         $("#decaffeine").css("background", "white")
+      });
+      $("#decaffeine").click(function() {
+         $("#decaffeine").css("background", "#adb5db")
+         $("#caffeine").css("background", "white")
+      });
+      
+      /* 드립방식 */
+      $("#dripback").click(function() {
+         $("#dripback").css("background", "#adb5db")
+         $("#coffemaker").css("background", "white")
+         $("#handdrip").css("background", "white")
+         $("#espresso").css("background", "white")
+         $("#mocha").css("background", "white")
+         $("#nodrip").css("background", "white")
+      });
+      $("#coffemaker").click(function() {
+         $("#coffemaker").css("background", "#adb5db")
+         $("#dripback").css("background", "white")
+         $("#handdrip").css("background", "white")
+         $("#espresso").css("background", "white")
+         $("#mocha").css("background", "white")
+         $("#nodrip").css("background", "white")
+      });
 
-		});
-	}); 
+      $("#handdrip").click(function() {
+         $("#handdrip").css("background", "#adb5db")
+         $("#coffemaker").css("background", "white")
+         $("#dripback").css("background", "white")
+         $("#espresso").css("background", "white")
+         $("#mocha").css("background", "white")
+         $("#nodrip").css("background", "white")
+      });
 
- 	$(document).ready(function() {
-		$("#caffeine").click(function() {
-			$("#caffeine").css("background", "yellow")
-		}); 
-	}); 
- 	$(document).ready(function() {
-		$("#decaffeinated").click(function() {
-			$("#decaffeinated").css("background", "yellow")
-		}); 
-	}); 
- 	$(document).ready(function() {
-		$("#dripback").click(function() {
-			$("#dripback").css("background", "yellow")
-		}); 
-	}); 
- 	$(document).ready(function() {
-		$("#coffemaker").click(function() {
-			$("#coffemaker").css("background", "yellow")
-		}); 
-	}); 
- 	$(document).ready(function() {
-		$("#handdrip").click(function() {
-			$("#handdrip").css("background", "yellow")
-		}); 
-	}); 
- 	$(document).ready(function() {
-		$("#espresso").click(function() {
-			$("#espresso").css("background", "yellow")
-		}); 
-	}); 
- 	$(document).ready(function() {
-		$("#mocha").click(function() {
-			$("#mocha").css("background", "yellow")
-		}); 
-	}); 
- 	$(document).ready(function() {
-		$("#nodrip").click(function() {
-			$("#nodrip ").css("background", "yellow")
-		}); 
-	}); 
- 	$(document).ready(function() {
-		$("#heavy").click(function() {
-			$("#heavy ").css("background", "yellow")
-		}); 
-	}); 
- 	$(document).ready(function() {
-		$("#balance").click(function() {
-			$("#balance ").css("background", "yellow")
-		}); 
-	}); 
- 	$(document).ready(function() {
-		$("#light").click(function() {
-			$("#light ").css("background", "yellow")
-		}); 
-	}); 
+      $("#espresso").click(function() {
+         $("#espresso").css("background", "#adb5db")
+         $("#coffemaker").css("background", "white")
+         $("#handdrip").css("background", "white")
+         $("#dripback").css("background", "white")
+         $("#mocha").css("background", "white")
+         $("#nodrip").css("background", "white")
+      });
 
-	
-	
- 	
+      $("#mocha").click(function() {
+         $("#mocha").css("background", "#adb5db")
+         $("#coffemaker").css("background", "white")
+         $("#handdrip").css("background", "white")
+         $("#espresso").css("background", "white")
+         $("#dripback").css("background", "white")
+         $("#nodrip").css("background", "white")
+      });
+
+      $("#nodrip").click(function() {
+         $("#nodrip").css("background", "#adb5db")
+         $("#coffemaker").css("background", "white")
+         $("#handdrip").css("background", "white")
+         $("#espresso").css("background", "white")
+         $("#mocha").css("background", "white")
+         $("#dripback").css("background", "white")
+      });
+      /* 무게감 */
+      $("#heavy").click(function() {
+         $("#heavy").css("background", "#adb5db")
+         $("#balance").css("background", "white")
+         $("#light").css("background", "white")
+      });
+      $("#balance").click(function() {
+         $("#balance").css("background", "#adb5db")
+         $("#heavy").css("background", "white")
+         $("#light").css("background", "white")
+      });
+      $("#light").click(function() {
+         $("#light").css("background", "#adb5db")
+         $("#balance").css("background", "white")
+         $("#heavy").css("background", "white")
+      });
+      /* 맛과 향 */
+      $("#chocolate").click(function() {
+         $("#chocolate").css("background", "#adb5db")
+         $("#flower").css("background", "white")
+         $("#sweet").css("background", "white")
+         $("#nuts").css("background", "white")
+         $("#citrus").css("background", "white")
+      });
+      $("#flower").click(function() {
+         $("#flower").css("background", "#adb5db")
+         $("#chocolate").css("background", "white")
+         $("#sweet").css("background", "white")
+         $("#nuts").css("background", "white")
+         $("#citrus").css("background", "white")
+      });
+      $("#sweet").click(function() {
+         $("#sweet").css("background", "#adb5db")
+         $("#chocolate").css("background", "white")
+         $("#flower").css("background", "white")
+         $("#nuts").css("background", "white")
+         $("#citrus").css("background", "white")
+      });
+      $("#nuts").click(function() {
+         $("#nuts").css("background", "#adb5db")
+         $("#flower").css("background", "white")
+         $("#sweet").css("background", "white")
+         $("#chocolate").css("background", "white")
+         $("#citrus").css("background", "white")
+      });
+      $("#citrus").click(function() {
+         $("#citrus").css("background", "#adb5db")
+         $("#flower").css("background", "white")
+         $("#sweet").css("background", "white")
+         $("#nuts").css("background", "white")
+         $("#chocolate").css("background", "white")
+      });
+      
+      /* 산미 */
+      $("#none").click(function() {
+         $("#none").css("background", "#adb5db")
+         $("#weakness").css("background", "white")
+         $("#moderation").css("background", "white")
+         $("#strong").css("background", "white")
+      });
+      $("#weakness").click(function() {
+         $("#weakness").css("background", "#adb5db")
+         $("#none").css("background", "white")
+         $("#moderation").css("background", "white")
+         $("#strong").css("background", "white")
+      });
+      $("#moderation").click(function() {
+         $("#moderation").css("background", "#adb5db")
+         $("#none").css("background", "white")
+         $("#weakness").css("background", "white")
+         $("#strong").css("background", "white")
+      });
+      $("#strong").click(function() {
+         $("#strong").css("background", "#adb5db")
+         $("#weakness").css("background", "white")
+         $("#moderation").css("background", "white")
+         $("#none").css("background", "white")
+      });
+
+      /* 원산지 */
+      $("#columbia").click(function() {
+         $("#columbia").css("background", "#adb5db")
+         $("#indonesia").css("background", "white")
+         $("#brazil").css("background", "white")
+         $("#ethiopia").css("background", "white")
+         $("#honduras").css("background", "white")
+      });
+      $("#indonesia").click(function() {
+         $("#indonesia").css("background", "#adb5db")
+         $("#columbia").css("background", "white")
+         $("#brazil").css("background", "white")
+         $("#ethiopia").css("background", "white")
+         $("#honduras").css("background", "white")
+      });
+      $("#brazil").click(function() {
+         $("#brazil").css("background", "#adb5db")
+         $("#indonesia").css("background", "white")
+         $("#columbia").css("background", "white")
+         $("#ethiopia").css("background", "white")
+         $("#honduras").css("background", "white")
+      });
+      $("#ethiopia").click(function() {
+         $("#ethiopia").css("background", "#adb5db")
+         $("#indonesia").css("background", "white")
+         $("#brazil").css("background", "white")
+         $("#columbia").css("background", "white")
+         $("#honduras").css("background", "white")
+      });
+      $("#honduras").click(function() {
+         $("#honduras").css("background", "#adb5db")
+         $("#indonesia").css("background", "white")
+         $("#brazil").css("background", "white")
+         $("#ethiopia").css("background", "white")
+         $("#columbia").css("background", "white")
+      });
+      
+      /* 가격대 */
+      $("#1won").click(function() {
+         $("#1won").css("background", "#adb5db")
+         $("#2won").css("background", "white")
+         $("#3won").css("background", "white")
+         $("#4won").css("background", "white")
+         $("#5won").css("background", "white")
+      });
+      $("#2won").click(function() {
+         $("#2won").css("background", "#adb5db")
+         $("#1won").css("background", "white")
+         $("#3won").css("background", "white")
+         $("#4won").css("background", "white")
+         $("#5won").css("background", "white")
+      });
+      $("#3won").click(function() {
+         $("#3won").css("background", "#adb5db")
+         $("#2won").css("background", "white")
+         $("#1won").css("background", "white")
+         $("#4won").css("background", "white")
+         $("#5won").css("background", "white")
+      });
+      $("#4won").click(function() {
+         $("#4won").css("background", "#adb5db")
+         $("#2won").css("background", "white")
+         $("#3won").css("background", "white")
+         $("#1won").css("background", "white")
+         $("#5won").css("background", "white")
+      });
+      $("#5won").click(function() {
+         $("#5won").css("background", "#adb5db")
+         $("#2won").css("background", "white")
+         $("#3won").css("background", "white")
+         $("#4won").css("background", "white")
+         $("#1won").css("background", "white")
+      });
+
+   });
+
+   
 </script>
+   <script>
+      function setThumbnail(event) {
+         var reader = new FileReader();
+         reader.onload = function(event) {
+            var img = document.createElement("img");
+            img.setAttribute("src", event.target.result);
+            document.querySelector("div#image_container").appendChild(img);
+         };
+         reader.readAsDataURL(event.target.files[0]);
+      }
+   </script>
+<h1 style="color: white; text-align: center; margin-top: 200px;">상품등록</h1> <br/>
+<div style="width: 100%; height: 1000px; padding-bottom: 100px; background: #111; ">
 
-<hr width="500px"/>
-<h1 style="color: white; text-align: center; margin-top: 200px;">상품등록</h1>
-<hr width="500px"/>
-<br/>
-<div
-	style="width: 100%; position: absolute; left: 50%; margin-left: -350px; height: 600px; padding-left: 100px;">
-<!-- 	<button id="btn1" style="width: 500px; height: 80px;">
-		<h2>카테고리명 검색</h2>
-	</button> -->
+<div id="together">
+<!-- 전체 div -->
 
-	<button id="btn2" style="width: 500px; height: 80px;">
-		<h2>카테고리명 선택</h2>
-	</button>
+<div align="center" class="parent" id="categoryBox"  style=" width: 67%; margin-left: -700px;     width: 1370px;">
+   <div class="child">
+   <h4>상품명 등록</h4>  
+      <input style="background: #fff; width: 300px; height: 30px; font-size: 15px;" type="text" name="productName" placeholder="상품명 입력" value=""> <br /> <br /> <br />
+
+   <h4>상품가격</h4>  
+      <input style="background: #fff; width: 300px; height: 30px; font-size: 15px;" type="text" name="productPrict" placeholder="상품가격 입력" value=""> <br /> <br /> <br />
+      
+   </div>
+   
+   <div class="child">
+   <h4>상품 이미지 등록 </h4> 
+      <div id="image_container"></div>
+      <input type="file"  id="image" accept="image/*" onchange="setThumbnail(event);" /> <br /> <br /> <br />
+   </div>
+
+   <div class="child">
+   <h4>상품 설명</h4>
+      <textarea style="font-size: 15px" name="menmo" rows=8 cols=40 placeholder="상품설명 입력"></textarea> <br /> <br /> <br />
+   </div>   
 </div>
 
-<br />
 <!-- <input type="text" id="show1" style="background: #fff; width: 700px; height: 40px; font-size: 15px;" />
  -->
 <div id="row">
-	<div class="items">
-		<p>카페인 / 디카페인</p>
-		<ul>
-			<li><a href="#" id="caffeine">카페인</a></li>
-			<li><a href="#" id="decaffeinated">디카페인</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>드립방식</p>
-		<ul>
-			<li><a href="#" id="dripback">드립백</a></li>
-			<li><a href="#" id="coffemaker">커피메이커</a></li>
-			<li><a href="#" id="handdrip">핸드드립</a></li>
-			<li><a href="#" id="espresso">에스프레소머신</a></li>
-			<li><a href="#" id="mocha">모카포트</a></li>
-			<li><a href="#" id="nodrip">기구 없음</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>무게감</p>
-		<ul>
-			<li><a href="#" id="heavy">묵직한 커피</a></li>
-			<li><a href="#" id="balance">밸런스 좋은 커피</a></li>
-			<li><a href="#" id="light">가벼운 커피</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>맛과 향</p>
-		<ul>
-			<li><a href="#none">초콜릿</a></li>
-			<li><a href="#none">꼿 향</a></li>
-			<li><a href="#none">달콤한</a></li>
-			<li><a href="#none">견과류</a></li>
-			<li><a href="#none">감귤류</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>산미</p>
-		<ul>
-			<li><a href="#none">없음</a></li>
-			<li><a href="#none">약함</a></li>
-			<li><a href="#none">적당</a></li>
-			<li><a href="#none">강함</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>원산지</p>
-		<ul>
-			<li><a href="#none">콜롬비아</a></li>
-			<li><a href="#none">인도네시아</a></li>
-			<li><a href="#none">브라질</a></li>
-			<li><a href="#none">에티오피아</a></li>
-			<li><a href="#none">온두라스</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>가격</p>
-		<ul>
-			<li><a href="#none">8,000</a></li>
-			<li><a href="#none">15,000</a></li>
-			<li><a href="#none">25,000</a></li>
-			<li><a href="#none">35,000</a></li>
-			<li><a href="#none">47,000</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>분쇄</p>
-		<ul>
-			<li><a href="#none">분쇄</a></li>
-			<li><a href="#none">홀빈</a></li>
+   <div class="items" style="margin-left: 80px;">
+      <h4 style="color: black;">카페인 / 디카페인</h4>
 
-		</ul>
-	</div>
+      <ul>
+         <li><a href="#" id="caffeine">카페인</a></li>
+         <li><a href="#" id="decaffeine">디카페인</a></li>
+      </ul>
+      <!--          <li><input type="checkbox"  name="caffeine" value="yescaff" />카페인</li>
+         <li><input type="checkbox"  name="caffeine" value="nocaff" />디카페인</li>  -->
+
+
+   </div>
+   <div class="items" >
+      <h4 style="color: black;">드립방식</h4>
+      <ul >
+         <li><a href="#" id="dripback">드립백</a></li>
+         <li><a href="#" id="coffemaker">커피메이커</a></li>
+         <li><a href="#" id="handdrip">핸드드립</a></li>
+         <li><a href="#" id="espresso">에스프레소머신</a></li>
+         <li><a href="#" id="mocha">모카포트</a></li>
+         <li><a href="#" id="nodrip">기구 없음</a></li>
+      </ul>
+   </div>
+   <div class="items">
+      <h4 style="color: black;">무게감</h4>
+      <ul>
+         <li><a href="#" id="heavy">묵직한 커피</a></li>
+         <li><a href="#" id="balance">밸런스 좋은 커피</a></li>
+         <li><a href="#" id="light">가벼운 커피</a></li>
+      </ul>
+   </div>
+   <div class="items">
+      <h4 style="color: black;">맛과 향</h4>
+      <ul>
+         <li><a href="#none" id="chocolate">초콜릿</a></li>
+         <li><a href="#none" id="flower">말린 과일</a></li>
+         <li><a href="#none" id="sweet">달콤한</a></li>
+         <li><a href="#none" id="nuts">견과류</a></li>
+         <li><a href="#none" id="citrus">감귤류</a></li>
+      </ul>
+   </div>
+   <div class="items">
+      <h4 style="color: black;">산미</h4>
+      <ul>
+         <li><a href="#none" id="none">없음</a></li>
+         <li><a href="#none" id="weakness">약함</a></li>
+         <li><a href="#none" id="moderation">적당</a></li>
+         <li><a href="#none" id="strong">강함</a></li>
+      </ul>
+   </div>
+   <div class="items">
+      <h4 style="color: black;">원산지</h4>
+      <ul>
+         <li><a href="#none" id="columbia">콜롬비아</a></li>
+         <li><a href="#none" id="indonesia">인도네시아</a></li>
+         <li><a href="#none" id="brazil">브라질</a></li>
+         <li><a href="#none" id="ethiopia">에티오피아</a></li>
+         <li><a href="#none" id="honduras">온두라스</a></li>
+      </ul>
+   </div>
+   <div class="items">
+      <h4 style="color: black;">가격대</h4>
+      <ul>
+         <li><a href="#none" id="1won">1만원 이하</a></li>
+         <li><a href="#none" id="2won">2만원 이하</a></li>
+         <li><a href="#none" id="3won">3만원 이하</a></li>
+         <li><a href="#none" id="4won">4만원 이하</a></li>
+         <li><a href="#none" id="5won">5만원 이하</a></li>
+      </ul>
+   </div>
+
+
 </div>
+</div>
+
+<div id="searchBox" align="center">
+      <button style=" background-color: #111; color: white; width: 100px; height: 50px;">검색</button>
+      <button type="button" value="초기화" style=" background-color: #111; color: white; color: white; width: 100px; height: 50px;" onClick="window.location.reload()">초기화</button>
+</div>
+
+</div>
+</form>
 <!--  -->
 <!-- 이름, 이미지 등록 -->
 <!--  -->
-<div id="row">
-	<div class="items">
-		<p>카페인 / 디카페인</p>
-		<ul>
-			<li><a href="#" id="caffeine">카페인</a></li>
-			<li><a href="#" id="decaffeinated">디카페인</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>드립방식</p>
-		<ul>
-			<li><a href="#" id="dripback">드립백</a></li>
-			<li><a href="#" id="coffemaker">커피메이커</a></li>
-			<li><a href="#" id="handdrip">핸드드립</a></li>
-			<li><a href="#" id="espresso">에스프레소머신</a></li>
-			<li><a href="#" id="mocha">모카포트</a></li>
-			<li><a href="#" id="nodrip">기구 없음</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>무게감</p>
-		<ul>
-			<li><a href="#" id="heavy">묵직한 커피</a></li>
-			<li><a href="#" id="balance">밸런스 좋은 커피</a></li>
-			<li><a href="#" id="light">가벼운 커피</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>맛과 향</p>
-		<ul>
-			<li><a href="#none">초콜릿</a></li>
-			<li><a href="#none">꼿 향</a></li>
-			<li><a href="#none">달콤한</a></li>
-			<li><a href="#none">견과류</a></li>
-			<li><a href="#none">감귤류</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>산미</p>
-		<ul>
-			<li><a href="#none">없음</a></li>
-			<li><a href="#none">약함</a></li>
-			<li><a href="#none">적당</a></li>
-			<li><a href="#none">강함</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>원산지</p>
-		<ul>
-			<li><a href="#none">콜롬비아</a></li>
-			<li><a href="#none">인도네시아</a></li>
-			<li><a href="#none">브라질</a></li>
-			<li><a href="#none">에티오피아</a></li>
-			<li><a href="#none">온두라스</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>가격</p>
-		<ul>
-			<li><a href="#none">8,000</a></li>
-			<li><a href="#none">15,000</a></li>
-			<li><a href="#none">25,000</a></li>
-			<li><a href="#none">35,000</a></li>
-			<li><a href="#none">47,000</a></li>
-		</ul>
-	</div>
-	<div class="items">
-		<p>분쇄</p>
-		<ul>
-			<li><a href="#none">분쇄</a></li>
-			<li><a href="#none">홀빈</a></li>
-
-		</ul>
-	</div>
-</div>
-<!-- 
-			<ul class="cate" style="display: none;">
-				<li><a href="#" style="text-decoration: none; color: white">카페인/디카페인</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">드립방식</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">무게감</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">향</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">산미</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">원산지</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">가격</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">분쇄</a></li>
-			</ul>
-						<ul class="cate" style="display: none;">
-				<li><a href="#" style="text-decoration: none; color: white">카페인/디카페인</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">드립방식</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">무게감</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">향</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">산미</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">원산지</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">가격</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">분쇄</a></li>
-			</ul>
-						<ul class="cate" style="display: none;">
-				<li><a href="#" style="text-decoration: none; color: white">카페인/디카페인</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">드립방식</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">무게감</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">향</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">산미</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">원산지</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">가격</a></li>
-				<li><a href="#" style="text-decoration: none; color: white">분쇄</a></li>
-			</ul>
- -->
