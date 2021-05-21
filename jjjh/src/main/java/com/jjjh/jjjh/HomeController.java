@@ -74,7 +74,6 @@ public class HomeController {
    @RequestMapping(value = "/status")
    public String status() {
 	   return "status/statusForm"; 
-
    }
    @RequestMapping(value = "/tasteTest")
    public String tasteTest() {

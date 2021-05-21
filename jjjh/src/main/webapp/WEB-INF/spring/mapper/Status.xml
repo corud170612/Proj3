@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jjjh.Status.IStatusDao">
+<select id="getList" parameterType="String" resultType="com.jjjh.Status.Sale">
+   SELECT *
+   FROM sale
+   WHERE id=#{bid}
+</select>
+<select id="searchNum" parameterType="String" resultType="int">
+   SELECT count(*)
+   FROM sale
+   WHERE id=#{bid}
+</select>
+<select id="ConditionSearch" parameterType="com.jjjh.Status.SearchCondition" resultType="com.jjjh.Status.Sale">
+   SELECT *
+   FROM sale
+   WHERE id=#{bid}
+   and prodname=#{searchProd }
+   and condition=#{process}
+   and submon=#{month}
+</select>
+<select id="searchNum2" parameterType="com.jjjh.Status.SearchCondition" resultType="int">
+   SELECT count(*)
+   FROM sale
+   WHERE id=#{bid}
+   and prodname=#{searchProd }
+   and condition=#{process}
+   and submon=#{month}
+</select>
+</mapper>

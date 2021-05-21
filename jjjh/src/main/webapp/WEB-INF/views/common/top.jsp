@@ -137,7 +137,7 @@ a {
                         <li><a href="#">RECIPE</a></li>
                   <%if(sessionCid==null && sessionBid!=null) { %>
                   <li class="xans-record-">
-                     <a href="${topHome }/index?formpath=status">SALES STATUS</a> </li>
+                     <a href="${topHome }status/statusProc">SALES STATUS</a> </li>
                   <li class="xans-record-">
                      <a href="${topHome }index?formpath=product">PRODUCT</a> </li>
                   <%} %>
