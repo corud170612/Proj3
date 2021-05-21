@@ -27,7 +27,7 @@ public class LoginController {
 		if(loginResult==LOGINSUCCESS)
 			return "forward:/index?formpath=home";
 
-		model.addAttribute("msg", "·Î±×ÀÎÁ¤º¸°¡ ´Ù¸¨´Ï´Ù ");
+		model.addAttribute("msg", "ë¡œê·¸ì¸ ì •ë³´ê°€ ë‹¤ë¦…ë‹ˆë‹¤");
 		return "forward:/index?formpath=Blogin";
 	}
 	
@@ -37,7 +37,7 @@ public class LoginController {
 		if(loginResult==LOGINSUCCESS)
 			return "forward:/index?formpath=home";
 		
-		model.addAttribute("msg", "·Î±×ÀÎÁ¤º¸°¡ ´Ù¸¨´Ï´Ù ");
+		model.addAttribute("msg", "ë¡œê·¸ì¸ ì •ë³´ê°€ ë‹¤ë¦…ë‹ˆë‹¤");
 		return "forward:/index?formpath=Clogin";
 	}
 	@RequestMapping(value = "logout")
