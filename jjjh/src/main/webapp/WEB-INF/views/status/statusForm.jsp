@@ -111,7 +111,7 @@ tr:hover {
    background: #A4A4A4;
 }
 </style>
-
+<form>
 <div style="width: 100%; height: 1600px;">
    <p id="FrameTitle">판매현황</p>
    <div id="statusFrame">
@@ -132,12 +132,12 @@ tr:hover {
                <label>처리 상태 :</label> 
                <input type="radio" name="process" value="완료" />처리완료 
                <input type="radio" name="process" value="처리중" /> 처리중
-               <label style="margin-left: 30px;"> 검색 결과 : 10 건</label>
+               <label style="margin-left: 30px;"> 검색 결과 : ${searchNum } 건</label>
             </div>
          </div>
          <div id="searchBox">
             <center>
-            <button style="margin-top: 50px;">검색</button>
+            <button style="margin-top: 50px;" formaction="${home }status/ConditionSearch">검색</button>
             <button style="margin-top: 50px;"><a onClick="window.location.reload()" >초기화</a></button>   
             </center>
          </div>
@@ -157,55 +157,23 @@ tr:hover {
                <td><label>처리 상태</label></td>
                <td><label>상태변경</label></td>
             </tr>
+            <c:forEach var="status" items="${saleLst }">
             <tr>
-               <td><label>1</label></td>
-               <td><label>첫번째 상품</label></td>
-               <td><label>\ 3,000</label></td>
-               <td><label>3 개월</label></td>
-               <td><label>김기홍</label></td>
-               <td><label>길음동</label></td>
-               <td><label>200 g</label></td>
-               <td><label>아디다스</label></td>
-               <td><label>처리중</label></td>
+               <td><label>${status.no }</label></td>
+               <td><label>${status.prodname }</label></td>
+               <td><label>\ ${status.prodprice }</label></td>
+               <td><label>${status.submon } 개월</label></td>
+               <td><label>${status.name }</label></td>
+               <td><label>${status.address }</label></td>
+               <td><label>${status.volume } g</label></td>
+               <td><label>${status.store }</label></td>
+               <td><label>${status.condition }</label></td>
                <td><button>완료</button></td>
             </tr>
-            <tr>
-               <td><label>2</label></td>
-               <td><label>두번째 상품</label></td>
-               <td><label>\ 9,000</label></td>
-               <td><label>3 개월</label></td>
-               <td><label>주소영</label></td>
-               <td><label>인천 어딘가</label></td>
-               <td><label>200 g</label></td>
-               <td><label>나이키</label></td>
-               <td><label>완료</label></td>
-               <td><button>완료취소</button></td>
-            </tr>
-            <tr>
-               <td><label>3</label></td>
-               <td><label>세번째 상품</label></td>
-               <td><label>\ 12,000</label></td>
-               <td><label>6 개월</label></td>
-               <td><label>조은지</label></td>
-               <td><label>청량리 였나요..?</label></td>
-               <td><label>400 g</label></td>
-               <td><label>아식스</label></td>
-               <td><label>처리중</label></td>
-               <td><button>완료</button></td>
-            </tr>
-            <tr>
-               <td><label>4</label></td>
-               <td><label>네번째 상품</label></td>
-               <td><label>\ 8,000</label></td>
-               <td><label>12 개월</label></td>
-               <td><label>전채경</label></td>
-               <td><label>서울 자취방</label></td>
-               <td><label>400 g</label></td>
-               <td><label>휴먼비잉</label></td>
-               <td><label>처리중</label></td>
-               <td><button>완료</button></td>
-            </tr>
+            </c:forEach>
+           
          </table>
       </div>
    </div>
 </div>
+</form>

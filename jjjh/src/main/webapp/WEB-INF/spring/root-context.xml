@@ -32,4 +32,9 @@
 	id="MemberMapperFactoryBean"
 	p:mapperInterface="com.jjjh.Member.IMemberDao"
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
+	
+	<bean class="org.mybatis.spring.mapper.MapperFactoryBean"
+   id="StatusMapperFactoryBean"
+   p:mapperInterface="com.jjjh.Status.IStatusDao"
+   p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
 </beans>
