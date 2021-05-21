@@ -186,25 +186,25 @@ strong {
 			<strong>카페인</strong> <strong>디카페인</strong>
 		</div>
 		<hr />
-		<h2 id="cate2">맛과향</h2>
+		<h2 id="cate2">드립방식</h2>
 		<div id="panel2" style="width: 100%; display: none;">
-			<strong>달콤한</strong> <strong>꽃향기</strong> <strong>초콜릿</strong> <strong>견과류</strong>
-			<strong>감귤류</strong>
+			<strong>드립백</strong> <strong>커피메이커</strong> <strong>핸드드립</strong> <strong>에스프레소머신</strong>
+			<strong>모카포트</strong> <strong>기구없음</strong>
 		</div>
 		<hr />
-		<h2 id="cate3">산미</h2>
+		<h2 id="cate3">무게감</h2>
 		<div id="panel3" style="width: 100%; display: none;">
-			<strong>없음</strong> <strong>약함</strong> <strong>적당</strong> <strong>강함</strong>
-		</div>
-		<hr />
-		<h2 id="cate4">드립방식</h2>
-		<div id="panel4" style="width: 100%; display: none;">
-			<strong>캡슐</strong> <strong>드립백</strong> <strong>핸드드립</strong> <strong>기구없음</strong>
-		</div>
-		<hr />
-		<h2 id="cate5">무게감</h2>
-		<div id="panel5" style="width: 100%; display: none;">
 			<strong>묵직한</strong> <strong>밸런스</strong> <strong>가벼운</strong>
+		</div>
+		<hr />
+		<h2 id="cate4">맛과 향</h2>
+		<div id="panel4" style="width: 100%; display: none;">
+			<strong>달콤한</strong> <strong>말린과일</strong> <strong>초콜릿</strong> <strong>견과류</strong> <strong>감귤류</strong>
+		</div>
+		<hr />
+		<h2 id="cate5">산미</h2>
+		<div id="panel5" style="width: 100%; display: none;">
+			<strong>없음</strong> <strong>약함</strong> <strong>적당</strong> <strong>강함</strong>
 		</div>
 		<hr />
 		<h2 id="cate6">원산지</h2>
