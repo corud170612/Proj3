@@ -199,7 +199,7 @@ strong {
 		<hr />
 		<h2 id="cate4">맛과 향</h2>
 		<div id="panel4" style="width: 100%; display: none;">
-			<strong>달콤한</strong> <strong>말린과일</strong> <strong>초콜릿</strong> <strong>견과류</strong> <strong>감귤류</strong>
+			<strong>달콤한</strong> <strong>말린과일</strong> <strong>초콜릿</strong> <strong>베리</strong> <strong>사과배</strong>
 		</div>
 		<hr />
 		<h2 id="cate5">산미</h2>
@@ -222,153 +222,27 @@ strong {
 
 	<div id="productList">
 		<ul id="productUl">
-			<li id="productLi"><a href="${home}index?formpath=payment">
-				<div class="productBox">
-					<div class="productImgBox">
-						<img alt="영앤도터스 에티오피아 예가체프 게르시 패키지 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/71NsSiFWWotiCs6kvevl3067oEE=/650x650/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210416/209c0a94609448adabc8c84e349f4f94.png"
-						class="productImg">
+            <c:forEach var="store" items="${storeLst }">
+				<li id="productLi"><a href="${home}index?formpath=payment">
+					<div class="productBox">
+						<div class="productImgBox">
+							<img src="https://d3jfjcd8dl9mjz.cloudfront.net/71NsSiFWWotiCs6kvevl3067oEE=/650x650/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210416/209c0a94609448adabc8c84e349f4f94.png"
+							class="productImg">
+						</div>
+						<div class="productGuide">
+							<strong>${store.flavor }</strong><br/>
+							<strong>${store.prodname }</strong><br/>
+							<strong>₩ ${store.price }</strong>
+						</div>
+						<div class="storeBox">
+							<img src="https://d3jfjcd8dl9mjz.cloudfront.net/X4xrt40_YZNnZZ8s8-RMSVHWXx8=/200x200/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210408/675467d771bc4372a3b02d0bd89620b4.png"
+							class="storeImg">
+							<br/>
+							<strong>영앤도터스</strong>
+						</div>
 					</div>
-					<div class="productGuide">
-						<strong>달콤<strong>&amp;</strong>상큼</strong><br/>
-						<strong>에티오피아 예가체프 게르시</strong><br/>
-						<strong>₩22,000</strong>
-					</div>
-					<div class="storeBox">
-						<img alt="roastery 영앤도터스 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/X4xrt40_YZNnZZ8s8-RMSVHWXx8=/200x200/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210408/675467d771bc4372a3b02d0bd89620b4.png"
-						class="storeImg">
-						<br/>
-						<strong>영앤도터스</strong>
-					</div>
-				</div>
-			</a></li>
-			<li id="productLi"><a href="#">
-				<div class="productBox">
-					<div class="productImgBox">
-						<img alt="영앤도터스 에티오피아 예가체프 게르시 패키지 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/71NsSiFWWotiCs6kvevl3067oEE=/650x650/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210416/209c0a94609448adabc8c84e349f4f94.png"
-						class="productImg">
-					</div>
-					<div class="productGuide">
-						<strong>달콤<strong>&amp;</strong>상큼</strong><br/>
-						<strong>에티오피아 예가체프 게르시</strong><br/>
-						<strong>₩22,000</strong>
-					</div>
-					<div class="storeBox">
-						<img alt="roastery 영앤도터스 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/X4xrt40_YZNnZZ8s8-RMSVHWXx8=/200x200/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210408/675467d771bc4372a3b02d0bd89620b4.png"
-						class="storeImg">
-						<br/>
-						<strong>영앤도터스</strong>
-					</div>
-				</div>
-			</a></li> 
-			<li id="productLi"><a href="#">
-				<div class="productBox">
-					<div class="productImgBox">
-						<img alt="영앤도터스 에티오피아 예가체프 게르시 패키지 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/71NsSiFWWotiCs6kvevl3067oEE=/650x650/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210416/209c0a94609448adabc8c84e349f4f94.png"
-						class="productImg">
-					</div>
-					<div class="productGuide">
-						<strong>달콤<strong>&amp;</strong>상큼</strong><br/>
-						<strong>에티오피아 예가체프 게르시</strong><br/>
-						<strong>₩22,000</strong>
-					</div>
-					<div class="storeBox">
-						<img alt="roastery 영앤도터스 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/X4xrt40_YZNnZZ8s8-RMSVHWXx8=/200x200/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210408/675467d771bc4372a3b02d0bd89620b4.png"
-						class="storeImg">
-						<br/>
-						<strong>영앤도터스</strong>
-					</div>
-				</div>
-			</a></li>
-			<li id="productLi"><a href="#">
-				<div class="productBox">
-					<div class="productImgBox">
-						<img alt="영앤도터스 에티오피아 예가체프 게르시 패키지 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/71NsSiFWWotiCs6kvevl3067oEE=/650x650/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210416/209c0a94609448adabc8c84e349f4f94.png"
-						class="productImg">
-					</div>
-					<div class="productGuide">
-						<strong>달콤<strong>&amp;</strong>상큼</strong><br/>
-						<strong>에티오피아 예가체프 게르시</strong><br/>
-						<strong>₩22,000</strong>
-					</div>
-					<div class="storeBox">
-						<img alt="roastery 영앤도터스 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/X4xrt40_YZNnZZ8s8-RMSVHWXx8=/200x200/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210408/675467d771bc4372a3b02d0bd89620b4.png"
-						class="storeImg">
-						<br/>
-						<strong>영앤도터스</strong>
-					</div>
-				</div>
-			</a></li>
-			<li id="productLi"><a href="#">
-				<div class="productBox">
-					<div class="productImgBox">
-						<img alt="영앤도터스 에티오피아 예가체프 게르시 패키지 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/71NsSiFWWotiCs6kvevl3067oEE=/650x650/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210416/209c0a94609448adabc8c84e349f4f94.png"
-						class="productImg">
-					</div>
-					<div class="productGuide">
-						<strong>달콤<strong>&amp;</strong>상큼</strong><br/>
-						<strong>에티오피아 예가체프 게르시</strong><br/>
-						<strong>₩22,000</strong>
-					</div>
-					<div class="storeBox">
-						<img alt="roastery 영앤도터스 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/X4xrt40_YZNnZZ8s8-RMSVHWXx8=/200x200/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210408/675467d771bc4372a3b02d0bd89620b4.png"
-						class="storeImg">
-						<br/>
-						<strong>영앤도터스</strong>
-					</div>
-				</div>
-			</a></li>
-			<li id="productLi"><a href="#">
-				<div class="productBox">
-					<div class="productImgBox">
-						<img alt="영앤도터스 에티오피아 예가체프 게르시 패키지 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/71NsSiFWWotiCs6kvevl3067oEE=/650x650/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210416/209c0a94609448adabc8c84e349f4f94.png"
-						class="productImg">
-					</div>
-					<div class="productGuide">
-						<strong>달콤<strong>&amp;</strong>상큼</strong><br/>
-						<strong>에티오피아 예가체프 게르시</strong><br/>
-						<strong>₩22,000</strong>
-					</div>
-					<div class="storeBox">
-						<img alt="roastery 영앤도터스 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/X4xrt40_YZNnZZ8s8-RMSVHWXx8=/200x200/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210408/675467d771bc4372a3b02d0bd89620b4.png"
-						class="storeImg">
-						<br/>
-						<strong>영앤도터스</strong>
-					</div>
-				</div>
-			</a></li>
-			<li id="productLi"><a href="#">
-				<div class="productBox">
-					<div class="productImgBox">
-						<img alt="영앤도터스 에티오피아 예가체프 게르시 패키지 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/71NsSiFWWotiCs6kvevl3067oEE=/650x650/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210416/209c0a94609448adabc8c84e349f4f94.png"
-						class="productImg">
-					</div>
-					<div class="productGuide">
-						<strong>달콤<strong>&amp;</strong>상큼</strong><br/>
-						<strong>에티오피아 예가체프 게르시</strong><br/>
-						<strong>₩22,000</strong>
-					</div>
-					<div class="storeBox">
-						<img alt="roastery 영앤도터스 이미지"
-						src="https://d3jfjcd8dl9mjz.cloudfront.net/X4xrt40_YZNnZZ8s8-RMSVHWXx8=/200x200/s3.ap-northeast-2.amazonaws.com/koke-uploads/images/20210408/675467d771bc4372a3b02d0bd89620b4.png"
-						class="storeImg">
-						<br/>
-						<strong>영앤도터스</strong>
-					</div>
-				</div>
-			</a></li>			
+				</a></li>
+            </c:forEach>
 		</ul>
 	</div>
 </div>
