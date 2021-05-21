@@ -67,6 +67,10 @@ public class HomeController {
    public String storeMain() {
 	   return "store/storeMain"; 
    }
+   @RequestMapping(value = "/payment")
+   public String payment() {
+	   return "store/payment"; 
+   }
    @RequestMapping(value = "/status")
    public String status() {
 	   return "status/statusForm"; 
