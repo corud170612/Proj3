@@ -222,7 +222,7 @@ strong {
 
 	<div id="productList">
 		<ul id="productUl">
-			<li id="productLi"><a href="#">
+			<li id="productLi"><a href="${home}index?formpath=payment">
 				<div class="productBox">
 					<div class="productImgBox">
 						<img alt="영앤도터스 에티오피아 예가체프 게르시 패키지 이미지"
