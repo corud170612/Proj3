@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jjjh.Product.ProductDao">
+<insert id="ProductProc" parameterType="com.jjjh.Product.Product">
+INSERT INTO PRODREGIS
+    (PRODNAME,  PRODIMG1, PRODIMG2, PRODINTRO, CAFFEINE, DRIP, HEAVY, FLAVOR, ACIDITY, ORIGIN, PRICE, PRICERANGE, BID, STORENAME)
+VALUES
+    (#{prodName, jdbcType=VARCHAR}, #{drip, jdbcType=VARCHAR}, 
+    #{drip, jdbcType=VARCHAR}, #{prodIntro, jdbcType=VARCHAR}, 
+    #{caffeine, jdbcType=VARCHAR}, #{drip, jdbcType=VARCHAR}, 
+    #{body, jdbcType=VARCHAR}, #{flavor, jdbcType=VARCHAR}, 
+    #{acidity, jdbcType=VARCHAR}, #{origin, jdbcType=VARCHAR}, 
+    #{price, jdbcType=VARCHAR}, #{pricerange, jdbcType=VARCHAR}, 
+    #{bid, jdbcType=VARCHAR}, #{storename, jdbcType=VARCHAR})
+</insert>
+<update id="AttachFile" parameterType="Map">
+UPDATE PRODREGIS SET PRODIMG1 = #{prodimg1, jdbcType=VARCHAR}, PRODIMG2 = #{prodimg2, jdbcType=VARCHAR} 
+WHERE PRODNAME = #{prodName, jdbcType=VARCHAR}
+</update>
+<select id="TakeStorename" parameterType="String" resultType="String">
+select storename from bmember
+where bid = #{businessid, jdbcType=VARCHAR}
+</select>
+
+</mapper>
