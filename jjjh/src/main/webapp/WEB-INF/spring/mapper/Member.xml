@@ -2,9 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jjjh.Member.IMemberDao">
 <insert id="BmemberProc" parameterType="com.jjjh.Member.Bmember">
-insert into bmember(id, pw, name, store, zipcode, num, storeAddr)
-values (#{bid}, #{bpw}, #{name}, #{store}, #{zipcode}, #{num}, #{storeAddr})</insert>
+insert into bmember(BID, BPW, BNAME, STORENAME, STORELOGO1, STORELOGO2, STOREINTRO, STOREPH, STOREZIPCODE, STOREADDR)
+values (#{bid}, #{bpw}, #{bname}, #{storename}, #{bid}, #{bid}, #{storeintro}, #{storeph}, #{storezipcode}, #{storeAddr})
+</insert>
+<update id="UploadLogo" parameterType="Map">
+UPDATE bmember SET STORELOGO1 = #{storelogo1}, storeLogo2 = #{storelogo2}
+WHERE storename = #{storename}
+
+</update>
 <insert id="CmemberProc" parameterType="com.jjjh.Member.Cmember">
 insert into cmember(id, pw, name, ph, zipcode, address, cardnumber, bank, expirationdate)
-values (#{cid}, #{cpw}, #{name}, #{ph}, #{zipcode}, #{address}, #{cardnumber}, #{bank}, #{expirationdate})</insert>
+values (#{cid}, #{cpw}, #{name}, #{ph}, #{zipcode}, #{address}, #{cardnumber}, #{bank}, #{expirationdate})
+</insert>
 </mapper>

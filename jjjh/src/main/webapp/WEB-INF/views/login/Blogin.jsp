@@ -45,7 +45,7 @@
 				    box-sizing: border-box;
 				    margin-top: 8px;
 				    margin-bottom: 8px;">
-		                    <input _type="text" name="Bid" id="user_id" formcontrolname="user_id" placeholder="아이디" autocorrect="off" autocapitalize="none" class="ng-pristine ng-invalid ng-touched" style="
+		                    <input _type="text" name="bid" id="user_id" formcontrolname="user_id" placeholder="아이디" autocorrect="off" autocapitalize="none" class="ng-pristine ng-invalid ng-touched" style="
 							margin: 0;
 						    appearance: none;
 						    vertical-align: top;
@@ -72,7 +72,7 @@
 				    box-sizing: border-box;
 				    margin-top: 8px;
 				    margin-bottom: 8px;">
-		    			<input _type="password" name="Bpw" id="user_password" formcontrolname="user_password" placeholder="비밀번호" class="ng-untouched ng-pristine ng-invalid" style="
+		    			<input _type="password" name="bpw" id="user_password" formcontrolname="user_password" placeholder="비밀번호" class="ng-untouched ng-pristine ng-invalid" style="
 						margin: 0;
 					    appearance: none;
 					    vertical-align: top;

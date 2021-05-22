@@ -4,13 +4,13 @@
 <select id="BloginProc" parameterType="com.jjjh.Member.Bmember" resultType="int">
 	SELECT COUNT(*)
 	FROM bmember
-	WHERE id=#{bid, jdbcType=VARCHAR}
-	AND pw=#{bpw, jdbcType=VARCHAR}
+	WHERE bid=#{bid, jdbcType=VARCHAR}
+	AND bpw=#{bpw, jdbcType=VARCHAR}
 </select>
 <select id="CloginProc" parameterType="com.jjjh.Member.Cmember" resultType="int">
 	SELECT COUNT(*)
 	FROM cmember
-	WHERE id=#{cid, jdbcType=VARCHAR}
-	AND pw=#{cpw, jdbcType=VARCHAR}
+	WHERE cid=#{cid, jdbcType=VARCHAR}
+	AND cpw=#{cpw, jdbcType=VARCHAR}
 </select>
 </mapper>

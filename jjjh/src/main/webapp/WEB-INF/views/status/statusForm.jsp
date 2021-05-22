@@ -154,6 +154,7 @@ tr:hover {
                <td><label>구매자 주소</label></td>
                <td><label>구독 원두용량</label></td>
                <td><label>브랜드</label></td>
+               <td><label>분쇄유무</label></td>
                <td><label>처리 상태</label></td>
                <td><label>상태변경</label></td>
             </tr>
@@ -161,12 +162,13 @@ tr:hover {
             <tr>
                <td><label>${status.no }</label></td>
                <td><label>${status.prodname }</label></td>
-               <td><label>\ ${status.prodprice }</label></td>
+               <td><label>\ ${status.price }</label></td>
                <td><label>${status.submon } 개월</label></td>
-               <td><label>${status.name }</label></td>
-               <td><label>${status.address }</label></td>
-               <td><label>${status.volume } g</label></td>
-               <td><label>${status.store }</label></td>
+               <td><label>${status.cid }</label></td>
+               <td><label>${status.caddr }</label></td>
+               <td><label>${status.subvol } g</label></td>
+               <td><label>${status.storename }</label></td>
+               <td><label>${status.grinding }</label></td>
                <td><label>${status.condition }</label></td>
                <td><button>완료</button></td>
             </tr>

@@ -62,7 +62,8 @@ tr {
 
 
 </style>
-<form action="${home }membership/BmemberProc">
+
+
 <script type="text/javascript">
 function openAuth(cmd){
 	window.name="인증";
@@ -129,66 +130,96 @@ function openAuth(cmd){
         }).open();
     }
 </script>
+   <script>
+      function setThumbnail(event) {
+         var reader = new FileReader();
+         reader.onload = function(event) {
+            var img = document.createElement("img");
+            img.setAttribute("src", event.target.result);
+            document.querySelector("div#image_container").appendChild(img);
+         };
+         reader.readAsDataURL(event.target.files[0]);
+      }
+   </script>
+   
+<form action="${home }membership/BmemberProc" enctype="multipart/form-data" method="post">
 <div style="margin-top: 150px; margin-bottom: 250px;">
 <p style="text-align: center;">Create an account</p>
 <br><br><br>
 
 <center>
-<table>
-<tr>
-<td colspan="2"><hr/>
-</td>
-</tr>
-<tr>
-<td colspan="2"><p style="margin-left: 180px;">아이디</p ></td>
-</tr>
-<tr >
-<td colspan="2"><input type="text" name="bid" style="width: 360px; margin-left: 180px;"></td>
-</tr>
-<tr>
-<td colspan="2"><p style="margin-left: 180px;">비밀번호</p></td>
-</tr>
-<tr>
-<td colspan="2"><input type="password" name="bpw" style="width: 360px; margin-left: 180px;"></td>
-</tr>
-<tr>
-<td colspan="2"><hr/>
-</td>
-
-<tr>
-<td><p>상호명</p></td>
-<td><p>대표자 이름</p></td>
-</tr>
-<tr>
-<td><input type="text" name="store" style="width: 360px; "></td>
-<td><input type="text" name="name" style="width: 360px; "></td>
-</tr>
-<tr>
-<td><p>매장 주소</p></td>
-<td><p>매장 전화번호</p></td>
-</tr>
-<tr>
-<td><input type="text" name="storeAddr" style="width: 360px; "></td>
-<td><input type="text" name="num" style="width: 360px; "></td>
-</tr>
-<tr>
-<td colspan="2"><p style=" margin-left: 180px;">매장 우편번호</p>
-</td>
-</tr>
-<tr>
-<td colspan="2"><input type="text" name="zipcode" style="width: 360px;  margin-left: 180px;"></td>
-</td>
-</tr>
-<tr>
-<td colspan="2"><input type="button" onclick="sample4_execDaumPostcode()" style="margin-left: 280px;" id="selectZipcode" value="우편번호 찾기">
-</td>
-</tr>
-<tr>
-<td colspan="2"><hr/>
-</td>
-</tr>
-</table>
-</center>
+			<table>
+				<tr>
+					<td colspan="2"><hr /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p style="margin-left: 180px;">아이디</p></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="text" name="bid"
+						style="width: 360px; margin-left: 180px;"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p style="margin-left: 180px;">비밀번호</p></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="password" name="bpw"
+						style="width: 360px; margin-left: 180px;"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><hr /></td>
+				<tr>
+					<td><p>상호명</p></td>
+					<td><p>대표자 이름</p></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="storename" style="width: 360px;"></td>
+					<td><input type="text" name="bname" style="width: 360px;"></td>
+				</tr>
+				<tr>
+					<td><p>매장 주소</p></td>
+					<td><p>매장 전화번호</p></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="storeAddr" style="width: 360px;"></td>
+					<td><input type="text" name="storeph" style="width: 360px;"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p style="margin-left: 180px;">매장 우편번호</p></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="text" name="storezipcode"
+						style="width: 360px; margin-left: 180px;"></td>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="button"
+						onclick="sample4_execDaumPostcode()" style="margin-left: 280px;"
+						id="selectZipcode" value="우편번호 찾기"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><hr /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p>브랜드 소개</p></td>
+				</tr>
+				<tr>
+					<td colspan="2"><textarea name="storeintro"
+						style="width: 720px; height: 300px;"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p style="margin-left: 180px;">브랜드 로고</p></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="file" name="storelogo2"
+						style="width: 360px; margin-left: 180px; color: white;" onchange="setThumbnail(event);" ></td>
+				</tr>
+				<tr>
+					<td colspan="2" ><div id="image_container" ></div></td>
+				</tr>
+				
+			</table>
+		</center>
 
 <div style="margin-top: 20px; position: absolute; left: 50%; margin-left: -175px;">
 <input type="button" id="authBtn" style="margin-right: 13px;" onclick="openAuth('${home}membership/authForm');" value="인증하기">

@@ -418,7 +418,7 @@ h4{
    <div class="child">
    <h4>상품 이미지 등록 </h4> 
       <div id="image_container"></div>
-      <input type="file"  id="image" accept="image/*" onchange="setThumbnail(event);" /> <br /> <br /> <br />
+      <input type="file"  id="image" accept="image/*" onchange="setThumbnail(event);" accept="image/*"/> <br /> <br /> <br />
    </div>
 
    <div class="child">

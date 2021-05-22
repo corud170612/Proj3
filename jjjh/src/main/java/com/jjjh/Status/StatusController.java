@@ -24,6 +24,7 @@ public class StatusController {
    @RequestMapping(value = "/statusProc")
    public String statusProc(Model model, HttpSession session) {
       String bid = (String)session.getAttribute("bid");
+      logger.warn(bid);
       int number = iStatusServ.searchNum(bid);
       List<Sale>saleLst= iStatusServ.getList(bid);
       model.addAttribute("saleLst", saleLst);
@@ -38,6 +39,7 @@ public class StatusController {
       List<Sale>saleLst=iStatusServ.ConditionSearch(searchCondition);
       model.addAttribute("saleLst", saleLst);
       int searchNum = iStatusServ.searchNum(searchCondition);
+      model.addAttribute("searchNum", searchNum);
       return "forward:/index?formpath=status";
    }
 

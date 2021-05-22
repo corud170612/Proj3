@@ -3,26 +3,26 @@
 <mapper namespace="com.jjjh.Status.IStatusDao">
 <select id="getList" parameterType="String" resultType="com.jjjh.Status.Sale">
    SELECT *
-   FROM sale
-   WHERE id=#{bid}
+   FROM SALESTATE
+   WHERE bid=#{bid}
 </select>
 <select id="searchNum" parameterType="String" resultType="int">
    SELECT count(*)
-   FROM sale
-   WHERE id=#{bid}
+   FROM SALESTATE
+   WHERE bid=#{bid}
 </select>
 <select id="ConditionSearch" parameterType="com.jjjh.Status.SearchCondition" resultType="com.jjjh.Status.Sale">
    SELECT *
-   FROM sale
-   WHERE id=#{bid}
+   FROM SALESTATE
+   WHERE bid=#{bid}
    and prodname=#{searchProd }
    and condition=#{process}
    and submon=#{month}
 </select>
 <select id="searchNum2" parameterType="com.jjjh.Status.SearchCondition" resultType="int">
    SELECT count(*)
-   FROM sale
-   WHERE id=#{bid}
+   FROM SALESTATE
+   WHERE bid=#{bid}
    and prodname=#{searchProd }
    and condition=#{process}
    and submon=#{month}

@@ -1,6 +1,8 @@
 package com.jjjh.Member;
 
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,8 +41,16 @@ public class MemberController {
 		return "member/authForm";
 	}
 	@RequestMapping(value = "/BmemberProc")
-	public String BmemberProc(Bmember bmember) {
-		iMemberServ.BmemberProc(bmember);
+	public String BmemberProc(Bmember bmember, HttpServletRequest request) {
+		logger.warn(bmember.getBid());
+		logger.warn(bmember.getBpw());
+		logger.warn(bmember.getBname());
+		logger.warn(bmember.getStoreAddr());
+		logger.warn(bmember.getStoreintro());
+		logger.warn(bmember.getStorename());
+		logger.warn(bmember.getStoreph());
+		logger.warn(bmember.getStorezipcode());
+		iMemberServ.BmemberProc(bmember, request);
 		return "forward:/index?formpath=Blogin";
 	}
 	@RequestMapping(value = "/CmemberProc")

@@ -4,77 +4,62 @@ package com.jjjh.Member;
 public class Bmember {
 
 	 private String bid;
-	
-
 	 private String bpw;
-	
 
-	 private String name;
-	
-
-	 private String store;
-	
-
-	 private String zipcode;
-	
-
-	 private String num;
+	 private String bname;
+	 private String storename;
+	 private String storezipcode;
+	 private String storeph;
 	 private String storeAddr;
-
-	public String getStoreAddr() {
-		return storeAddr;
-	}
-
-	public void setStoreAddr(String storeAddr) {
-		this.storeAddr = storeAddr;
-	}
-
+	 private String storeintro;
 	public String getBid() {
 		return bid;
 	}
-
 	public void setBid(String bid) {
 		this.bid = bid;
 	}
-
 	public String getBpw() {
 		return bpw;
 	}
-
 	public void setBpw(String bpw) {
 		this.bpw = bpw;
 	}
 
-	public String getName() {
-		return name;
+	public String getBname() {
+		return bname;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setBname(String bname) {
+		this.bname = bname;
 	}
-
-	public String getStore() {
-		return store;
+	public String getStorename() {
+		return storename;
 	}
-
-	public void setStore(String store) {
-		this.store = store;
+	public void setStorename(String storename) {
+		this.storename = storename;
 	}
-
-	public String getZipcode() {
-		return zipcode;
+	public String getStorezipcode() {
+		return storezipcode;
 	}
-
-	public void setZipcode(String zipcode) {
-		this.zipcode = zipcode;
+	public void setStorezipcode(String storezipcode) {
+		this.storezipcode = storezipcode;
 	}
-
-	public String getNum() {
-		return num;
+	public String getStoreph() {
+		return storeph;
 	}
-
-	public void setNum(String num) {
-		this.num = num;
+	public void setStoreph(String storeph) {
+		this.storeph = storeph;
+	}
+	public String getStoreAddr() {
+		return storeAddr;
+	}
+	public void setStoreAddr(String storeAddr) {
+		this.storeAddr = storeAddr;
+	}
+	public String getStoreintro() {
+		return storeintro;
+	}
+	public void setStoreintro(String storeintro) {
+		this.storeintro = storeintro;
 	}
 
 	
