@@ -54,14 +54,14 @@ $(document).ready(function(){
     $("#choice1").css("background", "white");
     $("#choice2").css("color", "white");
     $("#choice2").css("background", "black");
-    sessionStorage
-    location.href="TasteTestController.java";
+    $("#test1").attr("value","카페인");
   });
   $("#choice2").click(function(){
        $("#choice2").css("color", "black");
        $("#choice2").css("background", "white");
        $("#choice1").css("color", "white");
        $("#choice1").css("background", "black");
+       $("#test1").attr("value","디카페인");
      });
 });
 </script>
@@ -78,7 +78,7 @@ $(document).ready(function(){
 </div><br/>
 <strong>커피 큐레이션을<br/> 계속 진행할게요</strong>
 </div>
-
+<input type="hidden" id="test1" name="test1"/>
 
 <div style="text-align: center;">
 <div class="choice" id="choice2">디카페인</div><br/>

@@ -99,13 +99,13 @@ public class HomeController {
    public String tasteTest6() {
       return "tasteTest/tasteTestForm6"; 
    }
-   @RequestMapping(value = "/tasteTestForm7")
-   public String tasteTest7() {
-      return "tasteTest/tasteTestForm7"; 
-   }
+
    @RequestMapping(value = "/testSucessForm")
    public String testSucessForm() {
       return "tasteTest/testSucessForm"; 
    }
-   
+   @RequestMapping(value = "/subComplete")
+   public String subComplete() {
+      return "store/subComplete"; 
+   }
 }

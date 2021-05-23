@@ -69,138 +69,145 @@ strong {
 <script>
 $(document).ready(function(){
   $("#choice1").click(function(){
-		$("#taste1").hide();
-		$("#choice1").append(" <b id='b1'>Drip Bag</b>");
-	    $("#choice1").css("background", "black");
-	    
-	    $("#taste2").show();
-	    $("#b2").remove();
-	    $("#choice2").css("background", "white");
-	    $("#taste3").show();
-	    $("#b3").remove();
-	    $("#choice3").css("background", "white");
-	    $("#taste4").show();
-	    $("#b4").remove();
-	    $("#choice4").css("background", "white");
-	    $("#taste5").show();
-	    $("#b5").remove();
-	    $("#choice5").css("background", "white");
-	    $("#taste6").show();
-	    $("#b6").remove();
-	    $("#choice6	").css("background", "white");
+      $("#taste1").hide();
+      $("#choice1").append(" <b id='b1'>Drip Bag</b>");
+       $("#choice1").css("background", "black");
+       
+       $("#taste2").show();
+       $("#b2").remove();
+       $("#choice2").css("background", "white");
+       $("#taste3").show();
+       $("#b3").remove();
+       $("#choice3").css("background", "white");
+       $("#taste4").show();
+       $("#b4").remove();
+       $("#choice4").css("background", "white");
+       $("#taste5").show();
+       $("#b5").remove();
+       $("#choice5").css("background", "white");
+       $("#taste6").show();
+       $("#b6").remove();
+       $("#choice6   ").css("background", "white");
+       $("#test1").attr("value","드립백");
   });
   $("#choice2").click(function(){
-		$("#taste2").hide();
-		$("#choice2").append(" <b id='b2'>Coffee Maker</b>");
-	    $("#choice2").css("background", "black");
-	    
-	    $("#taste1").show();
-	    $("#b1").remove();
-	    $("#choice1").css("background", "white");
-	    $("#taste3").show();
-	    $("#b3").remove();
-	    $("#choice3").css("background", "white");
-	    $("#taste4").show();
-	    $("#b4").remove();
-	    $("#choice4").css("background", "white");
-	    $("#taste5").show();
-	    $("#b5").remove();
-	    $("#choice5").css("background", "white");
-	    $("#taste6").show();
-	    $("#b6").remove();
-	    $("#choice6").css("background", "white");
+      $("#taste2").hide();
+      $("#choice2").append(" <b id='b2'>Coffee Maker</b>");
+       $("#choice2").css("background", "black");
+       
+       $("#taste1").show();
+       $("#b1").remove();
+       $("#choice1").css("background", "white");
+       $("#taste3").show();
+       $("#b3").remove();
+       $("#choice3").css("background", "white");
+       $("#taste4").show();
+       $("#b4").remove();
+       $("#choice4").css("background", "white");
+       $("#taste5").show();
+       $("#b5").remove();
+       $("#choice5").css("background", "white");
+       $("#taste6").show();
+       $("#b6").remove();
+       $("#choice6").css("background", "white");
+       $("#test1").attr("value","커피메이커");
      });
   $("#choice3").click(function(){
-		$("#taste3").hide();
-		$("#choice3").append(" <b id='b3'>Hand drip</b>");
-	    $("#choice3").css("background", "black");
-	    
-	    $("#taste2").show();
-	    $("#b2").remove();
-	    $("#choice2").css("background", "white");
-	    $("#taste1").show();
-	    $("#b1").remove();
-	    $("#choice1").css("background", "white");
-	    $("#taste4").show();
-	    $("#b4").remove();
-	    $("#choice4").css("background", "white");
-	    $("#taste5").show();
-	    $("#b5").remove();
-	    $("#choice5").css("background", "white");
-	    $("#taste6").show();
-	    $("#b6").remove();
-	    $("#choice6").css("background", "white");
+      $("#taste3").hide();
+      $("#choice3").append(" <b id='b3'>Hand drip</b>");
+       $("#choice3").css("background", "black");
+       
+       $("#taste2").show();
+       $("#b2").remove();
+       $("#choice2").css("background", "white");
+       $("#taste1").show();
+       $("#b1").remove();
+       $("#choice1").css("background", "white");
+       $("#taste4").show();
+       $("#b4").remove();
+       $("#choice4").css("background", "white");
+       $("#taste5").show();
+       $("#b5").remove();
+       $("#choice5").css("background", "white");
+       $("#taste6").show();
+       $("#b6").remove();
+       $("#choice6").css("background", "white");
+       $("#test1").attr("value","핸드드립");
      });
   $("#choice4").click(function(){
-		$("#taste4").hide();
-		$("#choice4").append(" <b id='b4'>Espresso</b>");
-	    $("#choice4").css("background", "black");
-	    
-	    $("#taste2").show();
-	    $("#b2").remove();
-	    $("#choice2").css("background", "white");
-	    $("#taste3").show();
-	    $("#b3").remove();
-	    $("#choice3").css("background", "white");
-	    $("#taste1").show();
-	    $("#b1").remove();
-	    $("#choice1").css("background", "white");
-	    $("#taste5").show();
-	    $("#b5").remove();
-	    $("#choice5").css("background", "white");
-	    $("#taste6").show();
-	    $("#b6").remove();
-	    $("#choice6").css("background", "white");
+      $("#taste4").hide();
+      $("#choice4").append(" <b id='b4'>Espresso</b>");
+       $("#choice4").css("background", "black");
+       
+       $("#taste2").show();
+       $("#b2").remove();
+       $("#choice2").css("background", "white");
+       $("#taste3").show();
+       $("#b3").remove();
+       $("#choice3").css("background", "white");
+       $("#taste1").show();
+       $("#b1").remove();
+       $("#choice1").css("background", "white");
+       $("#taste5").show();
+       $("#b5").remove();
+       $("#choice5").css("background", "white");
+       $("#taste6").show();
+       $("#b6").remove();
+       $("#choice6").css("background", "white");
+       $("#test1").attr("value","에스프레소머신");
      });
   $("#choice5").click(function(){
-		$("#taste5").hide();
-		$("#choice5").append(" <b id='b5'>Moka pot</b>");
-	    $("#choice5").css("background", "black");
-	    
-	    $("#taste2").show();
-	    $("#b2").remove();
-	    $("#choice2").css("background", "white");
-	    $("#taste3").show();
-	    $("#b3").remove();
-	    $("#choice3").css("background", "white");
-	    $("#taste4").show();
-	    $("#b4").remove();
-	    $("#choice4").css("background", "white");
-	    $("#taste1").show();
-	    $("#b1").remove();
-	    $("#choice1").css("background", "white");
-	    $("#taste6").show();
-	    $("#b6").remove();
-	    $("#choice6").css("background", "white");
+      $("#taste5").hide();
+      $("#choice5").append(" <b id='b5'>Moka pot</b>");
+       $("#choice5").css("background", "black");
+       
+       $("#taste2").show();
+       $("#b2").remove();
+       $("#choice2").css("background", "white");
+       $("#taste3").show();
+       $("#b3").remove();
+       $("#choice3").css("background", "white");
+       $("#taste4").show();
+       $("#b4").remove();
+       $("#choice4").css("background", "white");
+       $("#taste1").show();
+       $("#b1").remove();
+       $("#choice1").css("background", "white");
+       $("#taste6").show();
+       $("#b6").remove();
+       $("#choice6").css("background", "white");
+       $("#test1").attr("value","모카포트");
      });
   $("#choice6").click(function(){
-		$("#taste6").hide();
-		$("#choice6").append(" <b id='b6'>No Tool</b>");
-	    $("#choice6").css("background", "black");
-	    
-	    $("#taste2").show();
-	    $("#b2").remove();
-	    $("#choice2").css("background", "white");
-	    
-	    $("#taste3").show();
-	    $("#b3").remove();
-	    $("#choice2").css("background", "white");
-	    
-	    $("#taste4").show();
-	    $("#b4").remove();
-	    $("#choice4").css("background", "white");
-	    $("#taste5").show();
-	    $("#b5").remove();
-	    $("#choice5").css("background", "white");
-	    $("#taste1").show();
-	    $("#b1").remove();
-	    $("#choice1").css("background", "white");
+      $("#taste6").hide();
+      $("#choice6").append(" <b id='b6'>No Tool</b>");
+       $("#choice6").css("background", "black");
+       
+       $("#taste2").show();
+       $("#b2").remove();
+       $("#choice2").css("background", "white");
+       
+       $("#taste3").show();
+       $("#b3").remove();
+       $("#choice2").css("background", "white");
+       
+       $("#taste4").show();
+       $("#b4").remove();
+       $("#choice4").css("background", "white");
+       $("#taste5").show();
+       $("#b5").remove();
+       $("#choice5").css("background", "white");
+       $("#taste1").show();
+       $("#b1").remove();
+       $("#choice1").css("background", "white");
+       $("#test1").attr("value","기구없음");
      });
 
   
 });
 </script>
 <form action="${home }tasteTest/tasteTestForm3">
+<input type="hidden" id="test1" name="test1"/>
 <br><br><br><br><br><br><br><br><br><br>
 <div>
 <p style="font-size: 30px; text-align: center; color: #fff;">어떤 방식으로 내려 드실건가요?</p>

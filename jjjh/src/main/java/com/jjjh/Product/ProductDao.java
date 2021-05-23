@@ -10,5 +10,7 @@ public interface ProductDao {
 
    public String TakeStorename(String bid);
 
+public Logoimg getStrorlogo(String bid);
+
 
 }

@@ -3,8 +3,30 @@
 <mapper namespace="com.jjjh.Store.IStoreDao">
 
 <select id="getProdList" resultType="com.jjjh.Store.ProdRegis">
-	SELECT * 
-	FROM prodregis 
+   SELECT * 
+   FROM prodregis
+</select>
+
+<select id="getBmemberList" parameterType="String" resultType="com.jjjh.Store.StoreDTO">
+   SELECT bmember.bid, bmember.storename, bmember.storelogo1, bmember.storelogo2, bmember.storeintro, bmember.storeph, bmember.storeaddr, prodregis.prodintro  
+   FROM bmember,prodregis 
+   WHERE bmember.bid=prodregis.bid
+   AND prodregis.prodname=#{prodname}
+</select>
+<select id="getprodimg1" parameterType="String" resultType="String">
+	select prodimg1 from prodregis
+	where prodname = #{prodname}
+</select>
+<select id="getProdList2" parameterType="String" resultType="com.jjjh.Store.ProdDTO">
+   SELECT prodname, flavor, price 
+   FROM prodregis 
+   WHERE prodname=#{prodname} 
+</select>
+
+<select id="getCaddr" parameterType="String" resultType="com.jjjh.Store.SaleDTO">
+   SELECT caddr 
+   FROM cmember 
+   WHERE cid=#{cid}
 </select>
 
 </mapper>

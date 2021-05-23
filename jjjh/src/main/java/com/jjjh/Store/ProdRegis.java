@@ -1,13 +1,18 @@
 package com.jjjh.Store;
-
 //제품등록 
 public class ProdRegis {
 
  // 제품명 
  private String prodname;
 
- // 제품이미지 
- private String prodimg;
+ // 제품이미지1 
+ private String prodimg1;
+
+ // 제품이미지2 
+ private String prodimg2;
+
+ // 제품소개 
+ private String prodintro;
 
  // 카페인 
  private String caffeine;
@@ -16,7 +21,7 @@ public class ProdRegis {
  private String drip;
 
  // 무게감 
- private String body;
+ private String heavy;
 
  // 맛과향 
  private String flavor;
@@ -33,110 +38,143 @@ public class ProdRegis {
  // 가격대 
  private String pricerange;
 
- // 제품소개 
- private String introduce;
+ // 사업자등록번호 
+ private String bid;
 
- public String getProdname() {
-     return prodname;
- }
+ // 가게 이름 
+ private String storename;
+ 
+ private String storelogo1;
+ 
+ private String storelogo2;
 
- public void setProdname(String prodname) {
-     this.prodname = prodname;
- }
+public String getProdname() {
+	return prodname;
+}
 
- public String getProdimg() {
-     return prodimg;
- }
+public void setProdname(String prodname) {
+	this.prodname = prodname;
+}
 
- public void setProdimg(String prodimg) {
-     this.prodimg = prodimg;
- }
+public String getProdimg1() {
+	return prodimg1;
+}
 
- public String getCaffeine() {
-     return caffeine;
- }
+public void setProdimg1(String prodimg1) {
+	this.prodimg1 = prodimg1;
+}
 
- public void setCaffeine(String caffeine) {
-     this.caffeine = caffeine;
- }
+public String getProdimg2() {
+	return prodimg2;
+}
 
- public String getDrip() {
-     return drip;
- }
+public void setProdimg2(String prodimg2) {
+	this.prodimg2 = prodimg2;
+}
 
- public void setDrip(String drip) {
-     this.drip = drip;
- }
+public String getProdintro() {
+	return prodintro;
+}
 
- public String getBody() {
-     return body;
- }
+public void setProdintro(String prodintro) {
+	this.prodintro = prodintro;
+}
 
- public void setBody(String body) {
-     this.body = body;
- }
+public String getCaffeine() {
+	return caffeine;
+}
 
- public String getFlavor() {
-     return flavor;
- }
+public void setCaffeine(String caffeine) {
+	this.caffeine = caffeine;
+}
 
- public void setFlavor(String flavor) {
-     this.flavor = flavor;
- }
+public String getDrip() {
+	return drip;
+}
 
- public String getAcidity() {
-     return acidity;
- }
+public void setDrip(String drip) {
+	this.drip = drip;
+}
 
- public void setAcidity(String acidity) {
-     this.acidity = acidity;
- }
+public String getHeavy() {
+	return heavy;
+}
 
- public String getOrigin() {
-     return origin;
- }
+public void setHeavy(String heavy) {
+	this.heavy = heavy;
+}
 
- public void setOrigin(String origin) {
-     this.origin = origin;
- }
+public String getFlavor() {
+	return flavor;
+}
 
- public String getPrice() {
-     return price;
- }
+public void setFlavor(String flavor) {
+	this.flavor = flavor;
+}
 
- public void setPrice(String price) {
-     this.price = price;
- }
+public String getAcidity() {
+	return acidity;
+}
 
- public String getPricerange() {
-     return pricerange;
- }
+public void setAcidity(String acidity) {
+	this.acidity = acidity;
+}
 
- public void setPricerange(String pricerange) {
-     this.pricerange = pricerange;
- }
+public String getOrigin() {
+	return origin;
+}
 
- public String getIntroduce() {
-     return introduce;
- }
+public void setOrigin(String origin) {
+	this.origin = origin;
+}
 
- public void setIntroduce(String introduce) {
-     this.introduce = introduce;
- }
+public String getPrice() {
+	return price;
+}
 
- // Prodregis 모델 복사
- public void CopyData(ProdRegis param)
- {
-     this.prodname = param.getProdname();
-     this.prodimg = param.getProdimg();
-     this.caffeine = param.getCaffeine();
-     this.drip = param.getDrip();
-     this.body = param.getBody();
-     this.flavor = param.getFlavor();
-     this.acidity = param.getAcidity();
-     this.origin = param.getOrigin();
-     this.price = param.getPrice();
-     this.pricerange = param.getPricerange();
-     this.introduce = param.getIntroduce();
- }
+public void setPrice(String price) {
+	this.price = price;
+}
+
+public String getPricerange() {
+	return pricerange;
+}
+
+public void setPricerange(String pricerange) {
+	this.pricerange = pricerange;
+}
+
+public String getBid() {
+	return bid;
+}
+
+public void setBid(String bid) {
+	this.bid = bid;
+}
+
+public String getStorename() {
+	return storename;
+}
+
+public void setStorename(String storename) {
+	this.storename = storename;
+}
+
+public String getStorelogo1() {
+	return storelogo1;
+}
+
+public void setStorelogo1(String storelogo1) {
+	this.storelogo1 = storelogo1;
+}
+
+public String getStorelogo2() {
+	return storelogo2;
+}
+
+public void setStorelogo2(String storelogo2) {
+	this.storelogo2 = storelogo2;
+}
+
+
 }

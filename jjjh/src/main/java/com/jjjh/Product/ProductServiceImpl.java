@@ -12,6 +12,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -22,11 +24,15 @@ public class ProductServiceImpl implements IProductServ {
    @Autowired
    private ProductDao productDao;
    private final String UPLOADPATH = "/resources/upload/";
-
+   private static final Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
    @Override
    public void ProductProc(Product product, HttpServletRequest request) {
+     
+      Logoimg logoimg = productDao.getStrorlogo(product.getBid());
+      product.setStorelogo1(logoimg.getStorelogo1());
+      product.setStorelogo2(logoimg.getStorelogo2());
+
       productDao.ProductProc(product);
-      
 
          List<Map<String, String>> fileLst = Upload(request);
          

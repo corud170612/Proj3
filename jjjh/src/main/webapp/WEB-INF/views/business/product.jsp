@@ -403,7 +403,7 @@ h4{
          $("#3won").css("background", "white")
          $("#4won").css("background", "white")
          $("#5won").css("background", "white")
-         $("#won1").attr("value", "1만원이하")
+         $("#won1").attr("value", "만원이하")
 
       });
       $("#2won").click(function() {

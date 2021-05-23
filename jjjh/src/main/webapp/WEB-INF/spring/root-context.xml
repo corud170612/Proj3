@@ -48,6 +48,11 @@
    p:mapperInterface="com.jjjh.Product.ProductDao"
    p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
    
+      	<bean class="org.mybatis.spring.mapper.MapperFactoryBean"
+   id="TestMapperFactoryBean"
+   p:mapperInterface="com.jjjh.TasteTest.TasteTestDao"
+   p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
+   
    	<bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 	id="multipartResolver"
 	p:maxInMemorySize="100000000"

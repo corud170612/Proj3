@@ -62,15 +62,15 @@ strong {
 
 }
 b {
-	color: #fff;
+   color: #fff;
 }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
   $("#taste1").click(function(){
-	$("#taste1").hide();
-	$("#choice1").append(" <b id='b1'>Chocolate</b>");
+   $("#taste1").hide();
+   $("#choice1").append(" <b id='b1'>Chocolate</b>");
     $("#choice1").css("background", "black");
     
     $("#taste2").show();
@@ -85,81 +85,84 @@ $(document).ready(function(){
     $("#taste5").show();
     $("#b5").remove();
 
-
+    $("#test1").attr("value","초콜릿");
    
   });
   $("#taste2").click(function(){
-		$("#taste2").hide();
-		$("#choice2").append(" <b id='b2'>Dried fruit</b>");
-	    $("#choice2").css("background", "black");
-	    
-	    $("#taste1").show();
-	    $("#b1").remove();
-	    
-	    $("#taste3").show();
-	    $("#b3").remove();
-	    
-	    $("#taste4").show();
-	    $("#b4").remove();
-	    
-	    $("#taste5").show();
-	    $("#b5").remove();
+      $("#taste2").hide();
+      $("#choice2").append(" <b id='b2'>Dried fruit</b>");
+       $("#choice2").css("background", "black");
+       
+       $("#taste1").show();
+       $("#b1").remove();
+       
+       $("#taste3").show();
+       $("#b3").remove();
+       
+       $("#taste4").show();
+       $("#b4").remove();
+       
+       $("#taste5").show();
+       $("#b5").remove();
+       
+       $("#test1").attr("value","말린과일");
 
      });
   $("#taste3").click(function(){
-		$("#taste3").hide();
-		$("#choice3").append(" <b id='b3'>Sweet</b>");
-	    $("#choice3").css("background", "black");
-	    
-	    $("#taste2").show();
-	    $("#b2").remove();
-	    
-	    $("#taste1").show();
-	    $("#b1").remove();
-	    
-	    $("#taste4").show();
-	    $("#b4").remove();
-	    
-	    $("#taste5").show();
-	    $("#b5").remove();
-
+      $("#taste3").hide();
+      $("#choice3").append(" <b id='b3'>Sweet</b>");
+       $("#choice3").css("background", "black");
+       
+       $("#taste2").show();
+       $("#b2").remove();
+       
+       $("#taste1").show();
+       $("#b1").remove();
+       
+       $("#taste4").show();
+       $("#b4").remove();
+       
+       $("#taste5").show();
+       $("#b5").remove();
+       
+       $("#test1").attr("value","달콤한");
      });
   $("#taste4").click(function(){
-		$("#taste4").hide();
-		$("#choice4").append(" <b id='b4'>Berry</b>");
-	    $("#choice4").css("background", "black");
-	    
-	    $("#taste2").show();
-	    $("#b2").remove();
-	    
-	    $("#taste3").show();
-	    $("#b3").remove();
-	    
-	    $("#taste1").show();
-	    $("#b1").remove();
-	    
-	    $("#taste5").show();
-	    $("#b5").remove();
-
+      $("#taste4").hide();
+      $("#choice4").append(" <b id='b4'>Berry</b>");
+       $("#choice4").css("background", "black");
+       
+       $("#taste2").show();
+       $("#b2").remove();
+       
+       $("#taste3").show();
+       $("#b3").remove();
+       
+       $("#taste1").show();
+       $("#b1").remove();
+       
+       $("#taste5").show();
+       $("#b5").remove();
+       $("#test1").attr("value","베리");
 
      });
   $("#taste5").click(function(){
-		$("#taste5").hide();
-		$("#choice5").append(" <b id='b5'>Apple/pear</b>");
-	    $("#choice5").css("background", "black");
-	    
-	    $("#taste2").show();
-	    $("#b2").remove();
-	    
-	    $("#taste3").show();
-	    $("#b3").remove();
-	    
-	    $("#taste4").show();
-	    $("#b4").remove();
-	    
-	    $("#taste1").show();
-	    $("#b1").remove();
-
+      $("#taste5").hide();
+      $("#choice5").append(" <b id='b5'>Apple/pear</b>");
+       $("#choice5").css("background", "black");
+       
+       $("#taste2").show();
+       $("#b2").remove();
+       
+       $("#taste3").show();
+       $("#b3").remove();
+       
+       $("#taste4").show();
+       $("#b4").remove();
+       
+       $("#taste1").show();
+       $("#b1").remove();
+       $("#test1").attr("value","사과배");
 
      });
 
@@ -168,6 +171,7 @@ $(document).ready(function(){
 });
 </script>
 <form action="${home }tasteTest/tasteTestForm5">
+<input type="hidden" id="test1" name="test1"/>
 <br><br><br><br><br><br><br><br><br><br>
 <div>
 <p style="font-size: 30px; text-align: center; color: #fff;">좋아하는 맛과 향을 골라주세요!</p>

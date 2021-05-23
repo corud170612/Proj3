@@ -3,23 +3,27 @@
 <mapper namespace="com.jjjh.Product.ProductDao">
 <insert id="ProductProc" parameterType="com.jjjh.Product.Product">
 INSERT INTO PRODREGIS
-    (PRODNAME,  PRODIMG1, PRODIMG2, PRODINTRO, CAFFEINE, DRIP, HEAVY, FLAVOR, ACIDITY, ORIGIN, PRICE, PRICERANGE, BID, STORENAME)
+    (PRODNAME,  PRODIMG1, PRODIMG2, PRODINTRO, CAFFEINE, DRIP, HEAVY, FLAVOR, ACIDITY, ORIGIN, PRICE, PRICERANGE, BID, STORENAME, storelogo1, storelogo2)
 VALUES
-    (#{prodName, jdbcType=VARCHAR}, #{drip, jdbcType=VARCHAR}, 
-    #{drip, jdbcType=VARCHAR}, #{prodIntro, jdbcType=VARCHAR}, 
-    #{caffeine, jdbcType=VARCHAR}, #{drip, jdbcType=VARCHAR}, 
-    #{body, jdbcType=VARCHAR}, #{flavor, jdbcType=VARCHAR}, 
-    #{acidity, jdbcType=VARCHAR}, #{origin, jdbcType=VARCHAR}, 
-    #{price, jdbcType=VARCHAR}, #{pricerange, jdbcType=VARCHAR}, 
-    #{bid, jdbcType=VARCHAR}, #{storename, jdbcType=VARCHAR})
+    (#{prodName}, #{drip}, 
+    #{drip}, #{prodIntro}, 
+    #{caffeine}, #{drip}, 
+    #{body}, #{flavor}, 
+    #{acidity}, #{origin}, 
+    #{price}, #{pricerange}, 
+    #{bid}, #{storename},
+    #{storelogo1}, #{storelogo2})
 </insert>
 <update id="AttachFile" parameterType="Map">
-UPDATE PRODREGIS SET PRODIMG1 = #{prodimg1, jdbcType=VARCHAR}, PRODIMG2 = #{prodimg2, jdbcType=VARCHAR} 
-WHERE PRODNAME = #{prodName, jdbcType=VARCHAR}
+UPDATE PRODREGIS SET PRODIMG1 = #{prodimg1}, PRODIMG2 = #{prodimg2} 
+WHERE PRODNAME = #{prodName}
 </update>
 <select id="TakeStorename" parameterType="String" resultType="String">
 select storename from bmember
 where bid = #{businessid, jdbcType=VARCHAR}
 </select>
-
+<select id="getStrorlogo" parameterType="String" resultType="com.jjjh.Product.Logoimg">
+select storelogo1, storelogo2 from bmember
+where bid = #{bid}
+</select>
 </mapper>
