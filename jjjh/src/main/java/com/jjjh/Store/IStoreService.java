@@ -13,4 +13,8 @@ public interface IStoreService {
 
    public String getCaddr(String cid);
 
+   public String getBid(String prodname);
+
+   public void insertSale(SaleDTO saleDTO);
+
 }

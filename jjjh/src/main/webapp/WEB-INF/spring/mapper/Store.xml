@@ -14,8 +14,8 @@
    AND prodregis.prodname=#{prodname}
 </select>
 <select id="getprodimg1" parameterType="String" resultType="String">
-	select prodimg1 from prodregis
-	where prodname = #{prodname}
+   select prodimg1 from prodregis
+   where prodname = #{prodname}
 </select>
 <select id="getProdList2" parameterType="String" resultType="com.jjjh.Store.ProdDTO">
    SELECT prodname, flavor, price 
@@ -23,10 +23,25 @@
    WHERE prodname=#{prodname} 
 </select>
 
-<select id="getCaddr" parameterType="String" resultType="com.jjjh.Store.SaleDTO">
+<select id="getCaddr" parameterType="String" resultType="String">
    SELECT caddr 
    FROM cmember 
    WHERE cid=#{cid}
 </select>
+
+<select id="getBid" parameterType="String" resultType="String">
+   SELECT bid  
+   FROM prodregis 
+   WHERE prodname =#{prodname} 
+</select>
+
+<insert id="insertSale" parameterType="com.jjjh.Store.SaleDTO">
+INSERT INTO salestate
+    (NO,  PRODNAME, PRICE, SUBMON, 
+    SUBVOL, GRINDING, CID, STORENAME, CONDITION, CADDR, BID) 
+VALUES
+    (sale_seq.NEXTVAL, #{prodname}, #{price}, #{submon}, 
+    #{subvol}, #{grinding}, #{cid}, #{storename}, '처리중', #{caddr}, #{bid}) 
+</insert>
 
 </mapper>

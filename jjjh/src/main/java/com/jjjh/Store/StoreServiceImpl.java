@@ -25,7 +25,7 @@ public class StoreServiceImpl implements IStoreService{
    public StoreDTO getBmemberList(String prodname) {
       StoreDTO storeDTO = new StoreDTO();
       storeDTO = iStoreDao.getBmemberList(prodname);
-	  storeDTO.setProdimg1(iStoreDao.getprodimg1(prodname));
+     storeDTO.setProdimg1(iStoreDao.getprodimg1(prodname));
       return  storeDTO;
    }
 
@@ -39,6 +39,18 @@ public class StoreServiceImpl implements IStoreService{
    public String getCaddr(String cid) {
       // TODO Auto-generated method stub
       return iStoreDao.getCaddr(cid);
+   }
+
+   @Override
+   public String getBid(String prodname) {
+      // TODO Auto-generated method stub
+      return iStoreDao.getBid(prodname);
+   }
+
+   @Override
+   public void insertSale(SaleDTO saleDTO) {
+      // TODO Auto-generated method stub
+      iStoreDao.insertSale(saleDTO);
    }
 
 }

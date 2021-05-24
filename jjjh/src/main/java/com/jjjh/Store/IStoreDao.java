@@ -12,6 +12,10 @@ public interface IStoreDao {
 
    String getCaddr(String cid);
 
-String getprodimg1(String prodname);
+   String getprodimg1(String prodname);
+
+   String getBid(String prodname);
+
+   void insertSale(SaleDTO saleDTO);
 
 }

@@ -41,8 +41,13 @@ public class StoreController {
    }
 
    @RequestMapping(value = "/subComplete")
-   public String subComplete() {
-
+   public String subComplete(Model model, HttpSession session, @RequestParam String prodname, SaleDTO saleDTO) {
+       
+      saleDTO.setCid((String) session.getAttribute("cid"));
+       saleDTO.setCaddr(iStoreServ.getCaddr(saleDTO.getCid()));
+       saleDTO.setBid(iStoreServ.getBid(prodname));
+        iStoreServ.insertSale(saleDTO);
+        
       return "forward:/index?formpath=subComplete";
    }
 }
