@@ -27,4 +27,15 @@
    and condition=#{process}
    and submon=#{month}
 </select>
+<update id="SuccessProcess" parameterType="String">
+update salestate set condition = '완료'
+where no = #{no}
+</update>
+<update id="CancelProcess" parameterType="String">
+update salestate set condition = '처리중'
+where no = #{no}
+</update>
+<delete id="CancelSuccess" parameterType="String">
+delete from salestate where no = #{no}
+</delete>
 </mapper>

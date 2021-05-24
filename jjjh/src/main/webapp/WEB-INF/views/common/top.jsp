@@ -135,6 +135,9 @@ a {
                   <a href="#">BRAND</a></li>
                         <li><a href="#">REVIEW</a></li>
                         <li><a href="#">RECIPE</a></li>
+                        <%if(sessionBid==null && sessionCid!=null) { %>
+                        <li><a href="${topHome }mypage/ShowOrder">MY PAGE</a></li>
+                        <%} %>
                   <%if(sessionCid==null && sessionBid!=null) { %>
                   <li class="xans-record-">
                      <a href="${topHome }status/statusProc">SALES STATUS</a> </li>

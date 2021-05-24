@@ -108,4 +108,12 @@ public class HomeController {
    public String subComplete() {
       return "store/subComplete"; 
    }
+   @RequestMapping(value = "/myPage")
+   public String ShowOrder() {
+      return "mypage/myPage"; 
+   }
+   @RequestMapping(value = "/modify")
+   public String modify() {
+      return "mypage/modify"; 
+   }
 }

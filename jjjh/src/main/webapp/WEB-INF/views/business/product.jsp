@@ -17,6 +17,32 @@
    margin-left: -150px;
    
    }
+   p{
+    --swiper-theme-color: #00FF0000 !important;
+    --swiper-navigation-size: 44px;
+    list-style: none;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-variant-ligatures: none;
+    word-break: keep-all;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    display: inline-block;
+    font-family: 'NanumSquare';
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #fff;
+    min-width: 7.5px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    }
 button {
    background: #111 border-radius: 2px;
    color: #000;
@@ -39,7 +65,7 @@ input {
    position: absolute;
    left: 50%;
    top:60%;
-   margin-left:-700px;
+   margin-left:-635px;
    
    display: flex;
    
@@ -464,7 +490,7 @@ h4{
 <div id="together">
 <!-- 전체 div -->
 
-<div align="center" class="parent" id="categoryBox"  style=" width: 67%; margin-left: -700px;     width: 1370px;">
+<div align="center" class="parent" id="categoryBox"  style=" width: 67%; margin-left: -635px;     width: 1370px;">
    <div class="child">
    <h4>상품명 등록</h4>  
       <input style="background: #fff; width: 300px; height: 30px; font-size: 15px;" 
@@ -576,7 +602,7 @@ h4{
 </div>
 
 <div id="searchBox" align="center">
-      <button style=" background-color: #111; color: white; width: 100px; height: 50px;">검색</button>
+      <button style=" background-color: #111; color: white; width: 100px; height: 50px;">상품등록	</button>
       <button type="button" value="초기화" style=" background-color: #111; color: white; color: white; width: 100px; height: 50px;" onClick="window.location.reload()">초기화</button>
 </div>
 

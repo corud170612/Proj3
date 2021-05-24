@@ -15,17 +15,43 @@
    margin-left: -650px;
    margin-bottom: 100px;
 }
-
+p{
+    --swiper-theme-color: #00FF0000 !important;
+    --swiper-navigation-size: 44px;
+    list-style: none;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-variant-ligatures: none;
+    word-break: keep-all;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    display: inline-block;
+    font-family: 'NanumSquare';
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #fff;
+    min-width: 7.5px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    }
 #option{
-   width: 320px;
+   width: 340px;
    height: 875px;
    position: fixed;
    margin-left: 950px;
    margin-top: -95px;
-   padding-left: 40px;
-   padding-right: 40px;
+   padding-left: 30px;
+   padding-right: 30px;
    border: 1px solid white;
    border-radius: 4px;
+   overflow-y: scroll;
 }
 .selectOption{
    margin-left: 16px;
@@ -248,11 +274,11 @@ $(document).ready(function(){
             <!-- 결제하기 버튼 + 구독 옵션 선택 div -->
          <c:forEach var="store2" items="${storeLst2 }">
             <h1 style="color: white;" id="saleProdname" name="saleProdname" >${store2.prodname }</h1>
-            <p style="font-size: 20px; color: white;">flavor : ${store2.flavor }</p>
-            <p style="font-size: 20px; color: white; margin-bottom: 32px;">\ ${store2.price } (200g 기준)</p>
+            <h4 style="font-size: 20px; color: white;">flavor : ${store2.flavor }</h4>
+            <h4 style="font-size: 20px; color: white; margin-bottom: 32px;">\ ${store2.price } (200g 기준)</h4>
          </c:forEach>         
-         <p style="font-size: 16px; color: white;">원두용량</p>
-         <p style="font-size: 14px; color: #bcbcbc;">로스터리마다 용량이 조금씩 다를 수 있습니다</p>
+         <h4 style="font-size: 16px; color: white;">원두용량</h4>
+         <h4 style="font-size: 14px; color: #bcbcbc;">로스터리마다 용량이 조금씩 다를 수 있습니다</h4>
          
          <div class="selectOption" id="200g" >
 <!--                <input type="hidden" id="saleProdname" name="saleProdname" /> -->
@@ -263,7 +289,7 @@ $(document).ready(function(){
          <span style="font-weight: 700; font-size: 30px; color: white; line-height: 60px;" id="span2">400g</span>
          </div>
          
-         <p style="font-size: 16px; color: white; margin-top: 30px;">분쇄 유무</p>
+         <h4 style="font-size: 16px; color: white; margin-top: 30px;">분쇄 유무</h4>
          
          <div class="selectOption" id="grindY" >
          <span style="font-weight: 700; font-size: 30px; color: white; line-height: 60px;" id="span11">분쇄</span>
@@ -273,7 +299,7 @@ $(document).ready(function(){
          <span style="font-weight: 700; font-size: 30px; color: white; line-height: 60px;" id="span22">홀빈</span>
          </div>
          
-         <p style="font-size: 16px; color: white; margin-top: 30px;">구독 개월</p>
+         <h4 style="font-size: 16px; color: white; margin-top: 30px;">구독 개월</h4>
          
                   <div class="selectOption" id="onemonth">
          <span style="font-weight: 700; font-size: 30px; color: white; line-height: 60px;" id="1span">1개월</span>

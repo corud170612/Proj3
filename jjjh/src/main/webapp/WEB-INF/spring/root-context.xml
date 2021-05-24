@@ -57,5 +57,9 @@
 	id="multipartResolver"
 	p:maxInMemorySize="100000000"
 	p:maxUploadSize="100000000"/>
-
+	
+    <bean class="org.mybatis.spring.mapper.MapperFactoryBean"
+   id="MyPageMapperFactoryBean"
+   p:mapperInterface="com.jjjh.MyPage.IMyPageDao"
+   p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
 </beans>

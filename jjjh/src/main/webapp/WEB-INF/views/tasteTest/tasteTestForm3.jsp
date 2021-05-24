@@ -28,6 +28,32 @@ height: auto;
    font-weight: bold;
    font-size: 25px;
 }
+p{
+    --swiper-theme-color: #00FF0000 !important;
+    --swiper-navigation-size: 44px;
+    list-style: none;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-variant-ligatures: none;
+    word-break: keep-all;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    display: inline-block;
+    font-family: 'NanumSquare';
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #fff;
+    min-width: 7.5px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
@@ -68,24 +94,24 @@ $(document).ready(function(){
 <input type="hidden" id="test1" name="test1"/>
 <br><br><br><br><br><br><br>
 <div>
-<p style="font-size: 30px; text-align: center; color: #fff; ">어떤 커피를 더 선호하시나요?</p>
+<h2 style="font-size: 30px; text-align: center; color: #fff; ">어떤 커피를 더 선호하시나요?</h2>
 </div>
 
 <div id="testframe">
 <div style="height: 570px; width: 400px;">
    <div class="selectBox" id="box1">
-      <p class="title">묵직한 커피</p>
-      <p class="contents">무거운 무게감으로<br/> 풍미가 가득한 커피</p>
+      <h2 class="title">묵직한 커피</h2>
+      <strong class="contents">무거운 무게감으로<br/> 풍미가 가득한 커피</strong>
    </div>
 
    <div class="selectBox" style="top: 55%;" id="box2">
-      <p class="title">밸런스 좋은 커피</p>
-      <p class="contents">적당한 무게감으로 <br/>균형이 잘 잡힌 커피</p>
+      <h2 class="title">밸런스 좋은 커피</h2>
+      <strong class="contents">적당한 무게감으로 <br/>균형이 잘 잡힌 커피</strong>
    </div>
 
    <div class="selectBox"style="top: 77%;" id="box3">
-      <p class="title">가벼운 커피</p>
-      <p class="contents">가벼운 무게감으로 <br/>산뜻한 느낌을 주는 커피</p>
+      <h2 class="title">가벼운 커피</h2>
+      <strong class="contents">가벼운 무게감으로 <br/>산뜻한 느낌을 주는 커피</strong>
    </div>
 </div>
 

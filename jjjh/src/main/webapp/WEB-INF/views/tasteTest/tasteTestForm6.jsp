@@ -27,6 +27,32 @@ height: auto;
    font-weight: bold;
    font-size: 25px;
 }
+p{
+    --swiper-theme-color: #00FF0000 !important;
+    --swiper-navigation-size: 44px;
+    list-style: none;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-variant-ligatures: none;
+    word-break: keep-all;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    display: inline-block;
+    font-family: 'NanumSquare';
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #fff;
+    min-width: 7.5px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
@@ -107,31 +133,31 @@ $(document).ready(function(){
 <input type="hidden" id="test1" name="test1"/>
 <br><br><br><br><br><br><br>
 <div>
-<p style="font-size: 30px; text-align: center; color: #fff; ">어느 정도 가격대로<br/>추천해드릴까요?</p>
+<h2 style="font-size: 30px; text-align: center; color: #fff; ">어느 정도 가격대로<br/>추천해드릴까요?</h2>
 </div>
 
    <div id="testframe">
       <div style="height: 400px; width: 100%;">
          <div class="selectBox" id="box1" style="margin-left: 230px;">
-            <p class="title">만원 이하</p>
+            <h2 class="title">만원 이하</h2>
 
          </div>
 
          <div class="selectBox" id="box2">
-            <p class="title">2만원 이하</p>
+            <h2 class="title">2만원 이하</h2>
 
          </div>
 
          <div class="selectBox" id="box3">
-            <p class="title">3만원 이하</p>
+            <h2 class="title">3만원 이하</h2>
 
          </div>
          <div class="selectBox" id="box4">
-            <p class="title">4만원 이하</p>
+            <h2 class="title">4만원 이하</h2>
 
          </div>
          <div class="selectBox" id="box5">
-         <p class="title">5만원 이하</p>
+         <h2 class="title">5만원 이하</h2>
 
       </div>
       </div>

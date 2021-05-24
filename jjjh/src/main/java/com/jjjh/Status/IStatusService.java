@@ -12,4 +12,12 @@ public interface IStatusService {
 
    public int searchNum(SearchCondition searchCondition);
 
+public void SuccessProcess(String no);
+
+public void CancelProcess(String no);
+
+public void CancelSuccess(String no);
+
+
+
 }

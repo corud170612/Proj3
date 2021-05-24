@@ -34,5 +34,23 @@ public class StatusServiceImpl implements IStatusService{
       return iStatusDao.searchNum2(searchCondition);
    }
 
+@Override
+public void SuccessProcess(String no) {
+	iStatusDao.SuccessProcess(no);
+	
+}
+
+@Override
+public void CancelProcess(String no) {
+	iStatusDao.CancelProcess(no);
+	
+}
+
+@Override
+public void CancelSuccess(String no) {
+	iStatusDao.CancelSuccess(no);
+	
+}
+
 
 }

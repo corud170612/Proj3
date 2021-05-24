@@ -10,4 +10,12 @@ public interface IStatusDao {
    public List<Sale> ConditionSearch(SearchCondition searchCondition);
 
    public int searchNum2(SearchCondition searchCondition);
+
+public void SuccessProcess(String no);
+
+public void CancelProcess(String no);
+
+public void CancelSuccess(String no);
+
+
 }

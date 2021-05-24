@@ -170,10 +170,15 @@ tr:hover {
                <td><label>${status.storename }</label></td>
                <td><label>${status.grinding }</label></td>
                <td><label>${status.condition }</label></td>
-               <td><button>완료</button></td>
+            	<c:choose>
+               <c:when test="${status.condition == '처리중' }"> <td><button formaction="${home }status/SuccessProcess${status.no}">완료</button></td></c:when>
+               <c:when test="${status.condition == '완료' }"> <td><button formaction="${home }status/CancelProcess${status.no}">완료취소</button></td></c:when>
+               <c:when test="${status.condition == '취소요청' }"> <td><button formaction="${home }status/CancelSuccess${status.no}">취소완료</button></td></c:when>
+               <c:otherwise>  <td colspan="11"><p>주문이 없습니다.</p></td> </c:otherwise>
+        		</c:choose>
             </tr>
             </c:forEach>
-           
+           <tr><td colspan="11" style="padding-top: 50px; padding-bottom: 50px;">${noList }</td></tr>
          </table>
       </div>
    </div>

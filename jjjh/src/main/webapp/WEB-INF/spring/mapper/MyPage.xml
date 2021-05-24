@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jjjh.MyPage.IMyPageDao">
+<select id="ShowMyInfo" parameterType="String" resultType="com.jjjh.MyPage.MyInfo">
+select * from cmember
+where cid = #{cid}
+</select>
+<select id="getOrderList" parameterType="String" resultType="com.jjjh.MyPage.OrderList">
+select prodname, price, submon, caddr, subvol, storename, condition
+from salestate
+where cid = #{cid}
+</select>
+<update id="ModifyProc" parameterType="com.jjjh.MyPage.MyInfo">
+update cmember set cid = #{cid}, cpw = #{cpw}, cph = #{cph}, czipcode = #{czipcode}, caddr = #{caddr}, cardnumber = #{cardnumber},
+bank = #{bank}, EXPIRATIONDATE = #{expirationDate}
+where cid = #{loginId}
+</update>
+<update id="ModifyProc2" parameterType="com.jjjh.MyPage.MyInfo">
+update salestate set cid = #{cid}, caddr = #{caddr}
+where cid = #{loginId}
+</update>
+<update id="CancelOrder" parameterType="com.jjjh.MyPage.MyInfo">
+update salestate set condition = '취소요청'
+where cid = #{loginId}
+and prodname = #{cname}
+</update>
+</mapper>

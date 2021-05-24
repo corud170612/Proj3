@@ -33,6 +33,32 @@
    border: 1px solid #fff;
    
 }
+p{
+    --swiper-theme-color: #00FF0000 !important;
+    --swiper-navigation-size: 44px;
+    list-style: none;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-variant-ligatures: none;
+    word-break: keep-all;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    display: inline-block;
+    font-family: 'NanumSquare';
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #fff;
+    min-width: 7.5px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    }
 #testframe{
 width: 540px;
 position: absolute;
@@ -68,7 +94,7 @@ $(document).ready(function(){
 <form action="${home }tasteTest/tasteTestForm2">
 <br><br><br><br><br><br><br><br><br><br>
 <div>
-<p style="font-size: 30px; margin-bottom: 100px; text-align: center; color: #fff;">어떤 커피를 찾고 계신가요?</p>
+<h2 style="font-size: 30px; margin-bottom: 100px; text-align: center; color: #fff;">어떤 커피를 찾고 계신가요?</h2>
 </div>
 
 <div id="testframe">

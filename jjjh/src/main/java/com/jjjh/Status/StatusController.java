@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -27,6 +28,9 @@ public class StatusController {
       logger.warn(bid);
       int number = iStatusServ.searchNum(bid);
       List<Sale>saleLst= iStatusServ.getList(bid);
+	   if(saleLst.size()==0) {
+		   model.addAttribute("noList", "들어온 주문이 없습니다");
+	   }
       model.addAttribute("saleLst", saleLst);
       model.addAttribute("searchNum", number);
       return "forward:/index?formpath=status";
@@ -42,5 +46,22 @@ public class StatusController {
       model.addAttribute("searchNum", searchNum);
       return "forward:/index?formpath=status";
    }
+   
+   @RequestMapping(value = "/SuccessProcess{no}")
+   public String SuccessProcess(Model model, @PathVariable String no) {
+	  iStatusServ.SuccessProcess(no);
+      return "forward:/status/statusProc";
+   }
+   @RequestMapping(value = "/CancelProcess{no}")
+   public String CancelProcess(Model model, @PathVariable String no) {
+	  iStatusServ.CancelProcess(no);
+      return "forward:/status/statusProc";
+   }
+   @RequestMapping(value = "/CancelSuccess{no}")
+   public String CancelSuccess(Model model, @PathVariable String no) {
+	  iStatusServ.CancelSuccess(no);
+      return "forward:/status/statusProc";
+   }
+
 
 }
