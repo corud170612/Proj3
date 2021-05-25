@@ -134,8 +134,8 @@ a {
                   <li id="my-cafebox-li" style="display: none;">
                   <a href="#">BRAND</a></li>
                         <li><a href="#">REVIEW</a></li>
-                        <li><a href="#">RECIPE</a></li>
-                        <%if(sessionBid==null && sessionCid!=null) { %>
+                        <li><a href="${topHome }/index?formpath=recipe">RECIPE</a></li>
+                      <%if(sessionBid==null && sessionCid!=null) { %>
                         <li><a href="${topHome }mypage/ShowOrder">MY PAGE</a></li>
                         <%} %>
                   <%if(sessionCid==null && sessionBid!=null) { %>
