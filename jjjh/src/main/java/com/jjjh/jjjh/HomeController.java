@@ -137,5 +137,34 @@ public class HomeController {
    public String recipe4() {
       return "recipe/recipe4Form"; 
    }
+   @RequestMapping(value = "/partner")
+   public String partner() {
+      return "partner/partner";
+   }
+
+   @RequestMapping(value = "/partnerTop1")
+   public String partnerTop1() {
+      return "partner/partnerTop1";
+   }
+
+   @RequestMapping(value = "/partnerTop2")
+   public String partnerTop2() {
+      return "partner/partnerTop2";
+   }
+   @RequestMapping(value = "/partnerTop3")
+   public String partnerTop3() {
+      return "partner/partnerTop3";
+   }
+   @RequestMapping(value = "/partnerTop4")
+   public String partnerTop4() {
+      return "partner/partnerTop4";
+   }
+   @RequestMapping(value = "/partnerTop5")
+   public String partnerTop5() {
+      return "partner/partnerTop5";
+   }
+
+
+
 
 }

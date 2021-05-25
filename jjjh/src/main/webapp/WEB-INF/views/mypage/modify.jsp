@@ -210,7 +210,7 @@ function openAuth(cmd){
 
 <div style="margin-top: 20px; position: absolute; left: 50%; margin-left: -175px;">
 <input type="button" id="authBtn" style="margin-right: 13px;" onclick="openAuth('${home}membership/authForm');" value="인증하기">
-<button disabled="disabled" id="signup">회원가입</button>
+<button disabled="disabled" id="signup">수정하기</button>
 </div>
 
 
