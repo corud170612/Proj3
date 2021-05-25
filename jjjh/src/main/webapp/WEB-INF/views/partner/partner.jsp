@@ -21,6 +21,7 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+
 #sub-page-title{
     --swiper-theme-color: #007aff;
     --swiper-navigation-size: 44px;
@@ -36,7 +37,32 @@
     position: relative;
     
 }
-
+p{
+    --swiper-theme-color: #00FF0000 !important;
+    --swiper-navigation-size: 44px;
+    list-style: none;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-variant-ligatures: none;
+    word-break: keep-all;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    display: inline-block;
+    font-family: 'NanumSquare';
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #fff;
+    min-width: 7.5px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    }
 #h2{
     --swiper-theme-color: #007aff;
     --swiper-navigation-size: 44px;
@@ -287,6 +313,7 @@ strong{
 	color: white;
 	font-size: 20px;
 }
+
 </style>
 
 <script
@@ -522,43 +549,43 @@ strong{
                  <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 6" style="width: 400px; margin-right: 40px;">
                     <a href="${home }/index?formpath=partnerTop1" class="image"><img style="width: 400px; height: 400px;" src="https://turtlecrew-aboutcafe.s3.amazonaws.com/media/aboutad/12/image/themselmain.jpg"></a>
                     <div class="content">
-                        <p class="title"><a href="${home }/index?formpath=partnerTop1">카페 뎀셀브즈</a></p>
-                        <p class="title-sub">종로를 대표하는 커피 로스팅 컴퍼니로 꾸준한 사랑을 받고있는 브랜드입니다.</p>
+                        <h2 class="title"><a style="font-size: 24px;" href="${home }/index?formpath=partnerTop1">카페 뎀셀브즈</a></h2>
+                        <h4 class="title-sub">종로를 대표하는 커피 로스팅 컴퍼니로 꾸준한 사랑을 받고있는 브랜드입니다.</h4>
                     </div>
                 </div>
                 <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 6" style="width: 400px; margin-right: 40px;">
                      <a href="${home }/index?formpath=partnerTop2" class="image"><img style="width: 400px; height: 400px;" src="https://turtlecrew-aboutcafe.s3.amazonaws.com/media/aboutad/12/image/namusairo.jpg"></a>
                     <div class="content">
-                        <p class="title"><a href="${home }/index?formpath=partnerTop2">나무사이로</a></p>
-                        <p class="title-sub">좋은 재료와 맛은 기본이라는 철학으로 커피를 통한 풍요로운 일상을 꿈꾸는 브랜드입니다.</p>
+                        <h4 class="title"><a style="font-size: 24px;" href="${home }/index?formpath=partnerTop2">나무사이로</a></h4>
+                        <h4 class="title-sub">좋은 재료와 맛은 기본이라는 철학으로 커피를 통한 풍요로운 일상을 꿈꾸는 브랜드입니다.</h4>
                     </div>
                 </div>
                 <div class="swiper-slide" role="group" aria-label="3 / 6" style="width: 400px; margin-right: 40px;">
                     <a href="${home }/index?formpath=partnerTop3" class="image"><img style="width: 400px; height: 400px;" src="https://turtlecrew-aboutcafe.s3.amazonaws.com/media/aboutad/12/image/soso.jpg"></a>
                     <div class="content">
-                        <p class="title"><a href="${home }/index?formpath=partnerTop3">소소한사치</a></p>
-                        <p class="title-sub">손님에게 커피 한 잔의 소소한 행복을 전달하는 부천의 작은 로스터리 브랜드입니다.</p>
+                        <h2 class="title"><a style="font-size: 24px;" href="${home }/index?formpath=partnerTop3">소소한사치</a></h2>
+                        <h4 class="title-sub">손님에게 커피 한 잔의 소소한 행복을 전달하는 부천의 작은 로스터리 브랜드입니다.</h4>
                     </div>
                 </div>
                 <div class="swiper-slide" role="group" aria-label="4 / 6" style="width: 400px; margin-right: 40px;">
                     <a href="${home }/index?formpath=partnerTop4" class="image"><img style="width: 400px; height: 400px;" src="https://turtlecrew-aboutcafe.s3.amazonaws.com/media/aboutad/12/image/thanksalot.jpg"></a>
                     <div class="content">
-                        <p class="title"><a href="${home }/index?formpath=partnerTop4">땡스얼랏</a></p>
-                        <p class="title-sub">커피는 단순히 쓴맛만 가지고 있지 않다는 신념으로 커피의 다양한 매력을 소개하는 브랜드입니다.</p>
+                        <h2 class="title"><a style="font-size: 24px;" href="${home }/index?formpath=partnerTop4">땡스얼랏</a></h2>
+                        <h4 class="title-sub">커피는 단순히 쓴맛만 가지고 있지 않다는 신념으로 커피의 다양한 매력을 소개하는 브랜드입니다.</h4>
                     </div>
                 </div>
                 <div class="swiper-slide" role="group" aria-label="5 / 6" style="width: 400px; margin-right: 40px;">
                     <a href="${home }/index?formpath=partnerTop5" class="image"><img style="width: 400px; height: 400px;" src="https://turtlecrew-aboutcafe.s3.amazonaws.com/media/aboutad/12/image/forawhile.jpg"></a>
                     <div class="content">
-                        <p class="title"><a href="${home }/index?formpath=partnerTop5">로스팅포러와일</a></p>
-                        <p class="title-sub">커피가 만들어지는 마술 같은 시간 동안 잠시만 여유를 가지자는 메시지를 전달하는 브랜드입니다.</p>
+                        <h2 class="title"><a style="font-size: 24px;" href="${home }/index?formpath=partnerTop5">로스팅포러와일</a></h2>
+                        <h4 class="title-sub">커피가 만들어지는 마술 같은 시간 동안 잠시만 여유를 가지자는 메시지를 전달하는 브랜드입니다.</h4>
                     </div>
                 </div>
                 <div class="swiper-slide" role="group" aria-label="6 / 6" style="width: 400px; margin-right: 40px;">
                     <a href="${home }/index?formpath=partnerTop6" class="image"><img style="width: 400px; height: 400px;" src="https://turtlecrew-aboutcafe.s3.amazonaws.com/media/aboutad/10/image/onedoithint.jpg"></a>
                     <div class="content">
-                        <p class="title"><a href="${home }/index?formpath=partnerTop6">원두잇로스터즈</a></p>
-                        <p class="title-sub">기본을 지키며 타협하지 않는 것. 좋은 커피를 위한 원칙을 지켜나가는 브랜드입니다.</p>
+                        <h2 class="title"><a style="font-size: 24px;" href="${home }/index?formpath=partnerTop6">원두잇로스터즈</a></h2>
+                        <h4 class="title-sub">기본을 지키며 타협하지 않는 것. 좋은 커피를 위한 원칙을 지켜나가는 브랜드입니다.</h4>
                     </div>
                 </div>
             </div>

@@ -48,23 +48,12 @@ public class MyPageController {
    }
    
    @RequestMapping(value = "/ModifyProc")
-   public String ModifyProc(Model model, HttpSession session, MyInfo myInfo, HttpServletResponse response) {
-	   response.setCharacterEncoding("UTF-8");
+   public String ModifyProc(Model model, HttpSession session, MyInfo myInfo) {
+	  
 	   myInfo.setLoginId((String)session.getAttribute("cid"));
 	   iMyPageServ.ModifyProc(myInfo);
-	   PrintWriter writer;
-	try {
-		writer = response.getWriter();
-		writer.println("<script type='text/javascript'>");
-	   writer.println("alert('다시 로그인해주세요.');");
-	   writer.println("</script>");
-	   writer.flush();
-
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-      return "forward:/index?formpath=home"; 
+	   model.addAttribute("script", "<script>alert('다시 로그인해주세요.')</script>");
+      return "forward:/login/logout"; 
    }
 
    
