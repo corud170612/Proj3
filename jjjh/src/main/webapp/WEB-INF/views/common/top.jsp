@@ -134,7 +134,7 @@ a {
                   <li id="my-cafebox-li" style="display: none;">
                   <a href="#">BRAND</a></li>
                         <li><a href="#">REVIEW</a></li>
-                        <li><a href="#">RECIPE</a></li>
+                        <li><a href="${topHome }/index?formpath=recipe">RECIPE</a></li>
                   <%if(sessionCid==null && sessionBid!=null) { %>
                   <li class="xans-record-">
                      <a href="${topHome }status/statusProc">SALES STATUS</a> </li>

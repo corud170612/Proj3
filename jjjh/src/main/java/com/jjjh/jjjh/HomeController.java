@@ -108,4 +108,24 @@ public class HomeController {
    public String subComplete() {
       return "store/subComplete"; 
    }
+   @RequestMapping(value = "/recipe")
+   public String recipe() {
+      return "recipe/recipemainForm"; 
+   }
+   @RequestMapping(value = "/recipe1")
+   public String recipe1() {
+      return "recipe/recipe1Form"; 
+   }
+   @RequestMapping(value = "/recipe2")
+   public String recipe2() {
+      return "recipe/recipe2Form"; 
+   }
+   @RequestMapping(value = "/recipe3")
+   public String recipe3() {
+      return "recipe/recipe3Form"; 
+   }
+   @RequestMapping(value = "/recipe4")
+   public String recipe4() {
+      return "recipe/recipe4Form"; 
+   }
 }
