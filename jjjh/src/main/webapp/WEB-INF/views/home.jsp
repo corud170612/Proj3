@@ -56,6 +56,7 @@ p {-webkit-text-size-adjust: none;
 <img alt="" src="${pageContext.request.contextPath}/resources/img/coffee2.png" style="-webkit-filter: grayscale(100%); filter: gray; width: 1500px; margin-left: 200px; margin-right: 200px; height: auto;vertical-align: middle;">
 <div id="text1" style="display: none;"><p  style="top: 25%; left: 12%;">집으로 찾아오는</p></div>
 <div id="text2" style="display: none;"><p  style="top: 35%; left: 12%;">나만의 커피구독</p></div>
+
 <div id="text3" style="display: none;"><p  style="top: 43%; left: 12%; font-size: 20px;">서로 다른 카페들의 다양한 커피를 한번에 즐겨보세요</p></div>
  <%if(sessionCid==null ||sessionBid==null) { %>
 ${script}

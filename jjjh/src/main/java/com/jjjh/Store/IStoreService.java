@@ -17,4 +17,6 @@ public interface IStoreService {
 
    public void insertSale(SaleDTO saleDTO);
 
+public List<ProdRegis> SelectCategory();
+
 }

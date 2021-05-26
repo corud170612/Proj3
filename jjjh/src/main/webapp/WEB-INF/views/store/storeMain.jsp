@@ -447,7 +447,7 @@ span{
       <h2 id="cate6">원산지</h2>
       <div id="panel6" style="width: 100%; display: none;">
          <span id="spanOrigin1">콜롬비아</span> <span id="spanOrigin2">에티오피아</span> 
-         <span id="spanOrigin3">과테말라</span> <span id="spanOrigin4">페루</span> <span id="spanOrigin5">파나마</span>
+         <span id="spanOrigin3">브라질</span> <span id="spanOrigin4">온두라스</span> <span id="spanOrigin5">인도네시아</span>
       </div>
       <hr />
       <h2 id="cate7">가격</h2>

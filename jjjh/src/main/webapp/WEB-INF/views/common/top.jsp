@@ -135,7 +135,7 @@ a {
                   <a href="#">BRAND</a></li>
                         <li><a href="#">REVIEW</a></li>
                         <li><a href="${topHome }/index?formpath=recipe">RECIPE</a></li>
-                        <li><a href="${tophome }index?formpath=partner">PARTNER BRAND</a></li>
+                        <li><a href="${topHome }index?formpath=partner">PARTNER BRAND</a></li>
                       <%if(sessionBid==null && sessionCid!=null) { %>
                         <li><a href="${topHome }mypage/ShowOrder">MY PAGE</a></li>
                         <%} %>

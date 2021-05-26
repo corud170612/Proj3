@@ -53,4 +53,10 @@ public class StoreServiceImpl implements IStoreService{
       iStoreDao.insertSale(saleDTO);
    }
 
+@Override
+public List<ProdRegis> SelectCategory() {
+
+	return iStoreDao.SelectCategory();
+}
+
 }

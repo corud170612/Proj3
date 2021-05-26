@@ -18,4 +18,6 @@ public interface IStoreDao {
 
    void insertSale(SaleDTO saleDTO);
 
+List<ProdRegis> SelectCategory();
+
 }

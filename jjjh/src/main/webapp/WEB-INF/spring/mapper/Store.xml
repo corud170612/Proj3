@@ -34,7 +34,10 @@
    FROM prodregis 
    WHERE prodname =#{prodname} 
 </select>
-
+<select id="SelectCategory" resultType="com.jjjh.Store.ProdRegis">
+	SELECT CAFFEINE, DRIP, HEAVY, FLAVOR, ACIDITY, ORIGIN, PRICERANGE
+	FROM PRODREGIS
+</select>
 <insert id="insertSale" parameterType="com.jjjh.Store.SaleDTO">
 INSERT INTO salestate
     (NO,  PRODNAME, PRICE, SUBMON, 

@@ -27,6 +27,7 @@ public class StoreController {
    public String storeProc(Model model, HttpSession session) {
       List<ProdRegis> storeLst= iStoreServ.getProdList();
       model.addAttribute("storeLst", storeLst);
+
       return "forward:/index?formpath=storeMain";
    }
    @RequestMapping(value = "/{prodname}")
@@ -50,4 +51,18 @@ public class StoreController {
         
       return "forward:/index?formpath=subComplete";
    }
+   @RequestMapping(value = "/SelectCategory")
+   public String SelectCategory(Model model, ConfirmCate confirmCate) {
+//	      List<ProdRegis> category = iStoreServ.SelectCategory();
+//	      model.addAttribute("category", category);
+//	   logger.warn(confirmCate.getCaffeine());
+//	   logger.warn(confirmCate.getDrip());
+//	   logger.warn(confirmCate.getFlavor());
+//	   logger.warn(confirmCate.getHeavy());
+//	   logger.warn(confirmCate.getOrigin());
+//	   logger.warn(confirmCate.getAcidity());
+//	   logger.warn(confirmCate.getPricerange());
+      return "forward:/index?formpath=storeMain";
+   }
+   
 }
