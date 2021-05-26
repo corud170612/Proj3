@@ -20,4 +20,6 @@ public interface IStoreDao {
 
 List<ProdRegis> SelectCategory();
 
+List<ProdRegis> ShowCategoryProd(ConfirmCate confirmCate);
+
 }

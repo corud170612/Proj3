@@ -19,4 +19,6 @@ public interface IStoreService {
 
 public List<ProdRegis> SelectCategory();
 
+public List<ProdRegis> ShowCategoryProd(ConfirmCate confirmCate);
+
 }

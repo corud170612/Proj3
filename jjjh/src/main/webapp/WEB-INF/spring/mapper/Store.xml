@@ -46,5 +46,28 @@ VALUES
     (sale_seq.NEXTVAL, #{prodname}, #{price}, #{submon}, 
     #{subvol}, #{grinding}, #{cid}, #{storename}, '처리중', #{caddr}, #{bid}) 
 </insert>
-
+<select id="ShowCategoryProd" parameterType="com.jjjh.Store.ConfirmCate" resultType="com.jjjh.Store.ProdRegis">
+select * from prodregis
+<if test="caffeine !=null">
+ where caffeine = #{caffeine}
+</if>
+<if test="caffeine !=null and drip !=null">
+ and drip = #{drip}
+</if>
+<if test="caffeine !=null and drip !=null and heavy !=null">
+ and heavy = #{heavy}
+</if>
+<if test="caffeine !=null and drip !=null and heavy !=null and flavor !=null">
+ and flavor = #{flavor}
+</if>
+<if test="caffeine !=null and drip !=null and heavy !=null and flavor !=null and acidity !=null">
+ and acidity = #{acidity}
+</if>
+<if test="caffeine !=null and drip !=null and heavy !=null and flavor !=null and acidity !=null and origin !=null">
+ and origin = #{origin}
+</if>
+<if test="caffeine !=null and drip !=null and heavy !=null and flavor !=null and acidity !=null and origin !=null and pricerange !=null">
+ and pricerange = #{pricerange}
+</if>
+</select>
 </mapper>

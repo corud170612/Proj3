@@ -27,7 +27,8 @@ public class StoreController {
    public String storeProc(Model model, HttpSession session) {
       List<ProdRegis> storeLst= iStoreServ.getProdList();
       model.addAttribute("storeLst", storeLst);
-
+      List<ProdRegis> category = iStoreServ.SelectCategory();
+      model.addAttribute("category", category);
       return "forward:/index?formpath=storeMain";
    }
    @RequestMapping(value = "/{prodname}")
@@ -53,15 +54,16 @@ public class StoreController {
    }
    @RequestMapping(value = "/SelectCategory")
    public String SelectCategory(Model model, ConfirmCate confirmCate) {
-//	      List<ProdRegis> category = iStoreServ.SelectCategory();
-//	      model.addAttribute("category", category);
-//	   logger.warn(confirmCate.getCaffeine());
-//	   logger.warn(confirmCate.getDrip());
-//	   logger.warn(confirmCate.getFlavor());
-//	   logger.warn(confirmCate.getHeavy());
-//	   logger.warn(confirmCate.getOrigin());
-//	   logger.warn(confirmCate.getAcidity());
-//	   logger.warn(confirmCate.getPricerange());
+	  
+	   logger.warn(confirmCate.getCaffeine());
+	   logger.warn(confirmCate.getDrip());
+	   logger.warn(confirmCate.getFlavor());
+	   logger.warn(confirmCate.getHeavy());
+	   logger.warn(confirmCate.getOrigin());
+	   logger.warn(confirmCate.getAcidity());
+	   logger.warn(confirmCate.getPricerange());
+	   List<ProdRegis>selectLst = iStoreServ.ShowCategoryProd(confirmCate);
+	   logger.warn(selectLst.size()+"");
       return "forward:/index?formpath=storeMain";
    }
    
