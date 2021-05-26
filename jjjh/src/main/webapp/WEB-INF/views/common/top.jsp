@@ -218,7 +218,7 @@ a {
     line-height: 34px;
     font-weight: 400;
     text-align: center;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.8px; 
     box-sizing: border-box;">JOIN</a></li>
     
           <%}else if(sessionCid!=null&&sessionBid==null){ %>
