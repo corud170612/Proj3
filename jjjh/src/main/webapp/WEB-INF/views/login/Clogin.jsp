@@ -2,8 +2,9 @@
     pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
 <c:url var="home" value="/"/>
-<%-- <h3><font color="white" style="text-align: center;">${msg }</font></h3>
- --%>
+
+${script}
+
 	<section _class="member global_wrap" style="
 	    margin: 0;
 	    padding: 0;
@@ -32,7 +33,7 @@
 		    padding-top: 16px;
 		    border-top: 0;">
 		    
-		        <form action="${home}login/CloginProc" method="post"_novalidate="" class="ng-pristine ng-invalid ng-touched" style="
+		        <form name="form" action="${home}login/CloginProc" method="post" class="ng-pristine ng-invalid ng-touched" style="
 				margin: 0;
 			    padding: 0;">
 		            <div _class="inpbx" style="
@@ -45,7 +46,7 @@
 				    box-sizing: border-box;
 				    margin-top: 8px;
 				    margin-bottom: 8px;">
-		                    <input _type="text" name="Cid" id="user_id" formcontrolname="user_id" placeholder="아이디" autocorrect="off" autocapitalize="none" class="ng-pristine ng-invalid ng-touched" style="
+		                    <input _type="text" name="cid" id="user_id" placeholder="아이디" class="ng-pristine ng-invalid ng-touched" style="
 							margin: 0;
 						    appearance: none;
 						    vertical-align: top;
@@ -72,7 +73,7 @@
 				    box-sizing: border-box;
 				    margin-top: 8px;
 				    margin-bottom: 8px;">
-		    			<input _type="password" name="Cpw" id="user_password" formcontrolname="user_password" placeholder="비밀번호" class="ng-untouched ng-pristine ng-invalid" style="
+		    			<input _type="password" name="cpw" id="user_password" placeholder="비밀번호" class="ng-untouched ng-pristine ng-invalid" style="
 						margin: 0;
 					    appearance: none;
 					    vertical-align: top;
@@ -114,33 +115,7 @@
 		            <!---->
 		
 		        </form>
-		
-	<!-- 	        <div _ngcontent-baf-c57="" class="sns_login">
-		            <h3 _ngcontent-baf-c57="">SNS계정으로 로그인하기</h3>
-		            
-		            <div _ngcontent-baf-c57="" class="sns_btn">
-		                <ruler-social-login-naver _ngcontent-baf-c57="" titletext="네이버로 로그인하기" _nghost-baf-c51=""><div _ngcontent-baf-c51="" id="naverIdLogin" style="display: none;" class="ng-star-inserted"><a id="naverIdLogin_loginButton" href="#"><img src="https://static.nid.naver.com/oauth/big_w.PNG?version=js-2.0.0" height="50"></a></div>
-						<div _ngcontent-baf-c51="" class="container ng-star-inserted">
-						    <button _ngcontent-baf-c51="" class="button naver-login">네이버로 로그인하기</button>
-						</div>
-						</ruler-social-login-naver>
-						                <ruler-social-login-kakao _ngcontent-baf-c57="" titletext="카카오로 로그인하기" _nghost-baf-c54=""><div _ngcontent-baf-c54="" class="container ng-star-inserted">
-						    <button _ngcontent-baf-c54="" class="button kakao-login">카카오로 로그인하기</button>
-						</div>
-						</ruler-social-login-kakao>
-						                <ruler-social-login-facebook _ngcontent-baf-c57="" titletext="페이스북으로 로그인하기" _nghost-baf-c55=""><div _ngcontent-baf-c55="" class="container ng-star-inserted">
-						    <button _ngcontent-baf-c55="" class="button facebook-login">페이스북으로 로그인하기</button>
-						</div>
-						</ruler-social-login-facebook>
-						                <ruler-social-login-facebook _ngcontent-baf-c57="" titletext="페이스북으로 로그인하기" stealthmode="" _nghost-baf-c55="">
-						</ruler-social-login-facebook>
-						                <ruler-social-login-apple _ngcontent-baf-c57="" titletext="Apple로 계속하기" _nghost-baf-c56="">
-						<div _ngcontent-baf-c56="" class="container ng-star-inserted">
-						    <button _ngcontent-baf-c56="" class="button apple-login">Apple로 계속하기</button>
-						</div>
-						</ruler-social-login-apple>
-		            </div>
-		        </div> -->
+
 		        <a _href="#" class="member_go" style="
 				margin: 0;
 			    padding: 0;
