@@ -24,20 +24,23 @@ public class LoginController {
 	@RequestMapping(value = "BloginProc")
 	public String BloginProc(Model model, Bmember bmember) {
 		int loginResult = iBloginServ.BloginProc(bmember);
-		if(loginResult==LOGINSUCCESS)
+		if(loginResult==LOGINSUCCESS) {
 			return "forward:/index?formpath=home";
-
-		model.addAttribute("msg", "로그인정보가 다릅니다 ");
+		}
+		model.addAttribute("script", "<script>alert('아이디 또는 패스워드가 잘못입력되었습니다')</script>");
 		return "forward:/index?formpath=Blogin";
 	}
 	
 	@RequestMapping(value = "CloginProc")
 	public String CloginProc(Model model, Cmember cmember) {
 		int loginResult = iBloginServ.CloginProc(cmember);
-		if(loginResult==LOGINSUCCESS)
+		logger.warn(cmember.getCid());
+		logger.warn(cmember.getCpw());
+		if(loginResult==LOGINSUCCESS) {
 			return "forward:/index?formpath=home";
+		}
 		
-		model.addAttribute("msg", "로그인정보가 다릅니다 ");
+		model.addAttribute("script", "<script>alert('아이디 또는 패스워드가 잘못입력되었습니다')</script>");
 		return "forward:/index?formpath=Clogin";
 	}
 	@RequestMapping(value = "logout")

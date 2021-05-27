@@ -6,7 +6,134 @@
    HttpSession topSession = request.getSession(false);
    String sessionBid = (String)topSession.getAttribute("bid");
 %>
-<form action="${home }product/ProductProc" method="post" enctype="multipart/form-data"> <!-- 컨트롤러  -->
+<%-- <form action="${home }product/ProductProc" method="post" enctype="multipart/form-data"> <!-- 컨트롤러  --> --%>
+<form name="form" onsubmit="return checkAll()" action="${home }product/ProductProc" method="post" enctype="multipart/form-data"> <!-- 컨트롤러  -->
+
+<script type="text/javascript">
+   function checkAll() {
+        if (!checkprodName(form.prodName.value)) {
+            return false;
+        }
+        if (!checkPrice(form.price.value)) {
+            return false;
+        }
+        if (!checkImg(form.prodimg2.value)) {
+            return false;
+        }
+        if (!checkProdIntro(form.prodIntro.value)) {
+            return false;
+        }
+        if (!checkCaffeine(form.caffeine.value)) {
+            return false;
+        }
+        if (!checkDrip(form.drip.value)) {
+            return false;
+        }
+        if (!checkBody(form.body.value)) {
+            return false;
+        }
+        if (!checkFlavor(form.flavor.value)) {
+            return false;
+        }
+        
+        if (!checkAcidity(form.acidity.value)) {
+            return false;
+        }
+        
+        if (!checkOrigin(form.origin.value)) {
+            return false;
+        }
+        
+        if (!checkPricerange(form.pricerange.value)) {
+            return false;
+        }
+        
+        return true;
+    }
+   
+    // 공백확인 함수
+    function checkExistData(value, dataName) {
+        if (value == "") {
+            alert(dataName + " 등록해주세요");
+            return false;
+        }
+        return true;
+    }
+    function checkprodName(name) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(name, "상품명을"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+    function checkPrice(price) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(price, "상품가격을"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+    function checkImg(img) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(img, "이미지를"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+    function checkProdIntro(intro) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(intro, "상품설명을"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+    function checkCaffeine(cate1) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(cate1, "카테고리 1을"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+    function checkCaffeine(cate1) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(cate1, "카테고리 1을"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+    function checkDrip(cate2) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(cate2, "카테고리 2를"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+    function checkBody(cate3) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(cate3, "카테고리 3를"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+    function checkFlavor(cate4) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(cate4, "카테고리 4를"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+    function checkAcidity(cate5) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(cate5, "카테고리 5를"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+    function checkOrigin(cate6) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(cate6, "카테고리 6를"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+    function checkPricerange(cate7) {
+        //Id가 입력되었는지 확인하기
+        if (!checkExistData(cate7, "카테고리 7를"))
+            return false;
+        return true; //확인이 완료되었을 때
+    }
+
+</script>
+
 <style type="text/css">
 #searchBox{
    width: 300px;
@@ -516,11 +643,11 @@ h4{
 </div>
 
 <!-- 카테고리 hidden값으로 숨기기  -->
-    <input type="hidden" name="bid" value="<%= sessionBid %>" />      <!-- 카페인 -->
+    <input type="hidden" name="bid" value="<%= sessionBid %>" />      <!-- 아이디 -->
     
     <input type="hidden" id="caffeine1"    name="caffeine" />      <!-- 카페인 -->
     <input type="hidden" id="dripback1"    name="drip" />         <!-- 드립 방식 -->
-    <input type="hidden" id="heavy1"       name="body" />         <!-- 무게간 -->
+    <input type="hidden" id="heavy1"       name="body" />         <!-- 무게감 -->
     <input type="hidden" id="chocolate1"   name="flavor" />      <!-- 맛과 향 -->
     <input type="hidden" id="none1"       name="acidity" />      <!-- 산미 -->
     <input type="hidden" id="columbia1"      name="origin"/>         <!-- 원산지 -->
@@ -602,7 +729,7 @@ h4{
 </div>
 
 <div id="searchBox" align="center">
-      <button style=" background-color: #111; color: white; width: 100px; height: 50px;">상품등록	</button>
+      <button style=" background-color: #111; color: white; width: 100px; height: 50px;">상품등록   </button>
       <button type="button" value="초기화" style=" background-color: #111; color: white; color: white; width: 100px; height: 50px;" onClick="window.location.reload()">초기화</button>
 </div>
 
