@@ -409,7 +409,6 @@ span{
 
 </script>
 
-
 <h1   style="margin-top: 150px; color: #fff; font-weight: 40px; font-size: 60px; margin-left: 300px;">모든 커피</h1>
 <div id="productFrame">
    <div id="category">
@@ -458,368 +457,302 @@ span{
    </div>
    <script type="text/javascript">
    $(document).ready(function() {
-	   var selectcaffeine = $("#caffeine").val();
-	   var selectdrip = $("#drip").val();
-	   var selectheavy = $("#heavy").val();
-	   var selectflavor = $("#flavor").val();
-	   var selectacidity = $("#acidity").val();
-	   var selectorigin = $("#origin").val();
-	   var selectpricerange = $("#pricerange").val();
-	   
-	      $("#spanCaffeine1").click(function() {
-	         $("#caffeine").val("카페인");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:"카페인", 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanCaffeine2").click(function() {
-	         $("#caffeine").val("디카페인");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:"디카페인", 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanDrip1").click(function() {
-	         $("#drip").val("드립백");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:"드립백", 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanDrip2").click(function() {
-	         $("#drip").val("커피메이커");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:"커피메이커", 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanDrip3").click(function() {
-	         $("#drip").val("핸드드립");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:"핸드드립", 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanDrip4").click(function() {
-	         $("#drip").val("에스프레소머신");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:"에스프레소머신", 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanDrip5").click(function() {
-	         $("#drip").val("모카포트");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:"모카포트", 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanDrip6").click(function() {
-	         $("#drip").val("기구없음");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:"기구없음", 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanBody1").click(function() {
-	         $("#heavy").val("묵직한커피");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:"묵직한커피", 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	         
-	      })
-	      $("#spanBody2").click(function() {
-	         $("#heavy").val("밸런스좋은커피");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:"밸런스좋은커피", 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanBody3").click(function() {
-	         $("#heavy").val("가벼운커피");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:"가벼운커피", 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanFlavor1").click(function() {
-	         $("#flavor").val("달콤한");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:"달콤한", 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanFlavor2").click(function() {
-	         $("#flavor").val("말린과일");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:"말린과일", 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanFlavor3").click(function() {
-	         $("#flavor").val("초콜릿");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:"초콜릿", 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanFlavor4").click(function() {
-	         $("#flavor").val("베리");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:"베리", 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanFlavor5").click(function() {
-	         $("#flavor").val("사과배");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:"사과배", 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanAcidity1").click(function() {
-	         $("#acidity").val("없음");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:"없음", 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanAcidity2").click(function() {
-	         $("#acidity").val("약함");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:"약함", 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanAcidity3").click(function() {
-	         $("#acidity").val("적당");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:"적당", 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanAcidity4").click(function() {
-	         $("#acidity").val("강함");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:"강함", 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanOrigin1").click(function() {
-	         $("#origin").val("콜롬비아");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:"콜롬비아", 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanOrigin2").click(function() {
-	         $("#origin").val("에티오피아");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:"에티오피아", 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanOrigin3").click(function() {
-	         $("#origin").val("브라질");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:"브라질", 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanOrigin4").click(function() {
-	         $("#origin").val("온두라스");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:"온두라스", 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanOrigin5").click(function() {
-	         $("#origin").val("인도네시아");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:"인도네시아", 
-	        	 pricerange:$('#pricerange').val()})
-	      })
-	      $("#spanPriceRange1").click(function() {
-	         $("#pricerange").val("만원이하");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:"만원이하"})
-	      })
-	      $("#spanPriceRange2").click(function() {
-	         $("#pricerange").val("2만원이하");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:"2만원이하"})
-	      })
-	      $("#spanPriceRange3").click(function() {
-	         $("#pricerange").val("3만원이하");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:"3만원이하"})
-	      })
-	      $("#spanPriceRange4").click(function() {
-	         $("#pricerange").val("4만원이하");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:"4만원이하"})
-	      })
-	      $("#spanPriceRange5").click(function() {
-	         $("#pricerange").val("5만원이하");
-	         $.get("${home}store/SelectCategory", {
-	        	 caffeine:$('#caffeine').val(), 
-	        	 drip:$('#drip').val(), 
-	        	 heavy:$('#heavy').val(), 
-	        	 flavor:$('#flavor').val(), 
-	        	 acidity:$('#acidity').val(), 
-	        	 origin:$('#origin').val(), 
-	        	 pricerange:"5만원이하"})
-	      })
-	});
+      var selectcaffeine = $("#caffeine").val();
+      var selectdrip = $("#drip").val();
+      var selectheavy = $("#heavy").val();
+      var selectflavor = $("#flavor").val();
+      var selectacidity = $("#acidity").val();
+      var selectorigin = $("#origin").val();
+      var selectpricerange = $("#pricerange").val();
+      
+         $("#spanCaffeine1").click(function() {
+            $("#caffeine").val("카페인");
+            $.get("${home}store/SelectCategory?caffeine=카페인&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanCaffeine2").click(function() {
+            $("#caffeine").val("디카페인");
+            $.get("${home}store/SelectCategory?caffeine=디카페인&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanDrip1").click(function() {
+            $("#drip").val("드립백");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip=드립백&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanDrip2").click(function() {
+            $("#drip").val("커피메이커");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip=커피메이커&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanDrip3").click(function() {
+            $("#drip").val("핸드드립");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip=핸드드립&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanDrip4").click(function() {
+            $("#drip").val("에스프레소머신");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip=에스프레소머신&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanDrip5").click(function() {
+            $("#drip").val("모카포트");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip=모카포트&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanDrip6").click(function() {
+            $("#drip").val("기구없음");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip=기구없음&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanBody1").click(function() {
+            $("#heavy").val("묵직한커피");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy=묵직한커피&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+            
+         })
+         $("#spanBody2").click(function() {
+            $("#heavy").val("밸런스좋은커피");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy=밸런스좋은커피&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanBody3").click(function() {
+            $("#heavy").val("가벼운커피");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy=가벼운커피&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanFlavor1").click(function() {
+            $("#flavor").val("달콤한");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor=달콤한&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanFlavor2").click(function() {
+            $("#flavor").val("말린과일");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor=말린과일&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanFlavor3").click(function() {
+            $("#flavor").val("초콜릿");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor=초콜릿&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               
+               }
+         })
+         })
+         $("#spanFlavor4").click(function() {
+            $("#flavor").val("베리");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor=베리&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanFlavor5").click(function() {
+            $("#flavor").val("사과배");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor=사과배&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanAcidity1").click(function() {
+            $("#acidity").val("없음");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity=없음&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanAcidity2").click(function() {
+            $("#acidity").val("약함");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity=약함&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanAcidity3").click(function() {
+            $("#acidity").val("적당");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity=적당&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanAcidity4").click(function() {
+            $("#acidity").val("강함");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity=강함&origin="+$('#origin').val()+"&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanOrigin1").click(function() {
+            $("#origin").val("콜롬비아");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin=콜롬비아&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanOrigin2").click(function() {
+            $("#origin").val("에티오피아");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin=에티오피아&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanOrigin3").click(function() {
+            $("#origin").val("브라질");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin=브라질&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanOrigin4").click(function() {
+            $("#origin").val("온두라스");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin=온두라스&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanOrigin5").click(function() {
+            $("#origin").val("인도네시아");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin=인도네시아&pricerange="+$('#pricerange').val(), function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanPriceRange1").click(function() {
+            $("#pricerange").val("만원이하");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange=만원이하", function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanPriceRange2").click(function() {
+            $("#pricerange").val("2만원이하");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange=2만원이하", function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanPriceRange3").click(function() {
+            $("#pricerange").val("3만원이하");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange=3만원이하", function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanPriceRange4").click(function() {
+            $("#pricerange").val("4만원이하");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange=4만원이하", function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+         $("#spanPriceRange5").click(function() {
+            $("#pricerange").val("5만원이하");
+            $.get("${home}store/SelectCategory?caffeine="+$('#caffeine').val()+"&drip="+$('#drip').val()+"&heavy="+$('#heavy').val()+"&flavor="+$('#flavor').val()+"&acidity="+$('#acidity').val()+"&origin="+$('#origin').val()+"&pricerange=5만원이하", function(data, status) {
+               if(status=='success'){
+                  console.log(data);
+                  $("#productList").html(data);
+               }
+         })
+         })
+   });
+
    </script>
-   <input type="text" name="caffeine" id="caffeine"/>
-   <input type="text" name="drip" id="drip"/>
-   <input type="text" name="heavy" id="heavy"/>
-   <input type="text" name="flavor" id="flavor"/>
-   <input type="text" name="acidity" id="acidity"/>
-   <input type="text" name="origin" id="origin"/>
-   <input type="text" name="pricerange" id="pricerange"/>
+   <input type="hidden" name="caffeine" id="caffeine"/>
+   <input type="hidden" name="drip" id="drip"/>
+   <input type="hidden" name="heavy" id="heavy"/>
+   <input type="hidden" name="flavor" id="flavor"/>
+   <input type="hidden" name="acidity" id="acidity"/>
+   <input type="hidden" name="origin" id="origin"/>
+   <input type="hidden" name="pricerange" id="pricerange"/>
 
    <div id="productList">
       <ul id="productUl">
-            <c:forEach var="store" items="${storeLst }" varStatus="status">
+            <c:forEach var="store" items="${storeLst }" >
            
-            <li id="productLi"><a href="${home}store/${store.prodname }">
-             <input type="hidden" value="${category[status.index].caffeine }"/>
-             <input type="hidden" value="${category[status.index].drip }"/>
-             <input type="hidden" value="${category[status.index].heavy }"/>
-             <input type="hidden" value="${category[status.index].flavor }"/>
-             <input type="hidden" value="${category[status.index].origin }"/>
-             <input type="hidden" value="${category[status.index].pricerange }"/>
-             <input type="hidden" value="${category[status.index].acidity }"/>
-             
+            <li id="productLi"><a href="${home}store/${store.prodname }">    
                <div class="productBox">
                   <div class="productImgBox">
                      <img src="${home }resources/upload/${store.prodimg1}"
@@ -841,4 +774,5 @@ span{
             </c:forEach>
       </ul>
    </div>
+
 </div>

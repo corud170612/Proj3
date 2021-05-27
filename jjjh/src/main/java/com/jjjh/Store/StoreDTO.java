@@ -28,12 +28,12 @@ public class StoreDTO {
     private String prodimg1;
 
    public String getProdimg1() {
-		return prodimg1;
-	}
+      return prodimg1;
+   }
 
-	public void setProdimg1(String prodimg1) {
-		this.prodimg1 = prodimg1;
-	}
+   public void setProdimg1(String prodimg1) {
+      this.prodimg1 = prodimg1;
+   }
 
 public String getBid() {
       return bid;

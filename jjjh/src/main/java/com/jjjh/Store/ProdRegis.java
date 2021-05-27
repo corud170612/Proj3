@@ -49,131 +49,131 @@ public class ProdRegis {
  private String storelogo2;
 
 public String getProdname() {
-	return prodname;
+   return prodname;
 }
 
 public void setProdname(String prodname) {
-	this.prodname = prodname;
+   this.prodname = prodname;
 }
 
 public String getProdimg1() {
-	return prodimg1;
+   return prodimg1;
 }
 
 public void setProdimg1(String prodimg1) {
-	this.prodimg1 = prodimg1;
+   this.prodimg1 = prodimg1;
 }
 
 public String getProdimg2() {
-	return prodimg2;
+   return prodimg2;
 }
 
 public void setProdimg2(String prodimg2) {
-	this.prodimg2 = prodimg2;
+   this.prodimg2 = prodimg2;
 }
 
 public String getProdintro() {
-	return prodintro;
+   return prodintro;
 }
 
 public void setProdintro(String prodintro) {
-	this.prodintro = prodintro;
+   this.prodintro = prodintro;
 }
 
 public String getCaffeine() {
-	return caffeine;
+   return caffeine;
 }
 
 public void setCaffeine(String caffeine) {
-	this.caffeine = caffeine;
+   this.caffeine = caffeine;
 }
 
 public String getDrip() {
-	return drip;
+   return drip;
 }
 
 public void setDrip(String drip) {
-	this.drip = drip;
+   this.drip = drip;
 }
 
 public String getHeavy() {
-	return heavy;
+   return heavy;
 }
 
 public void setHeavy(String heavy) {
-	this.heavy = heavy;
+   this.heavy = heavy;
 }
 
 public String getFlavor() {
-	return flavor;
+   return flavor;
 }
 
 public void setFlavor(String flavor) {
-	this.flavor = flavor;
+   this.flavor = flavor;
 }
 
 public String getAcidity() {
-	return acidity;
+   return acidity;
 }
 
 public void setAcidity(String acidity) {
-	this.acidity = acidity;
+   this.acidity = acidity;
 }
 
 public String getOrigin() {
-	return origin;
+   return origin;
 }
 
 public void setOrigin(String origin) {
-	this.origin = origin;
+   this.origin = origin;
 }
 
 public String getPrice() {
-	return price;
+   return price;
 }
 
 public void setPrice(String price) {
-	this.price = price;
+   this.price = price;
 }
 
 public String getPricerange() {
-	return pricerange;
+   return pricerange;
 }
 
 public void setPricerange(String pricerange) {
-	this.pricerange = pricerange;
+   this.pricerange = pricerange;
 }
 
 public String getBid() {
-	return bid;
+   return bid;
 }
 
 public void setBid(String bid) {
-	this.bid = bid;
+   this.bid = bid;
 }
 
 public String getStorename() {
-	return storename;
+   return storename;
 }
 
 public void setStorename(String storename) {
-	this.storename = storename;
+   this.storename = storename;
 }
 
 public String getStorelogo1() {
-	return storelogo1;
+   return storelogo1;
 }
 
 public void setStorelogo1(String storelogo1) {
-	this.storelogo1 = storelogo1;
+   this.storelogo1 = storelogo1;
 }
 
 public String getStorelogo2() {
-	return storelogo2;
+   return storelogo2;
 }
 
 public void setStorelogo2(String storelogo2) {
-	this.storelogo2 = storelogo2;
+   this.storelogo2 = storelogo2;
 }
 
 

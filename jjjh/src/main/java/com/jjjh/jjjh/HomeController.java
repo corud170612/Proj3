@@ -75,6 +75,11 @@ public class HomeController {
    public String status() {
 	   return "status/statusForm"; 
    }
+   @RequestMapping(value = "/selectView")
+   public String selectView() {
+      return "store/selectView";
+   }
+   
    @RequestMapping(value = "/tasteTest")
    public String tasteTest() {
       return "tasteTest/tasteTestForm"; 

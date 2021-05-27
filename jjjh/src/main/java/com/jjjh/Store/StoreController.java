@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jjjh.Member.Bmember;
 
-
 @Controller
 @RequestMapping("store")
 public class StoreController {
@@ -54,17 +53,22 @@ public class StoreController {
    }
    @RequestMapping(value = "/SelectCategory")
    public String SelectCategory(Model model, ConfirmCate confirmCate) {
-	  
-	   logger.warn(confirmCate.getCaffeine());
-	   logger.warn(confirmCate.getDrip());
-	   logger.warn(confirmCate.getFlavor());
-	   logger.warn(confirmCate.getHeavy());
-	   logger.warn(confirmCate.getOrigin());
-	   logger.warn(confirmCate.getAcidity());
-	   logger.warn(confirmCate.getPricerange());
-	   List<ProdRegis>selectLst = iStoreServ.ShowCategoryProd(confirmCate);
-	   logger.warn(selectLst.size()+"");
-      return "forward:/index?formpath=storeMain";
+     
+      List<ProdRegis>selectLst = iStoreServ.ShowCategoryProd(confirmCate);
+      model.addAttribute("selectLst", selectLst);
+      for(ProdRegis prodRegis:selectLst) {
+         logger.warn("============START===============");
+         logger.warn(prodRegis.getCaffeine());
+         logger.warn(prodRegis.getDrip());
+         logger.warn(prodRegis.getFlavor());
+         logger.warn(prodRegis.getHeavy());
+         logger.warn(prodRegis.getOrigin());
+         logger.warn(prodRegis.getPricerange());
+         logger.warn(prodRegis.getAcidity());
+         logger.warn("============FINISH==============");
+      }
+      logger.warn(selectLst.size()+"");
+      return "store/selectView";
    }
    
 }
