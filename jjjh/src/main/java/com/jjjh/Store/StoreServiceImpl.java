@@ -56,13 +56,13 @@ public class StoreServiceImpl implements IStoreService{
 @Override
 public List<ProdRegis> SelectCategory() {
 
-	return iStoreDao.SelectCategory();
+   return iStoreDao.SelectCategory();
 }
 
 @Override
 public List<ProdRegis> ShowCategoryProd(ConfirmCate confirmCate) {
-		List<ProdRegis>selectLst = iStoreDao.ShowCategoryProd(confirmCate);
-	return selectLst;
+      List<ProdRegis>selectLst = iStoreDao.ShowCategoryProd(confirmCate);
+   return selectLst;
 }
 
 }
