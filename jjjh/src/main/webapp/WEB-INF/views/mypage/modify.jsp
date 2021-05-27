@@ -131,7 +131,7 @@ function openAuth(cmd){
     }
 </script>
 <div style="margin-top: 150px; margin-bottom: 250px;">
-<p style="text-align: center; font-size: 20px;">Create an account</p>
+<p style="text-align: center; font-size: 20px;">Modify an account</p>
 <br><br><br>
 <div style="width: 100%; height: 800px;">
 
