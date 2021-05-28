@@ -67,10 +67,16 @@ public class TasteTestController {
      logger.warn(tasteTest.getFlavor());
      logger.warn(tasteTest.getPricerange());
       List<Test>testLst = tasteTestService.tasteResult(tasteTest);
-      model.addAttribute("drip", tasteTest.getDrip());
-      model.addAttribute("heavy", tasteTest.getHeavy());
-      model.addAttribute("flavor", tasteTest.getFlavor());
+      if(testLst.size()==0) {
+     	 model.addAttribute("NoTest", "<br/><br/><br/>선택지에 맞는 상품이<br/> 판매준비중입니다");
+     	 return "forward:/index?formpath=testSucessForm";
+      }
+      model.addAttribute("msg","꼭 맞는 커피를 찾았어요");
+      model.addAttribute("drip", tasteTest.getDrip()+"으로 내려마시기 좋고</br>");
+      model.addAttribute("heavy", tasteTest.getHeavy()+" 즐길 수 있는</br>");
+      model.addAttribute("flavor", tasteTest.getFlavor()+"  커피를 추천해요.");
      logger.warn(test.getProdimg1());
+    
       model.addAttribute("testLst", testLst);
       return "forward:/index?formpath=testSucessForm";
    }

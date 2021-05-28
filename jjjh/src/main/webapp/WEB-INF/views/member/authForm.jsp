@@ -1,26 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 <meta charset="utf-8">
-<title>º»ÀÎÀÎÁõ</title>
+<title>ë³¸ì¸ì¸ì¦</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
 	  $("#sendAuth").click(function(){
 		    if( $("#name").val()==""){
-		    	alert("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä")
+		    	alert("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”")
 		    }
 
 			else if( $("#birth").val()==""){
-	  	  		alert("»ı³â¿ùÀÏÀ» ÀÔ·ÂÇÏ¼¼¿ä")
+	  	  		alert("ìƒë…„ì›”ì¼ì„ ì…ë ¥í•˜ì„¸ìš”")
 		  }
 
 			else if( $("#phoneNum").val()==""){
-			alert("ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä")
+			alert("ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”")
 			}
 			else{
 				var ranNum = Math.floor(Math.random()*(9999-1000+1)) + 1000;
@@ -39,7 +39,7 @@ $(document).ready(function(){
 		    }
 
 			else{
-				alert("ÀÎÁõ¹øÈ£°¡ ´Ù¸¨´Ï´Ù");
+				alert("ì¸ì¦ë²ˆí˜¸ê°€ ë‹¤ë¦…ë‹ˆë‹¤");
 				$("#authNum").val("");
 			}
 });
@@ -52,37 +52,37 @@ $(document).ready(function(){
 	<center>
 <br/>
 <div style=" padding: 10px; padding-bottom: 40px; border-radius: 20px;">
-<h2>º»ÀÎÀÎÁõ</h2>
+<h2>ë³¸ì¸ì¸ì¦</h2>
 <input type="hidden" id="getAuth">
 <hr><img src="${pageContext.request.contextPath}/resources/img/logoBlack.png" style="width: 100px; height: 100px;" />
   <div class="col-xs-3 mx-auto" style="width: 400px; margin: 10px;">
   <div style="width: 100px; height: auto; float: left;">
-    <label for="exampleInputName2" style=" margin: 5px; font-weight: bold; text-align: left;">ÀÌ¸§</label>
+    <label for="exampleInputName2" style=" margin: 5px; font-weight: bold; text-align: left;">ì´ë¦„</label>
    </div> 
-    <input type="text" class="form-control" name="name" id="name"  placeholder="ÀÌ¸§ ÀÔ·Â">
+    <input type="text" class="form-control" name="name" id="name"  placeholder="ì´ë¦„ ì…ë ¥">
   </div>
     <div class="col-xs-3 mx-auto" style="width: 400px; margin: 10px;">
     <div style="width: 100px; height: auto; float: left;">
-    <label for="exampleInputName2" style=" margin: 5px; font-weight: bold; text-align: left;">»ı³â¿ùÀÏ</label>
+    <label for="exampleInputName2" style=" margin: 5px; font-weight: bold; text-align: left;">ìƒë…„ì›”ì¼</label>
    </div> 
-    <input type="text" class="form-control" name="residentNum"  id="birth" placeholder="6ÀÚ¸® ÀÔ·Â">
+    <input type="text" class="form-control" name="residentNum"  id="birth" placeholder="6ìë¦¬ ì…ë ¥">
   </div>
 
  <div class="col-xs-3 mx-auto" style="width: 400px; margin: 10px;">
     <div style="width: 100px; height: auto; float: left;">
-    <label for="exampleInputName2" style=" margin: 5px; font-weight: bold; text-align: left;">ÈŞ´ëÆù¹øÈ£</label>
+    <label for="exampleInputName2" style=" margin: 5px; font-weight: bold; text-align: left;">íœ´ëŒ€í°ë²ˆí˜¸</label>
    </div> 
-    <input type="text" class="form-control" name="phoneNum" id="phoneNum" placeholder="-¾øÀÌ ÀÔ·Â">
+    <input type="text" class="form-control" name="phoneNum" id="phoneNum" placeholder="-ì—†ì´ ì…ë ¥">
   </div>
-<button class="btn btn-outline-secondary" id="sendAuth">ÀÎÁõ¹øÈ£ Àü¼Û</button>
+<button class="btn btn-outline-secondary" id="sendAuth">ì¸ì¦ë²ˆí˜¸ ì „ì†¡</button>
  <div class="col-xs-3 mx-auto" style="width: 400px; margin: 10px;">
     <div style="width: 100px; height: auto; float: left;">
-    <label for="exampleInputName2" style=" margin: 5px; font-weight: bold; text-align: left;">ÀÎÁõ¹øÈ£</label>
+    <label for="exampleInputName2" style=" margin: 5px; font-weight: bold; text-align: left;">ì¸ì¦ë²ˆí˜¸</label>
    </div> 
-    <input type="text" class="form-control" id="authNum" name="authNum" id="authNum" placeholder="ÀÎÁõ¹øÈ£ ÀÔ·Â">
+    <input type="text" class="form-control" id="authNum" name="authNum" id="authNum" placeholder="ì¸ì¦ë²ˆí˜¸ ì…ë ¥">
   </div>
   
-<button class="btn btn-outline-secondary" id="authOk" >È®ÀÎ</button>
+<button class="btn btn-outline-secondary" id="authOk" >í™•ì¸</button>
 </div>
 </center>
 </body>

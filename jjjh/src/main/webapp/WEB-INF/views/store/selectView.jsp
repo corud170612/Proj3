@@ -26,3 +26,4 @@
             </a></li>
             </c:forEach>
       </ul>
+      <p style="text-align: center; font-size: 30px; margin-left: 350px; margin-top: 250px;">${NoProduct }</p>

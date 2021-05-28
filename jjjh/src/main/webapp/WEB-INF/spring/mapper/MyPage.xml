@@ -11,8 +11,7 @@ from salestate
 where cid = #{cid}
 </select>
 <update id="ModifyProc" parameterType="com.jjjh.MyPage.MyInfo">
-update cmember set cid = #{cid}, cpw = #{cpw}, cph = #{cph}, czipcode = #{czipcode}, caddr = #{caddr}, cardnumber = #{cardnumber},
-bank = #{bank}, EXPIRATIONDATE = #{expirationDate}
+update cmember set cid = #{cid}, cpw = #{cpw}, czipcode = #{czipcode}, caddr = #{caddr}
 where cid = #{loginId}
 </update>
 <update id="ModifyProc2" parameterType="com.jjjh.MyPage.MyInfo">

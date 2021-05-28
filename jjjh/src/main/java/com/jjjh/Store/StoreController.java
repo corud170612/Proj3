@@ -57,6 +57,9 @@ public class StoreController {
    public String SelectCategory(Model model, ConfirmCate confirmCate) {
      
       List<ProdRegis>selectLst = iStoreServ.ShowCategoryProd(confirmCate);
+      if(selectLst.size()==0) {
+    	  model.addAttribute("NoProduct", "상품 준비중입니다");
+      }
       model.addAttribute("selectLst", selectLst);
       for(ProdRegis prodRegis:selectLst) {
          logger.warn("============START===============");

@@ -133,7 +133,7 @@ a {
                      <a href="${topHome }/index?formpath=tasteTest">TASTE TEST</a> </li>
                   <li id="my-cafebox-li" style="display: none;">
                   <a href="#">BRAND</a></li>
-                        <li><a href="#">REVIEW</a></li>
+       
                         <li><a href="${topHome }/index?formpath=recipe">RECIPE</a></li>
                         <li><a href="${topHome }index?formpath=partner">PARTNER BRAND</a></li>
                       <%if(sessionBid==null && sessionCid!=null) { %>

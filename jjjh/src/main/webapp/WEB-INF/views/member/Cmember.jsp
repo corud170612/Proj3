@@ -26,7 +26,7 @@ border: 1px solid #ccc;
 border-radius: 4px;
  box-sizing: border-box; 
  }
- button, #authBtn{
+ button, #authBtn, #CardInfo{
    width: 170px;
    height: 40px;
    background: gray;
@@ -62,7 +62,6 @@ tr {
 
 }
 
-
 </style>
 <form action="${home }membership/CmemberProc">
 <script type="text/javascript">
@@ -70,7 +69,6 @@ function openAuth(cmd){
 	window.name="인증";
 	window.open(cmd, "_blank", "top=500, left=500, width=450, height=600");
 }
-
 </script>
 
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -147,12 +145,12 @@ function openAuth(cmd){
 </td>
 </tr>
 <tr>
-<td><p>이름</p></td>
-<td><p>전화번호</p></td>
+<td ><p>이름</p></td>
+<td ><p>상세주소</p></td>
 </tr>
 <tr>
 <td><input type="text" name="name" style="width: 360px; "></td>
-<td><input type="text" name="ph" style="width: 360px; "></td>
+<td ><input type="text" id="detailsAddr" style="width: 360px;"></td>
 </tr>
 <tr>
 <td><p>우편번호</p></td>
@@ -163,10 +161,10 @@ function openAuth(cmd){
 <td><input type="text" id="address" name="address" style="width: 360px; "></td>
 </tr>
 <tr>
-<td colspan="2"><p style="width: 360px; margin-left: 180px;">상세주소</p></td>
+
 </tr>
 <tr>
-<td colspan="2" ><input type="text" id="detailsAddr" style="width: 360px; margin-left: 180px;"></td>
+
 </tr>
 <tr>
 <td colspan="2"><input type="button" onclick="sample6_execDaumPostcode()" style="margin-left: 280px;" id="selectZipcode" value="우편번호 찾기">
@@ -176,28 +174,7 @@ function openAuth(cmd){
 <td colspan="2"><hr/>
 </td>
 </tr>
-<tr>
-<td colspan="2"><p style="width: 360px; margin-left: 180px;">카드번호</p></td>
-</tr>
-<tr>
-<td colspan="2" ><input type="text" name="cardnumber" style="width: 360px; margin-left: 180px;"></td>
-</tr>
-<tr>
-<td colspan="2"><p style="width: 360px; margin-left: 180px;">은행</p></td>
-</tr>
-<tr>
-<td colspan="2" ><input type="text" name="bank" style="width: 360px; margin-left: 180px;"></td>
-</tr>
-<tr>
-<td colspan="2"><p style="width: 360px; margin-left: 180px;">카드 만기일</p></td>
-</tr>
-<tr>
-<td colspan="2" ><input type="text" name="expirationdate" style="width: 360px; margin-left: 180px;"></td>
-</tr>
-<tr>
-<td colspan="2"><hr/>
-</td>
-</tr>
+
 
 </table>
 </center>

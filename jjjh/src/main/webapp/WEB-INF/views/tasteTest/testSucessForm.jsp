@@ -157,12 +157,13 @@ font-size: 20px;
 </style>
 
 <div id="resultWords">
-꼭 맞는 커피를 찾았어요
+${msg }
+${NoTest }
 </div>
 <div id="aboutResult">
-${drip }으로 내려마시기 좋고</br>
-${heavy } 즐길 수 있는</br>
-${flavor } 커피를 추천해요.
+${drip }
+${heavy }
+${flavor }
 </div>
 
 <div id="productList">

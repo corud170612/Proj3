@@ -244,7 +244,7 @@ $(document).ready(function(){
          class="storeImg">
          <strong>${bmember.storename }</strong>
       </div>
-      <hr>
+      <hr>	
       <div class="storeGuide">
          <input type="hidden" name="storeId" value="${bmember.bid }" />
          <div id="storeName">

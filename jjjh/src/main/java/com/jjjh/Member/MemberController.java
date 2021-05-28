@@ -40,6 +40,11 @@ public class MemberController {
 	
 		return "member/authForm";
 	}
+	@RequestMapping(value = "/cardInfo")
+	public String cardInfo() {
+	
+		return "member/cardInfo";
+	}
 	@RequestMapping(value = "/BmemberProc")
 	public String BmemberProc(Bmember bmember, HttpServletRequest request) {
 		logger.warn(bmember.getBid());
