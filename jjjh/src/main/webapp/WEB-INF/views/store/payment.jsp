@@ -317,7 +317,7 @@ $(document).ready(function(){
                <span style="font-weight: 700; font-size: 30px; color: white; line-height: 60px;" id="12span">12개월</span>
             </div>
          
-         <input type="submit" id="buyBtn" value="구독하기" style="width: 100%; height: 60px; background: white; font-size: 20px; font-weight: 600; border-radius: 4px; color: black; border: 1px solid white;" />
+         <input type="submit" id="buyBtn" onclick="" value="구독하기" style="width: 100%; height: 60px; background: white; font-size: 20px; font-weight: 600; border-radius: 4px; color: black; border: 1px solid white;" />
       </form>
          </div>
    </div>
