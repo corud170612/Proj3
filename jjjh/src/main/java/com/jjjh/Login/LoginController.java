@@ -24,6 +24,7 @@ public class LoginController {
 	@RequestMapping(value = "BloginProc")
 	public String BloginProc(Model model, Bmember bmember) {
 		int loginResult = iBloginServ.BloginProc(bmember);
+		logger.warn(loginResult+"");
 		if(loginResult==LOGINSUCCESS) {
 			return "forward:/index?formpath=home";
 		}

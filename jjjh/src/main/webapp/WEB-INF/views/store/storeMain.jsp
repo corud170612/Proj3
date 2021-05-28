@@ -451,8 +451,8 @@ span{
       <hr />
       <h2 id="cate7">가격</h2>
       <div id="panel7" style="width: 100%; display: none;">
-         <span id="spanPriceRange1">1만원 이하</span> <span id="spanPriceRange2">2만원 이하</span> 
-         <span id="spanPriceRange3">3만원 이하</span> <span id="spanPriceRange4">4만원 이하</span> <span id="spanPriceRange5">5만원 이하</span>
+         <span id="spanPriceRange1">만원이하</span> <span id="spanPriceRange2">만원~2만원대</span> 
+         <span id="spanPriceRange3">2만원~3만원</span> <span id="spanPriceRange4">3만원~4만원</span> <span id="spanPriceRange5">4만원이상</span>
       </div>
    </div>
    <script type="text/javascript">

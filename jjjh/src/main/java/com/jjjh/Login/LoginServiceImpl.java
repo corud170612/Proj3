@@ -41,7 +41,7 @@ public class LoginServiceImpl implements ILoginService{
    
    @Override
    public int BloginProc(Bmember bmember) {
-      bmember.setBpw(bmember.getBid());
+      bmember.setBpw(bmember.getBpw());
       int cntB = iBloginDao.BloginProc(bmember);
       setSessionB(cntB, bmember.getBid());
       logger.warn(bmember.getBid());
@@ -52,7 +52,7 @@ public class LoginServiceImpl implements ILoginService{
 
    @Override
    public int CloginProc(Cmember cmember) {
-      cmember.setCpw(cmember.getCid());
+      cmember.setCpw(cmember.getCpw());
       int cntC = iBloginDao.CloginProc(cmember);
       setSessionC(cntC, cmember.getCid());
       logger.warn(cmember.getCid());
