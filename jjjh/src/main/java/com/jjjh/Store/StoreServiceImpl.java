@@ -65,4 +65,10 @@ public List<ProdRegis> ShowCategoryProd(ConfirmCate confirmCate) {
    return selectLst;
 }
 
+@Override
+public MemberInfo joinMember(String loginCheck) {
+	
+	return iStoreDao.joinMember(loginCheck);
+}
+
 }

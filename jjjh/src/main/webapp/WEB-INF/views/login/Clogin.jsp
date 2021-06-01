@@ -116,7 +116,7 @@ ${script}
 		
 		        </form>
 
-		        <a _href="#" class="member_go" style="
+		        <a href="${home }membership/moveCustomer" class="member_go" style="
 				margin: 0;
 			    padding: 0;
 			    text-decoration: none;

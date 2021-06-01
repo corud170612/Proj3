@@ -21,4 +21,6 @@ public List<ProdRegis> SelectCategory();
 
 public List<ProdRegis> ShowCategoryProd(ConfirmCate confirmCate);
 
+public MemberInfo joinMember(String loginCheck);
+
 }

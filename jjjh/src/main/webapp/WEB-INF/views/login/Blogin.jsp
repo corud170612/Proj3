@@ -25,7 +25,7 @@ ${script}
 		    text-align: center;">기업 로그인</h2><!---->
 		
 		    
-		    <div _class="tab_cnt ng-star-inserted" style="
+		    <div class="tab_cnt ng-star-inserted" style="
 			margin: 0;
 		    padding: 0;
 		    padding-top: 16px;
@@ -34,7 +34,7 @@ ${script}
 		        <form action="${home}login/BloginProc" method="post"_novalidate="" class="ng-pristine ng-invalid ng-touched" style="
 				margin: 0;
 			    padding: 0;">
-		            <div _class="inpbx" style="
+		            <div class="inpbx" style="
 					margin: 0;
 				    padding: 0;
 				    position: relative;
@@ -44,7 +44,7 @@ ${script}
 				    box-sizing: border-box;
 				    margin-top: 8px;
 				    margin-bottom: 8px;">
-		                    <input _type="text" name="bid" id="user_id" formcontrolname="user_id" placeholder="아이디" autocorrect="off" autocapitalize="none" class="ng-pristine ng-invalid ng-touched" style="
+		                    <input type="text" name="bid" id="user_id" formcontrolname="user_id" placeholder="아이디" autocorrect="off" autocapitalize="none" class="ng-pristine ng-invalid ng-touched" style="
 							margin: 0;
 						    appearance: none;
 						    vertical-align: top;
@@ -71,7 +71,7 @@ ${script}
 				    box-sizing: border-box;
 				    margin-top: 8px;
 				    margin-bottom: 8px;">
-		    			<input _type="password" name="bpw" id="user_password" formcontrolname="user_password" placeholder="비밀번호" class="ng-untouched ng-pristine ng-invalid" style="
+		    			<input type="password" name="bpw" id="user_password" formcontrolname="user_password" placeholder="비밀번호" class="ng-untouched ng-pristine ng-invalid" style="
 						margin: 0;
 					    appearance: none;
 					    vertical-align: top;
@@ -89,7 +89,7 @@ ${script}
 		                <!---->
 		    		</div>
 
-		            <button _type="submit" class="btn btn_login ng-star-inserted" style="
+		            <button type="submit" class="btn btn_login ng-star-inserted" style="
 					padding: 0;
 				    outline: none;
 				    vertical-align: top;
@@ -112,7 +112,7 @@ ${script}
 		
 		        </form>
 		
-		        <a _href="#" class="member_go" style="
+		        <a href="${home }membership/moveBusiness" class="member_go" style="
 				margin: 0;
 			    padding: 0;
 			    text-decoration: none;
