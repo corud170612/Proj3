@@ -47,20 +47,21 @@ public class MemberController {
 	}
 	@RequestMapping(value = "/BmemberProc")
 	public String BmemberProc(Bmember bmember, HttpServletRequest request) {
-		logger.warn(bmember.getBid());
-		logger.warn(bmember.getBpw());
-		logger.warn(bmember.getBname());
-		logger.warn(bmember.getStoreAddr());
-		logger.warn(bmember.getStoreintro());
-		logger.warn(bmember.getStorename());
-		logger.warn(bmember.getStoreph());
-		logger.warn(bmember.getStorezipcode());
+
 		iMemberServ.BmemberProc(bmember, request);
 		return "forward:/index?formpath=Blogin";
 	}
 	@RequestMapping(value = "/CmemberProc")
-	public String CmemberProc(Cmember cmember) {
+	public String CmemberProc(Cmember cmember, Model model) {
+		int ids= iMemberServ.searchId(cmember);
+		logger.warn(ids+"");
+		if(ids==0) {
 		iMemberServ.CmemberProc(cmember);
 		return "forward:/index?formpath=Clogin";
+		}
+		else if(cmember.getAddress()=="¹ÌÀÔ·Â") {
+			
+		}
+		return "forward:/login/CloginProc";
 	}
 }

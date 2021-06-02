@@ -8,4 +8,6 @@ public interface IMemberService {
 
 	public void CmemberProc(Cmember cmember);
 
+	public int searchId(Cmember cmember);
+
 }

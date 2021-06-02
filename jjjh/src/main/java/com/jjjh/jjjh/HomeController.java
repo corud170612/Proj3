@@ -168,8 +168,10 @@ public class HomeController {
    public String partnerTop5() {
       return "partner/partnerTop5";
    }
-
-
+   @RequestMapping(value = "/33")
+   public String newfile() {
+      return "NewFile";
+   }
 
 
 }

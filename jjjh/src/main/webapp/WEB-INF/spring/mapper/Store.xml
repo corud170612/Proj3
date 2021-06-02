@@ -61,4 +61,8 @@ where 1=1
 select cid, cname, czipcode, caddr from cmember
 where cid= #{loginCheck}
 </select>
+<select id="SelectAddr" parameterType="String" resultType="String">
+select caddr from cmember
+where cid=#{loginCheck}
+</select>
 </mapper>

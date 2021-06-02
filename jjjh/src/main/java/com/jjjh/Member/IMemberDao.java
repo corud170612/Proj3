@@ -10,4 +10,6 @@ public interface IMemberDao {
 
 	public void UploadLogo(Map<String, String> fileMap);
 
+	public int searchId(Cmember cmember);
+
 }

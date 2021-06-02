@@ -25,8 +25,16 @@ public class Cmember {
 	
 	 private String bank;
 	
-	 
-	 private String expirationdate;
+	 private int ids;
+	 public int getIds() {
+		return ids;
+	}
+
+	public void setIds(int ids) {
+		this.ids = ids;
+	}
+
+	private String expirationdate;
 
 	public String getCid() {
 		return cid;

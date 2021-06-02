@@ -11,7 +11,13 @@ WHERE storename = #{storename}
 
 </update>
 <insert id="CmemberProc" parameterType="com.jjjh.Member.Cmember">
-insert into cmember(cid, cpw, cname, czipcode, caddr)
-values (#{cid}, #{cpw}, #{name}, #{zipcode}, #{address})
+<if test="ids == 0">insert into cmember(cid, cpw, cname, czipcode, caddr)
+values (#{cid}, #{cpw}, #{name}, #{zipcode}, #{address})</if>
 </insert>
+<select id="searchId" parameterType="com.jjjh.Member.Cmember" resultType="int">
+	SELECT COUNT(*)
+	FROM cmember
+	WHERE cid=#{cid}
+	AND cpw=#{cpw}
+</select>
 </mapper>

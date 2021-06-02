@@ -220,6 +220,9 @@ $(document).ready(function(){
       $("#submon").attr("value","12개월");       
       
 });
+
+	
+
 	$("#kakaopayBtn").click(function () {
 
         $.get("${home}store/importProc?prodname="+$('#prodname').val()+"&price="+$('#price').val()+"&submon="+$('#submon').val()+"&subvol="+$('#subvol').val()+"&grinding="+$('#grinding').val()+"&storename="+$('#storename').val(), function(data, status) {
@@ -287,8 +290,9 @@ $(document).ready(function(){
 	})
 
 });
-</script>
 
+</script>
+${plzLogin }
 
 <div id="buyFrame">
    <!-- 결제페이지 전체 div -->
@@ -390,8 +394,9 @@ $(document).ready(function(){
             <div class="selectOption" style="margin-bottom: 40px;" id="twelvmonth">
                <span style="font-weight: 700; font-size: 30px; color: white; line-height: 60px;" id="12span">12개월</span>
             </div>
+            
 
-       
+
       <img id="kakaopayBtn" style="margin-left: 100px; margin-bottom: 50px;" src="${home }resources/img/kakaopay.png">
       </form>
          </div>

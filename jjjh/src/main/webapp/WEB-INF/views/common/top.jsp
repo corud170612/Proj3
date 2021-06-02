@@ -222,7 +222,7 @@ a {
     box-sizing: border-box;">JOIN</a></li>
     
           <%}else if(sessionCid!=null&&sessionBid==null){ %>
-          <li style="margin-right: 200px; margin-bottom: 35px;"><p style="font-size: 20px;">안녕하세요 <%=sessionCid%>님 </p></li>
+          <li style="margin-right: 200px; margin-bottom: 35px;"><p style="font-size: 20px;"><%=sessionCid%> </p></li>
 <li><a href="${topHome}login/logout" class="log" style="    --swiper-theme-color: #00FF0000 !important;
     --swiper-navigation-size: 44px;
     font-family: 'Noto Sans KR',sans-serif;

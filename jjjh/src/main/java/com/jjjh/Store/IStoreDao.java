@@ -24,4 +24,6 @@ List<ProdRegis> ShowCategoryProd(ConfirmCate confirmCate);
 
 MemberInfo joinMember(String loginCheck);
 
+String SelectAddr(String loginCheck);
+
 }

@@ -40,8 +40,9 @@ public class LoginController {
 		if(loginResult==LOGINSUCCESS) {
 			return "forward:/index?formpath=home";
 		}
-		
+		else if(loginResult!=LOGINSUCCESS) {
 		model.addAttribute("script", "<script>alert('아이디 또는 패스워드가 잘못입력되었습니다')</script>");
+		}
 		return "forward:/index?formpath=Clogin";
 	}
 	@RequestMapping(value = "logout")

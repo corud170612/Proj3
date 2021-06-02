@@ -39,14 +39,20 @@ public class StoreController {
 		return "forward:/index?formpath=storeMain";
    }
    @RequestMapping(value = "/{prodname}")
-   public String paymentProc(Model model, @PathVariable String prodname) {
-
+   public String paymentProc(Model model, @PathVariable String prodname, HttpSession session) {
+		String loginCheck = (String) session.getAttribute("cid");
+		String caddr = iStoreServ.SelectAddr(loginCheck);
      model.addAttribute("thisProdName", prodname);
       StoreDTO storeDTO = iStoreServ.getBmemberList(prodname);
       model.addAttribute("bmember", storeDTO);
       List<ProdDTO> storeLst2= iStoreServ.getProdList2(prodname);
       model.addAttribute("storeLst2", storeLst2);
-      
+		if (loginCheck == null) {
+			model.addAttribute("plzLogin", "<script>alert('결제를 위해선 로그인이 필요합니다')</script>");
+		}
+		else if(caddr=="미입력"){
+			model.addAttribute("plzLogin", "<script>alert('결제를 위해선 마이페이지에서 주소를 등록해주세요')</script>");
+		}
      return "forward:/index?formpath=payment"; 
    }
 

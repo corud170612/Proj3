@@ -121,7 +121,7 @@ function openAuth(cmd){
 <p style="text-align: center; font-size: 20px;">Create an account</p>
 <br><br><br>
 <div style="width: 100%; height: 800px;">
-
+    ${NoMembership }
 <center>
 <table>
 <tr>

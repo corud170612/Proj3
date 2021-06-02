@@ -81,4 +81,10 @@ public class MemberServiceImpl implements IMemberService{
 		
 		return fileLst;
 	}
+
+	@Override
+	public int searchId(Cmember cmember) {
+		
+		return iMemberDao.searchId(cmember);
+	}
 }

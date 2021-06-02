@@ -71,4 +71,10 @@ public MemberInfo joinMember(String loginCheck) {
 	return iStoreDao.joinMember(loginCheck);
 }
 
+@Override
+public String SelectAddr(String loginCheck) {
+	
+	return iStoreDao.SelectAddr(loginCheck);
+}
+
 }
