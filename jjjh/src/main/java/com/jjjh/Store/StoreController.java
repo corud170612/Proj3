@@ -46,12 +46,13 @@ public class StoreController {
       StoreDTO storeDTO = iStoreServ.getBmemberList(prodname);
       model.addAttribute("bmember", storeDTO);
       List<ProdDTO> storeLst2= iStoreServ.getProdList2(prodname);
+      logger.warn(caddr);
       model.addAttribute("storeLst2", storeLst2);
 		if (loginCheck == null) {
 			model.addAttribute("plzLogin", "<script>alert('결제를 위해선 로그인이 필요합니다')</script>");
 		}
-		else if(caddr=="미입력"){
-			model.addAttribute("plzLogin", "<script>alert('결제를 위해선 마이페이지에서 주소를 등록해주세요')</script>");
+		else if("미입력".contentEquals(caddr)){
+			model.addAttribute("plzAddAddr", "<script>alert('결제를 위해선 마이페이지에서 주소를 등록해주세요')</script>");
 		}
      return "forward:/index?formpath=payment"; 
    }

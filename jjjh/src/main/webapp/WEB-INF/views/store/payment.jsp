@@ -293,7 +293,7 @@ $(document).ready(function(){
 
 </script>
 ${plzLogin }
-
+${plzAddAddr }
 <div id="buyFrame">
    <!-- 결제페이지 전체 div -->
    
