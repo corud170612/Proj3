@@ -42,11 +42,12 @@ public class StoreController {
    public String paymentProc(Model model, @PathVariable String prodname, HttpSession session) {
 		String loginCheck = (String) session.getAttribute("cid");
 		String caddr = iStoreServ.SelectAddr(loginCheck);
+		
      model.addAttribute("thisProdName", prodname);
       StoreDTO storeDTO = iStoreServ.getBmemberList(prodname);
       model.addAttribute("bmember", storeDTO);
       List<ProdDTO> storeLst2= iStoreServ.getProdList2(prodname);
-      logger.warn(caddr);
+     
       model.addAttribute("storeLst2", storeLst2);
 		if (loginCheck == null) {
 			model.addAttribute("plzLogin", "<script>alert('결제를 위해선 로그인이 필요합니다')</script>");

@@ -63,6 +63,6 @@ where cid= #{loginCheck}
 </select>
 <select id="SelectAddr" parameterType="String" resultType="String">
 select caddr from cmember
-where cid=#{loginCheck}
+where cid=#{loginCheck, jdbcType=VARCHAR}
 </select>
 </mapper>
